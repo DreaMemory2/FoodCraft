@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "bottom": "foodcraft:block/frying_machine_side",
+    "front": "foodcraft:block/frying_machine_front_on",
+    "side": "foodcraft:block/frying_machine_side",
+    "top": "foodcraft:block/frying_machine_top_on"
+  }
+}

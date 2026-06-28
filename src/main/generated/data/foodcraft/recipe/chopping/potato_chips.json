@@ -1,0 +1,10 @@
+{
+  "type": "foodcraft:chopping",
+  "ingredients": [
+    "minecraft:potato"
+  ],
+  "result": {
+    "count": 3,
+    "id": "foodcraft:potato_chips"
+  }
+}

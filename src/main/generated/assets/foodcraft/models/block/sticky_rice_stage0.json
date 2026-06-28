@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "foodcraft:block/sticky_rice_stage0"
+  }
+}

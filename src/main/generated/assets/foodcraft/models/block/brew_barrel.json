@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "foodcraft:block/brew_barrel_top",
+    "side": "foodcraft:block/brew_barrel_side"
+  }
+}

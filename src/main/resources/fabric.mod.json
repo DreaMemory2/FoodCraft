@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "foodcraft",
+	"version": "${version}",
+	"name": "Foodcraft",
+	"description": "A China and foreign food Minecraft mod",
+	"authors": [
+		"Darost",
+		"Crystal"
+	],
+	"contact": {
+		"homepage": "https://www.mcmod.cn/class/410.html"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/foodcraft/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.crystal.foodcraft.FoodCraft"
+		],
+		"client": [
+			"com.crystal.foodcraft.FoodCraftClient"
+		],
+		"fabric-datagen": [
+			"com.crystal.foodcraft.FoodCraftDataGenerator"
+		]
+	},
+	"mixins": [
+		"foodcraft.mixins.json",
+		{
+			"config": "foodcraft.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~26.1",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

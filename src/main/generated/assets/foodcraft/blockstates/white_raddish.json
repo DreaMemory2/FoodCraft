@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "foodcraft:block/white_raddish_stage0"
+    },
+    "age=1": {
+      "model": "foodcraft:block/white_raddish_stage1"
+    },
+    "age=2": {
+      "model": "foodcraft:block/white_raddish_stage2"
+    },
+    "age=3": {
+      "model": "foodcraft:block/white_raddish_stage3"
+    },
+    "age=4": {
+      "model": "foodcraft:block/white_raddish_stage4"
+    }
+  }
+}

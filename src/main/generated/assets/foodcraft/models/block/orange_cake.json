@@ -1,0 +1,9 @@
+{
+  "parent": "foodcraft:block/cake",
+  "textures": {
+    "bottom": "minecraft:block/cake_bottom",
+    "particle": "foodcraft:block/orange_cake_side",
+    "side": "foodcraft:block/orange_cake_side",
+    "top": "foodcraft:block/orange_cake_top"
+  }
+}

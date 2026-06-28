@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "bottom": "foodcraft:block/mill_side",
+    "front": "foodcraft:block/mill_front",
+    "side": "foodcraft:block/mill_side",
+    "top": "foodcraft:block/mill_top"
+  }
+}

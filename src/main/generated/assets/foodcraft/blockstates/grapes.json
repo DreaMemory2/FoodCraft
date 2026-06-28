@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "foodcraft:block/grapes_stage0"
+    },
+    "age=1": {
+      "model": "foodcraft:block/grapes_stage1"
+    },
+    "age=2": {
+      "model": "foodcraft:block/grapes_stage2"
+    },
+    "age=3": {
+      "model": "foodcraft:block/grapes_stage3"
+    },
+    "age=4": {
+      "model": "foodcraft:block/grapes_stage4"
+    }
+  }
+}

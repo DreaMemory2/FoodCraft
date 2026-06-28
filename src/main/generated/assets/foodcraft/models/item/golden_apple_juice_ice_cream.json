@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "foodcraft:item/golden_apple_juice_ice_cream"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "foodcraft:potting",
+  "ingredients": [
+    "foodcraft:peanut_oil",
+    "foodcraft:salt",
+    "foodcraft:starches"
+  ],
+  "maxTime": 450,
+  "minTime": 350,
+  "output": {
+    "id": "foodcraft:sichuan_boiled_beef"
+  },
+  "staples": [
+    "foodcraft:chili",
+    "foodcraft:vegetable",
+    "minecraft:cooked_beef"
+  ]
+}

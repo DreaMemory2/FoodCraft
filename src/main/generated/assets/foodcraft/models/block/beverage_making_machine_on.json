@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "bottom": "foodcraft:block/beverage_making_machine_side",
+    "front": "foodcraft:block/beverage_making_machine_front_on",
+    "side": "foodcraft:block/beverage_making_machine_side",
+    "top": "foodcraft:block/beverage_making_machine_top_on"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "foodcraft:item/juice",
+    "tints": [
+      {
+        "type": "foodcraft:juice",
+        "default": -13083194
+      }
+    ]
+  }
+}
