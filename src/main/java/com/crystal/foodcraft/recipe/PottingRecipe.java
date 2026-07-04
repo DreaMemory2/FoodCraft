@@ -17,14 +17,14 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PottingRecipe implements Recipe<@NotNull RecipeInput> {
+public class PottingRecipe extends HeatedRecipe<@NotNull RecipeInput> {
     public static final int INGREDIENT_SLOTS = 8;
     public static final int STAPLE_SLOTS = 4;
     public static final MapCodec<PottingRecipe> CODEC = RecordCodecBuilder.mapCodec(
             instance -> instance.group(
                     ItemStackTemplate.CODEC.fieldOf("output").forGetter(recipe -> recipe.output),
-                    Ingredient.CODEC.listOf().fieldOf("ingredients").forGetter(recipe -> recipe.ingredients),
                     Ingredient.CODEC.listOf().fieldOf("staples").forGetter(recipe -> recipe.staples),
+                    Ingredient.CODEC.listOf().fieldOf("ingredients").forGetter(recipe -> recipe.ingredients),
                     Codec.INT.optionalFieldOf("minTime", 400).forGetter(recipe -> recipe.minTime),
                     Codec.INT.optionalFieldOf("maxTime", 1000).forGetter(recipe -> recipe.maxTime)
             ).apply(instance, PottingRecipe::new)
@@ -33,9 +33,9 @@ public class PottingRecipe implements Recipe<@NotNull RecipeInput> {
             ItemStackTemplate.STREAM_CODEC,
             recipe -> recipe.output,
             Ingredient.CONTENTS_STREAM_CODEC.apply(ByteBufCodecs.list()),
-            recipe -> recipe.ingredients,
-            Ingredient.CONTENTS_STREAM_CODEC.apply(ByteBufCodecs.list()),
             recipe -> recipe.staples,
+            Ingredient.CONTENTS_STREAM_CODEC.apply(ByteBufCodecs.list()),
+            recipe -> recipe.ingredients,
             ByteBufCodecs.INT,
             recipe -> recipe.minTime,
             ByteBufCodecs.INT,
@@ -44,12 +44,11 @@ public class PottingRecipe implements Recipe<@NotNull RecipeInput> {
     );
 
     private final ItemStackTemplate output;
-    private final List<Ingredient> ingredients;
     private final List<Ingredient> staples;
-    private final int minTime;
-    private final int maxTime;
+    private final List<Ingredient> ingredients;
 
-    public PottingRecipe(ItemStackTemplate output, List<Ingredient> ingredients, List<Ingredient> staples, int minTime, int maxTime) {
+    public PottingRecipe(ItemStackTemplate output, List<Ingredient> staples, List<Ingredient> ingredients, int minTime, int maxTime) {
+        super(minTime, maxTime);
         this.output = output;
 
         if (ingredients.isEmpty()) {
@@ -64,53 +63,40 @@ public class PottingRecipe implements Recipe<@NotNull RecipeInput> {
                     "Too many staples for pot recipe! The max is 4");
         }
 
-        this.ingredients = ingredients;
         this.staples = staples;
-        this.minTime = minTime;
-        this.maxTime = maxTime;
+        this.ingredients = ingredients;
     }
 
     @Override
     public boolean matches(RecipeInput container, @NotNull Level level) {
-        ArrayList<ItemStack> inputs = new ArrayList<>();
-        int inputSize = 0;
-        for (int i = 0; i < INGREDIENT_SLOTS; ++i) {
-            ItemStack stack = container.getItem(i);
-            if (!stack.isEmpty()) {
-                ++inputSize;
-                inputs.add(stack);
-            }
-        }
-
         ArrayList<ItemStack> stapleInputs = new ArrayList<>();
         int stapleSize = 0;
-        for (int j = 0; j < STAPLE_SLOTS; ++j) {
-            ItemStack stack = container.getItem(INGREDIENT_SLOTS + j);
+        for (int i = 0; i < 4; i++) {
+            ItemStack stack = container.getItem(i);
             if (!stack.isEmpty()) {
                 ++stapleSize;
                 stapleInputs.add(stack);
             }
         }
 
-        return this.ingredients.size() <= inputSize && RecipeMatcher.findMatches(inputs, ingredients) != null
-                && this.staples.size() <= stapleSize && RecipeMatcher.findMatches(stapleInputs, staples) != null;
+        ArrayList<ItemStack> ingredientInputs = new ArrayList<>();
+        int inputSize = 0;
+        for (int j = 4; j < 8; j++) {
+            ItemStack stack = container.getItem(j);
+            if (!stack.isEmpty()) {
+                ++inputSize;
+                ingredientInputs.add(stack);
+            }
+        }
+
+        return this.staples.size() <= stapleSize && RecipeMatcher.findMatches(stapleInputs, staples) != null
+                && this.ingredients.size() <= inputSize && RecipeMatcher.findMatches(ingredientInputs, ingredients) != null;
     }
 
     @NotNull
     @Override
     public ItemStack assemble(RecipeInput input) {
         return this.output.create();
-    }
-
-    @Override
-    public boolean showNotification() {
-        return true;
-    }
-
-    @NotNull
-    @Override
-    public String group() {
-        return "";
     }
 
     @NotNull
@@ -123,26 +109,5 @@ public class PottingRecipe implements Recipe<@NotNull RecipeInput> {
     @Override
     public RecipeType<? extends @NotNull Recipe<@NotNull RecipeInput>> getType() {
         return ModRecipeTypes.POT_RECIPE_TYPE;
-    }
-
-    @NotNull
-    @Override
-    public PlacementInfo placementInfo() {
-        return PlacementInfo.NOT_PLACEABLE;
-    }
-
-    @NotNull
-    @Override
-    public RecipeBookCategory recipeBookCategory() {
-        return new RecipeBookCategory();
-    }
-
-    public int getMinTime() {
-        return this.minTime;
-    }
-
-
-    public int getMaxTime() {
-        return this.maxTime;
     }
 }

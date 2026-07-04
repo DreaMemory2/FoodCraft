@@ -31,9 +31,4 @@ public class MillMenu extends BaseMachineMenu {
         // 数据槽位
         this.addDataSlots(data);
     }
-
-    @Override
-    public int getMachineSlots() {
-        return 3;
-    }
 }

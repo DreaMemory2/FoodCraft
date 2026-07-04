@@ -104,7 +104,7 @@ public class PottingRecipeBuilder extends ModRecipeBuilder {
 
     @Override
     public void save(RecipeOutput consumer, @NotNull ResourceKey<Recipe<?>> id) {
-        PottingRecipe recipe = new PottingRecipe(this.result, this.ingredients, this.staples, this.minTime, this.maxTime);
+        PottingRecipe recipe = new PottingRecipe(this.result, this.staples, this.ingredients, this.minTime, this.maxTime);
         consumer.accept(id, recipe, null);
     }
 }

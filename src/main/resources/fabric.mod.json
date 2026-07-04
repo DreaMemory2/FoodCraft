@@ -23,8 +23,12 @@
 		],
 		"fabric-datagen": [
 			"com.crystal.foodcraft.FoodCraftDataGenerator"
+		],
+		"jei_mod_plugin": [
+			"com.crystal.foodcraft.FoodCraftJeiPlugin"
 		]
 	},
+	"accessWidener": "foodcraft.accesswidener",
 	"mixins": [
 		"foodcraft.mixins.json",
 		{

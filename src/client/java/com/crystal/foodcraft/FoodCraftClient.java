@@ -1,7 +1,7 @@
 package com.crystal.foodcraft;
 
 import com.crystal.foodcraft.block.ModBlocks;
-import com.crystal.foodcraft.init.ModFluid;
+import com.crystal.foodcraft.register.ModFluids;
 import com.crystal.foodcraft.item.juice.JuiceColor;
 import com.crystal.foodcraft.rendering.api.ChunkSectionLayerMap;
 import com.crystal.foodcraft.screen.*;
@@ -55,8 +55,8 @@ public class FoodCraftClient implements ClientModInitializer {
 		MenuScreens.register(ModMenuTypes.STOVE, StoveScreen::new);
 		// 液体渲染
 		FluidRenderingRegistry.register(
-				ModFluid.COOKING_OIL_STILL,
-				ModFluid.COOKING_OIL_FLOWING,
+				ModFluids.COOKING_OIL_STILL,
+				ModFluids.COOKING_OIL_FLOWING,
 				new FluidModel.Unbaked(
 						new Material(FoodCraft.of("block/cooking_oil_still")),
 						new Material(FoodCraft.of("block/cooking_oil_flow")),

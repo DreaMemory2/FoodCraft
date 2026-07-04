@@ -13,9 +13,7 @@ import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.ArrayList;
-
-public class PanningRecipe implements Recipe<@NotNull RecipeInput> {
+public class PanningRecipe extends HeatedRecipe<RecipeInput> {
     public static final MapCodec<PanningRecipe> CODEC = RecordCodecBuilder.mapCodec(
             instance -> instance.group(
                     ItemStackTemplate.CODEC.fieldOf("output").forGetter(recipe -> recipe.output),
@@ -36,10 +34,9 @@ public class PanningRecipe implements Recipe<@NotNull RecipeInput> {
     );
     private final ItemStackTemplate output;
     private final Ingredient input;
-    private final int minTime;
-    private final int maxTime;
 
     public PanningRecipe(ItemStackTemplate output, Ingredient input, int minTime, int maxTime) {
+        super(minTime, maxTime);
         this.output = output;
 
         if (input.isEmpty()) {
@@ -47,8 +44,6 @@ public class PanningRecipe implements Recipe<@NotNull RecipeInput> {
         }
 
         this.input = input;
-        this.minTime = minTime;
-        this.maxTime = maxTime;
     }
 
     @Override
@@ -62,17 +57,6 @@ public class PanningRecipe implements Recipe<@NotNull RecipeInput> {
         return this.output.create();
     }
 
-    @Override
-    public boolean showNotification() {
-        return true;
-    }
-
-    @NotNull
-    @Override
-    public String group() {
-        return "";
-    }
-
     @NotNull
     @Override
     public RecipeSerializer<? extends @NotNull Recipe<@NotNull RecipeInput>> getSerializer() {
@@ -83,25 +67,5 @@ public class PanningRecipe implements Recipe<@NotNull RecipeInput> {
     @Override
     public RecipeType<? extends @NotNull Recipe<@NotNull RecipeInput>> getType() {
         return ModRecipeTypes.PAN_RECIPE_TYPE;
-    }
-
-    @NotNull
-    @Override
-    public PlacementInfo placementInfo() {
-        return PlacementInfo.NOT_PLACEABLE;
-    }
-
-    @NotNull
-    @Override
-    public RecipeBookCategory recipeBookCategory() {
-        return new RecipeBookCategory();
-    }
-
-    public int getMinTime() {
-        return this.minTime;
-    }
-
-    public int getMaxTime() {
-        return this.maxTime;
     }
 }

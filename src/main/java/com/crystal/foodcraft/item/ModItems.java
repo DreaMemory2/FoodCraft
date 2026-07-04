@@ -6,16 +6,14 @@ import com.crystal.foodcraft.item.juice.JuiceContents;
 import com.crystal.foodcraft.item.juice.Juices;
 import com.crystal.foodcraft.register.ModDataComponents;
 import com.crystal.foodcraft.item.juice.JuiceItem;
+import com.crystal.foodcraft.register.ModFluids;
 import net.minecraft.core.Registry;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.Consumables;
 import net.minecraft.world.level.block.Block;
 
@@ -270,6 +268,8 @@ public class ModItems {
     public static final Item PEACH_BISCUIT = food("peach_biscuit", ModFoods.BISCUIT);
     public static final Item PEAR_BISCUIT = food("pear_biscuit", ModFoods.BISCUIT);
     public static final Item STRAWBERRY_BISCUIT = food("strawberry_biscuit", ModFoods.BISCUIT);
+
+    public static final Item PEANUT_OIL_BUCKET = register("peanut_oil_bucket", properties -> new BucketItem(ModFluids.COOKING_OIL_STILL, properties), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1));
 
     private static Item drink(String name, FoodProperties food) {
         return register(name, new Item.Properties().food(food).craftRemainder(Items.GLASS_BOTTLE));

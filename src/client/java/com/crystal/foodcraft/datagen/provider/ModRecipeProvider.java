@@ -8,14 +8,17 @@ import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStackTemplate;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.material.Fluid;
 
 public abstract class ModRecipeProvider extends RecipeProvider {
     private final HolderGetter<Item> items;
+    private final HolderGetter<Fluid> fluids;
 
     protected ModRecipeProvider(HolderLookup.Provider registries, RecipeOutput output) {
         super(registries, output);
 
         this.items = registries.lookupOrThrow(Registries.ITEM);
+        this.fluids = registries.lookupOrThrow(Registries.FLUID);
     }
 
     public ChoppingRecipeBuilder chopping(ItemLike result, int count) {
@@ -36,5 +39,9 @@ public abstract class ModRecipeProvider extends RecipeProvider {
 
     public PanningRecipeBuilder panning(Item result, int minTime, int maxTime) {
         return PanningRecipeBuilder.panning(this.items, result, minTime, maxTime);
+    }
+
+    public FryingRecipeBuilder frying(Item result) {
+        return FryingRecipeBuilder.frying(this.items, this.fluids, result);
     }
 }

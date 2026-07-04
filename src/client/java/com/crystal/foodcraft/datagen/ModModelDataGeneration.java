@@ -351,6 +351,8 @@ public class ModModelDataGeneration extends FabricModelProvider {
         createFlatItemModel(model, ModItems.ULTIMATE_ETERNAL_STONE);
         model.generateFlatItem(ModItems.DARK_GREEN_MULTIFUNCTION_TOOLS, ModelTemplates.FLAT_HANDHELD_ITEM);
         model.generateFlatItem(ModItems.DARK_BLUE_MULTIFUNCTION_TOOLS, ModelTemplates.FLAT_HANDHELD_ITEM);
+
+        createFlatItemModel(model, ModItems.PEANUT_OIL_BUCKET);
     }
 
     /**

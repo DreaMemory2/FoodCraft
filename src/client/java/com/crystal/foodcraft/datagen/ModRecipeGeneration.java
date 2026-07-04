@@ -2,6 +2,7 @@ package com.crystal.foodcraft.datagen;
 
 import com.crystal.foodcraft.datagen.provider.ModRecipeProvider;
 import com.crystal.foodcraft.item.ModItems;
+import com.crystal.foodcraft.register.ModFluids;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.core.HolderLookup;
@@ -45,6 +46,11 @@ public class ModRecipeGeneration extends FabricRecipeProvider {
                         .ingredient(ModItems.DOUGH_TWIST)
                         .unlockedBy("has_dough_shred", has(ModItems.DOUGH_TWIST))
                         .save(output, "panning/dough_shred");
+                this.frying(ModItems.FRENCH_FRIES)
+                        .fluidState(ModFluids.COOKING_OIL_STILL)
+                        .ingredient(ModItems.POTATO_WIRE)
+                        .unlockedBy("has_potato_wire", has(ModItems.POTATO_WIRE))
+                        .save(output, "frying/potato_wire");
             }
         };
     }

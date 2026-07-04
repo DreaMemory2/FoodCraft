@@ -7,6 +7,9 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * <p>燃料槽，用于处理燃料</p>
+ */
 public class FuelSlot extends Slot {
     private final BaseMachineMenu menu;
 

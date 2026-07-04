@@ -311,6 +311,7 @@ public class ChineseDataGeneration extends FabricLanguageProvider {
         builder.add(ModItems.ULTIMATE_ETERNAL_STONE, "终极千古之石[珍贵]");
         builder.add(ModItems.DARK_GREEN_MULTIFUNCTION_TOOLS, "暗碧多功能工具");
         builder.add(ModItems.DARK_BLUE_MULTIFUNCTION_TOOLS, "暗蓝多功能工具");
+        builder.add(ModItems.PEANUT_OIL_BUCKET, "桶装花生油");
 
         generateBlockTranslations(provider, builder);
     }
@@ -380,5 +381,7 @@ public class ChineseDataGeneration extends FabricLanguageProvider {
         builder.add(ModBlocks.CHERRY_SAPLING, "樱桃树苗");
         builder.add(ModBlocks.BANANA_SAPLING, "香蕉树苗");
         builder.add(ModBlocks.COCONUT_SAPLING, "椰子树苗");
+        // 液体
+        builder.add(ModBlocks.COOKING_OIL, "花生油");
     }
 }
