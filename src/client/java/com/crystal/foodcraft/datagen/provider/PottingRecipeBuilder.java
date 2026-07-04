@@ -1,7 +1,6 @@
 package com.crystal.foodcraft.datagen.provider;
 
 import com.crystal.foodcraft.recipe.PottingRecipe;
-import net.minecraft.advancements.Criterion;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.data.recipes.RecipeBuilder;
 import net.minecraft.data.recipes.RecipeOutput;

@@ -64,7 +64,7 @@ public abstract class HeatedBlockEntity extends NetWorkBlockEntity implements Co
 
     public void updateLit(Level world) {
         // 是否提供热源
-        if (isHeated(world, getBlockPos(), getBlockState())) {
+        if (isHeated(world, getBlockPos())) {
             isLit = true;
             detectLit(world, getBlockPos(), getBlockState(), true);
         } else {

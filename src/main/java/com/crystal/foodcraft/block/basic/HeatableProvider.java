@@ -15,7 +15,7 @@ public interface HeatableProvider {
     /**
      * <p>是否下方方块提供了热源</p>
      */
-    default boolean isHeated(Level level, BlockPos pos, BlockState state) {
+    default boolean isHeated(Level level, BlockPos pos) {
         // 方块底部
         BlockState stateBelow = level.getBlockState(pos.below());
         // 如果方块下方有热源，且方块属性为Lit

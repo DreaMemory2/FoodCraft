@@ -426,7 +426,7 @@ public class ModModelDataGeneration extends FabricModelProvider {
     /**
      * <p>创建蛋糕模型</p>
      */
-    private final void createCakeBlock(BlockModelGenerators model, Block block) {
+    private void createCakeBlock(BlockModelGenerators model, Block block) {
         model.registerSimpleFlatItemModel(block.asItem());
         Material topTexture = TextureMapping.getBlockTexture(block, "_top");
         Material sideTexture = TextureMapping.getBlockTexture(block, "_side");
