@@ -63,6 +63,7 @@
   "block.foodcraft.strawberry_cake": "草莓蛋糕",
   "block.foodcraft.sugar_block": "糖块",
   "block.foodcraft.watercress_block": "豆瓣方块",
+  "config.jade.plugin_crystalmod.fermenting_time": "发酵时间",
   "container.foodcraft.beverage_making_machine": "饮料制作机",
   "container.foodcraft.brew_barrel": "酿桶",
   "container.foodcraft.chopping_board": "菜板",
@@ -343,5 +344,6 @@
   "itemGroup.foodcraft.plant": "植物",
   "itemGroup.foodcraft.snack": "小吃",
   "itemGroup.foodcraft.staple": "主食",
-  "tag.item.foodcraft.knives": "菜刀"
+  "tag.item.foodcraft.knives": "菜刀",
+  "tooltip.crystalcraft.fermenting_time": "发酵时间：%d s"
 }

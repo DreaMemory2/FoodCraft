@@ -68,4 +68,12 @@ public class PanningRecipe extends HeatedRecipe<RecipeInput> {
     public RecipeType<? extends @NotNull Recipe<@NotNull RecipeInput>> getType() {
         return ModRecipeTypes.PAN_RECIPE_TYPE;
     }
+
+    public Ingredient getInput() {
+        return input;
+    }
+
+    public ItemStackTemplate getOutput() {
+        return output;
+    }
 }

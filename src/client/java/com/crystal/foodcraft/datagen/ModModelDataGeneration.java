@@ -19,6 +19,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.Property;
 import org.jetbrains.annotations.NotNull;
@@ -128,6 +129,9 @@ public class ModModelDataGeneration extends FabricModelProvider {
         createCropBlock(model, ModBlocks.VEGETABLE);
         createCropBlock(model, ModBlocks.RICE);
         createCropBlock(model, ModBlocks.CORN);
+
+        // 液体模型
+        model.createNonTemplateModelBlock(ModBlocks.COOKING_OIL);
     }
 
     @Override

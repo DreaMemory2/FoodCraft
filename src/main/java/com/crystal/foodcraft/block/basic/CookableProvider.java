@@ -2,13 +2,14 @@ package com.crystal.foodcraft.block.basic;
 
 import com.crystal.foodcraft.item.ModItems;
 import com.crystal.foodcraft.recipe.input.PottingRecipeInput;
+import com.crystal.foodcraft.recipe.input.PressureCookerInput;
 import net.minecraft.core.NonNullList;
 import net.minecraft.world.item.ItemStack;
 
 public interface CookableProvider {
 
     default void produceFood(ItemStack result, NonNullList<ItemStack> items, int index) {
-        ItemStack itemStack = items.get(2);
+        ItemStack itemStack = items.get(index);
         if (itemStack.isEmpty()) {
             items.set(index, result.copy());
         } else {
@@ -33,6 +34,13 @@ public interface CookableProvider {
             itemStack.grow(1);
             items.set(charring, itemStack);
         }
+    }
+
+    default void consumeIngredient(PressureCookerInput.Positioned inputs) {
+        if (inputs != null)
+            for (int i = 0; i < inputs.ingredients().size(); i++)
+                if (!inputs.ingredients().get(i).isEmpty())
+                    inputs.ingredients().get(i).shrink(1);
     }
 
     /**

@@ -68,10 +68,11 @@ public interface FluidHandlerProvider {
     /**
      * <p>消耗食用油（花生油），每次成功制作食材，则消耗一瓶花生油</p>
      * @param fluidStorage 方块容器所存储的液体
+     * @param amount 消耗方块容器内存储的液体的容量
      */
-    default void consumeFluid(SingleFluidStorage fluidStorage) {
+    default void consumeFluid(SingleFluidStorage fluidStorage, long amount) {
         try(Transaction transaction = Transaction.openOuter()) {
-            fluidStorage.extract(fluidStorage.getResource(), FluidConstants.BOTTLE, transaction);
+            fluidStorage.extract(fluidStorage.getResource(), amount, transaction);
 
             transaction.commit();
         }

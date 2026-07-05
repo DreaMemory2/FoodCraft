@@ -88,4 +88,12 @@ public class MillingRecipe implements Recipe<@NotNull RecipeInput> {
     public RecipeBookCategory recipeBookCategory() {
         return new RecipeBookCategory();
     }
+
+    public Ingredient getIngredient() {
+        return ingredient;
+    }
+
+    public ItemStackTemplate getResultItem() {
+        return output;
+    }
 }

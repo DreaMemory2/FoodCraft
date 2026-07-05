@@ -43,4 +43,32 @@ public abstract class ModRecipeProvider extends RecipeProvider {
     public FryingRecipeBuilder frying(Item result) {
         return FryingRecipeBuilder.frying(this.items, this.fluids, result);
     }
+
+    /**
+     * @param result 主要产出物品，没有副产物
+     * @param count 主要产物产出数量
+     * @return 酿桶配方构建器
+     */
+    public BrewRecipeBuilder brewing(Item result, int count) {
+        return BrewRecipeBuilder.brewing(this.items, this.fluids, result, count);
+    }
+
+    /**
+     * @param result 主要产出物品
+     * @param count1 主要产物产出数量
+     * @param byproduct 副产物
+     * @param count2 副产物产出数量
+     * @return 酿桶配方构建器
+     */
+    public BrewRecipeBuilder brewing(Item result, int count1, Item byproduct, int count2) {
+        return BrewRecipeBuilder.brewing(this.items, this.fluids, result, count1, byproduct, count2);
+    }
+
+    public PressureCookingBuilder pressureCooking(Item result, int count) {
+        return PressureCookingBuilder.pressureCooking(this.items, this.fluids, result, count);
+    }
+
+    public PressureCookingBuilder pressureCooking(Item result) {
+        return PressureCookingBuilder.pressureCooking(this.items, this.fluids, result);
+    }
 }

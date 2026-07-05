@@ -1,4 +1,4 @@
-package com.crystal.foodcraft.jei;
+package com.crystal.foodcraft.compat.jei;
 
 import com.crystal.foodcraft.item.juice.JuiceContents;
 import com.crystal.foodcraft.register.ModDataComponents;

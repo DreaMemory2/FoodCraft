@@ -86,4 +86,16 @@ public class FryingRecipe implements Recipe<@NotNull FluidAttachedRecipeInput> {
     public RecipeBookCategory recipeBookCategory() {
         return new RecipeBookCategory();
     }
+
+    public Ingredient getIngredient() {
+        return ingredient;
+    }
+
+    public ItemStackTemplate getResultItem() {
+        return result;
+    }
+
+    public FluidState getFluid() {
+        return fluidInput;
+    }
 }

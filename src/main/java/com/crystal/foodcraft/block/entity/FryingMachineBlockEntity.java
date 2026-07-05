@@ -114,7 +114,7 @@ public class FryingMachineBlockEntity extends BaseMachineBlockEntity implements 
                                 // 生产食材，消耗材料和花生油
                                 produceFood(result, items, 3);
                                 ingredient.shrink(1);
-                                consumeFluid(fluidStorage);
+                                consumeFluid(fluidStorage, FluidConstants.BUCKET);
                                 changed = true;
                             }
                         } else {

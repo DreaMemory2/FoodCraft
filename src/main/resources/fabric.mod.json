@@ -25,7 +25,10 @@
 			"com.crystal.foodcraft.FoodCraftDataGenerator"
 		],
 		"jei_mod_plugin": [
-			"com.crystal.foodcraft.FoodCraftJeiPlugin"
+          "com.crystal.foodcraft.compat.FoodCraftJeiPlugin"
+		],
+		"jade": [
+          "com.crystal.foodcraft.compat.FoodCraftJadePlugin"
 		]
 	},
 	"accessWidener": "foodcraft.accesswidener",

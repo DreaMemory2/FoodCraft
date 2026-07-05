@@ -17,6 +17,9 @@ public class ChineseDataGeneration extends FabricLanguageProvider {
 
     @Override
     public void generateTranslations(@NotNull HolderLookup.Provider provider, TranslationBuilder builder) {
+        // 添加Jade 显示信息
+        builder.add("config.jade.plugin_crystalmod.fermenting_time", "发酵时间");
+        builder.add("tooltip.crystalcraft.fermenting_time", "发酵时间：%d s");
         // Item Group
         builder.add("itemGroup.foodcraft.machine", "机器");
         builder.add("itemGroup.foodcraft.plant", "植物");

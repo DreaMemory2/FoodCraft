@@ -110,4 +110,16 @@ public class PottingRecipe extends HeatedRecipe<@NotNull RecipeInput> {
     public RecipeType<? extends @NotNull Recipe<@NotNull RecipeInput>> getType() {
         return ModRecipeTypes.POT_RECIPE_TYPE;
     }
+
+    public List<Ingredient> getIngredients() {
+        return ingredients;
+    }
+
+    public List<Ingredient> getStaples() {
+        return staples;
+    }
+
+    public ItemStackTemplate getResultItem() {
+        return output;
+    }
 }

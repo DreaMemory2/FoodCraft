@@ -16,8 +16,8 @@ import org.jetbrains.annotations.NotNull;
 public final class ModMenuTypes {
     public static final MenuType<@NotNull ChoppingBoardMenu> CHOPPING_BOARD = register("chopping_board", ChoppingBoardMenu::new);
     public static final MenuType<@NotNull PotMenu> POT = register("pot", PotMenu::new);
-    public static final MenuType<@NotNull PressureCookerMenu> PRESSURE_COOKER = register("pressure_cooker", PressureCookerMenu::new);
-    public static final MenuType<@NotNull BrewBarrelMenu> BREW_BARREL = register("brew_barrel", BrewBarrelMenu::new);
+    public static final MenuType<@NotNull PressureCookerMenu> PRESSURE_COOKER = register("pressure_cooker", PressureCookerMenu::new, BlockPosPayload.PACKET_CODEC);
+    public static final MenuType<@NotNull BrewBarrelMenu> BREW_BARREL = register("brew_barrel", BrewBarrelMenu::new, BlockPosPayload.PACKET_CODEC);
     public static final MenuType<@NotNull PanMenu> PAN = register("pan", PanMenu::new);
     public static final MenuType<@NotNull BeverageMakingMachineMenu> BEVERAGE_MAKING_MACHINE = register("beverage_making_machine", BeverageMakingMachineMenu::new);
     public static final MenuType<@NotNull MillMenu> MILL = register("mill", MillMenu::new);

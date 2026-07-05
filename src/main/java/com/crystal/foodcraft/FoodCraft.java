@@ -1,8 +1,10 @@
 package com.crystal.foodcraft;
 
 import com.crystal.foodcraft.block.ModBlocks;
+import com.crystal.foodcraft.block.entity.BrewBarrelBlockEntity;
 import com.crystal.foodcraft.block.entity.FryingMachineBlockEntity;
 import com.crystal.foodcraft.block.entity.ModBlockEntities;
+import com.crystal.foodcraft.block.entity.PressureCookerBlockEntity;
 import com.crystal.foodcraft.register.ModDataComponents;
 import com.crystal.foodcraft.register.ModFluids;
 import com.crystal.foodcraft.item.ModItemGroup;
@@ -29,10 +31,21 @@ public class FoodCraft implements ModInitializer {
 		ModItemGroup.init();
 		ModFluids.init();
 
+		// Synchronize recipe serializers for JEI/RRV/other recipe viewers
 		RecipeSynchronization.synchronizeRecipeSerializer(ModRecipeTypes.CHOPPING_RECIPE_SERIALIZER);
+		RecipeSynchronization.synchronizeRecipeSerializer(ModRecipeTypes.MILLING_RECIPE_SERIALIZER);
+		RecipeSynchronization.synchronizeRecipeSerializer(ModRecipeTypes.POT_RECIPE_SERIALIZER);
+		RecipeSynchronization.synchronizeRecipeSerializer(ModRecipeTypes.PAN_RECIPE_SERIALIZER);
+		RecipeSynchronization.synchronizeRecipeSerializer(ModRecipeTypes.FRYING_RECIPE_SERIALIZER);
+		RecipeSynchronization.synchronizeRecipeSerializer(ModRecipeTypes.BREWING_RECIPE_SERIALIZER);
+		RecipeSynchronization.synchronizeRecipeSerializer(ModRecipeTypes.PRESSURE_COOKING_SERIALIZER);
 
 		ItemStorage.SIDED.registerForBlockEntity(FryingMachineBlockEntity::getInventoryProvider, ModBlockEntities.FRYING_MACHINE);
+		ItemStorage.SIDED.registerForBlockEntity(BrewBarrelBlockEntity::getInventoryProvider, ModBlockEntities.BREW_BARREL);
+		ItemStorage.SIDED.registerForBlockEntity(PressureCookerBlockEntity::getInventoryProvider, ModBlockEntities.PRESSURE_COOKER);
 		FluidStorage.SIDED.registerForBlockEntity(FryingMachineBlockEntity::getFluidStorage, ModBlockEntities.FRYING_MACHINE);
+		FluidStorage.SIDED.registerForBlockEntity(BrewBarrelBlockEntity::getFluidStorage, ModBlockEntities.BREW_BARREL);
+		FluidStorage.SIDED.registerForBlockEntity(PressureCookerBlockEntity::getFluidStorage, ModBlockEntities.PRESSURE_COOKER);
 	}
 
 	public static Identifier of(String path) {

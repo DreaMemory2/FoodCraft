@@ -50,7 +50,7 @@ public abstract class BaseContainerScreen<T extends BaseMachineMenu> extends Abs
      * <p>渲染是否处于加热状态，是否处于受热状态</p>
      */
     public void renderLit(GuiGraphicsExtractor guiGraphics, int x, int y) {
-        renderLit(guiGraphics, x, y, true);
+        renderLit(guiGraphics, x, y, false);
     }
 
     public void renderCookedIndicator(GuiGraphicsExtractor guiGraphics, int x, int y, int minCookedLine) {
