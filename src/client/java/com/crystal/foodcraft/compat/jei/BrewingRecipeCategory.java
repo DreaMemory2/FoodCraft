@@ -2,7 +2,6 @@ package com.crystal.foodcraft.compat.jei;
 
 import com.crystal.foodcraft.FoodCraft;
 import com.crystal.foodcraft.block.ModBlocks;
-import com.crystal.foodcraft.item.ModItems;
 import com.crystal.foodcraft.recipe.BrewingRecipe;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
@@ -63,17 +62,5 @@ public class BrewingRecipeCategory extends AbstractRecipeCategory<RecipeHolder<@
         for (int j = 0; j < results.size(); j++) {
             builder.addSlot(RecipeIngredientRole.INPUT, 128, 20 + 27 * j).add(results.get(j).create());
         }
-    }
-
-    public Ingredient getIngredient(int index, List<Ingredient> ingredients) {
-        if (index < ingredients.size())
-            return ingredients.get(index);
-        return Ingredient.of(ModItems.ITEM_NULL);
-    }
-
-    public ItemStackTemplate getResult(int index, List<ItemStackTemplate> results) {
-        if (index < results.size())
-            return results.get(index);
-        return new ItemStackTemplate(ModItems.ITEM_NULL);
     }
 }

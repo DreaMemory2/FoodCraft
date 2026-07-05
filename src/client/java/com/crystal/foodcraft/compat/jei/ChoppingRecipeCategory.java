@@ -3,18 +3,12 @@ package com.crystal.foodcraft.compat.jei;
 import com.crystal.foodcraft.FoodCraft;
 import com.crystal.foodcraft.block.ModBlocks;
 import com.crystal.foodcraft.recipe.ChoppingRecipe;
-import com.crystal.foodcraft.recipe.ModRecipeTypes;
-import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
-import mezz.jei.api.gui.drawable.IDrawable;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.category.AbstractRecipeCategory;
-import mezz.jei.api.recipe.types.IRecipeHolderType;
-import mezz.jei.api.recipe.types.IRecipeType;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import org.jetbrains.annotations.NotNull;
 
