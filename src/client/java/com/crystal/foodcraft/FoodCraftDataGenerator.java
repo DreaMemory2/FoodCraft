@@ -1,6 +1,7 @@
 package com.crystal.foodcraft;
 
 import com.crystal.foodcraft.datagen.*;
+import com.crystal.foodcraft.datagen.tags.JuiceTagsProvider;
 import com.crystal.foodcraft.world.features.ModConfiguredFeatures;
 import com.crystal.foodcraft.world.placement.ModPlacementFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -19,6 +20,9 @@ public class FoodCraftDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModItemTagsProvider::new);
 		pack.addProvider(ModBlockTagsProvider::new);
 		pack.addProvider(ModRecipeGeneration::new);
+		pack.addProvider(ModBlockLootDataGeneration::new);
+
+		pack.addProvider(JuiceTagsProvider::new);
 	}
 
 	@Override

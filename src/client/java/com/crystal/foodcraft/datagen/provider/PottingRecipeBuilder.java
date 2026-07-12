@@ -1,8 +1,9 @@
 package com.crystal.foodcraft.datagen.provider;
 
 import com.crystal.foodcraft.recipe.PottingRecipe;
-import net.minecraft.advancements.Criterion;
 import net.minecraft.core.HolderGetter;
+import net.minecraft.core.component.DataComponentPatch;
+import net.minecraft.core.component.DataComponentType;
 import net.minecraft.data.recipes.RecipeBuilder;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.resources.ResourceKey;
@@ -68,6 +69,15 @@ public class PottingRecipeBuilder extends ModRecipeBuilder {
         return this;
     }
 
+    /**
+     * <p>带有数据组件的staple方法</p>
+     */
+    public <T> PottingRecipeBuilder staple(Item item, DataComponentType<T> component, T type) {
+        ItemStackTemplate itemStack = new ItemStackTemplate(item, DataComponentPatch.builder().set(component, type).build());
+        this.staple(itemStack.create().getItem(), 1);
+        return this;
+    }
+
     public PottingRecipeBuilder staple(TagKey<Item> tag) {
         return this.staple(Ingredient.of(this.items.getOrThrow(tag)), 1);
     }
@@ -104,7 +114,7 @@ public class PottingRecipeBuilder extends ModRecipeBuilder {
 
     @Override
     public void save(RecipeOutput consumer, @NotNull ResourceKey<Recipe<?>> id) {
-        PottingRecipe recipe = new PottingRecipe(this.result, this.ingredients, this.staples, this.minTime, this.maxTime);
+        PottingRecipe recipe = new PottingRecipe(this.result, this.staples, this.ingredients, this.minTime, this.maxTime);
         consumer.accept(id, recipe, null);
     }
 }

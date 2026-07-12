@@ -1,8 +1,0 @@
-give @p foodcraft:jam[foodcraft:jam={id:0,texture:"coconut_jam"}]
-give @p foodcraft:jam[foodcraft:jam={id:1,texture:"golden_grapes_jam"}]
-give @p foodcraft:jam[foodcraft:jam={id:2,texture:"grapes_jam"}]
-give @p foodcraft:jam[foodcraft:jam={id:3,texture:"lemon_jam"}]
-give @p foodcraft:jam[foodcraft:jam={id:4,texture:"orange_jam"}]
-give @p foodcraft:jam[foodcraft:jam={id:5,texture:"peach_jam"}]
-give @p foodcraft:jam[foodcraft:jam={id:6,texture:"pear_jam"}]
-give @p foodcraft:jam[foodcraft:jam={id:7,texture:"strawberry_jam"}]

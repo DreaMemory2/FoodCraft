@@ -14,6 +14,7 @@
   "block.foodcraft.coconut_block": "椰子块",
   "block.foodcraft.coconut_cake": "椰子蛋糕",
   "block.foodcraft.coconut_sapling": "椰子树苗",
+  "block.foodcraft.cooking_oil": "花生油",
   "block.foodcraft.frying_machine": "油炸机",
   "block.foodcraft.golden_grapes_cake": "金葡萄蛋糕",
   "block.foodcraft.grapefruit_leaves": "柚子树叶",
@@ -62,6 +63,7 @@
   "block.foodcraft.strawberry_cake": "草莓蛋糕",
   "block.foodcraft.sugar_block": "糖块",
   "block.foodcraft.watercress_block": "豆瓣方块",
+  "config.jade.plugin_crystalmod.fermenting_time": "发酵时间",
   "container.foodcraft.beverage_making_machine": "饮料制作机",
   "container.foodcraft.brew_barrel": "酿桶",
   "container.foodcraft.chopping_board": "菜板",
@@ -259,6 +261,7 @@
   "item.foodcraft.peanut": "花生",
   "item.foodcraft.peanut_filling": "花生汤圆馅",
   "item.foodcraft.peanut_oil": "花生油",
+  "item.foodcraft.peanut_oil_bucket": "桶装花生油",
   "item.foodcraft.pear": "梨子",
   "item.foodcraft.pear_biscuit": "梨子夹心饼干",
   "item.foodcraft.pear_jam": "梨子果酱",
@@ -324,6 +327,7 @@
   "item.foodcraft.tomato_egg_rice": "西红柿炒鸡蛋配米饭",
   "item.foodcraft.tomato_seeds": "西红柿种子",
   "item.foodcraft.twice_cooked_pork_slices": "回锅肉配米饭",
+  "item.foodcraft.vanilla_ice_cream": "原味冰淇淋",
   "item.foodcraft.vegetable": "蔬菜",
   "item.foodcraft.vegetable_seeds": "蔬菜种子",
   "item.foodcraft.vinegar": "陈醋",
@@ -341,5 +345,6 @@
   "itemGroup.foodcraft.plant": "植物",
   "itemGroup.foodcraft.snack": "小吃",
   "itemGroup.foodcraft.staple": "主食",
-  "tag.item.foodcraft.knives": "菜刀"
+  "tag.item.foodcraft.knives": "菜刀",
+  "tooltip.crystalcraft.fermenting_time": "发酵时间：%d s"
 }

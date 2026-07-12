@@ -6,16 +6,14 @@ import com.crystal.foodcraft.item.juice.JuiceContents;
 import com.crystal.foodcraft.item.juice.Juices;
 import com.crystal.foodcraft.register.ModDataComponents;
 import com.crystal.foodcraft.item.juice.JuiceItem;
+import com.crystal.foodcraft.register.ModFluids;
 import net.minecraft.core.Registry;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.Consumables;
 import net.minecraft.world.level.block.Block;
 
@@ -29,10 +27,10 @@ public class ModItems {
     public static final Item IRON_SHEET = register("iron_sheet");
     public static final Item ITEM_BUCKET = register("item_bucket");
     public static final Item MACHINE_CORE = register("machine_core");
-    public static final Item KITCHEN_KNIFE = register("kitchen_knife");
-    public static final Item GOLDEN_KITCHEN_KNIFE = register("golden_kitchen_knife");
-    public static final Item EMERALD_KITCHEN_KNIFE = register("emerald_kitchen_knife");
-    public static final Item DIAMOND_KITCHEN_KNIFE = register("diamond_kitchen_knife");
+    public static final Item KITCHEN_KNIFE = register("kitchen_knife", properties -> new KitchenKnifeItem(properties, ToolMaterial.IRON, 3.0F, -2.4F), new Item.Properties().stacksTo(1));
+    public static final Item GOLDEN_KITCHEN_KNIFE = register("golden_kitchen_knife", properties -> new KitchenKnifeItem(properties, ToolMaterial.GOLD, 3.0F, -2.4F), new Item.Properties().stacksTo(1));
+    public static final Item EMERALD_KITCHEN_KNIFE = register("emerald_kitchen_knife", properties -> new KitchenKnifeItem(properties, IToolMaterial.EMERALD, 8.0F, -7.2F), new Item.Properties().stacksTo(1));
+    public static final Item DIAMOND_KITCHEN_KNIFE = register("diamond_kitchen_knife", properties -> new KitchenKnifeItem(properties, ToolMaterial.DIAMOND, 6.0F, -4.8F), new Item.Properties().stacksTo(1));
     public static final Item WRENCH = register("wrench");
     public static final Item GOLDEN_BONE_MEAL = register("golden_bone_meal");
     public static final Item ITEM_NULL = register("item_null");
@@ -98,6 +96,8 @@ public class ModItems {
     public static final Item LEMON_WINE = drink("lemon_wine", ModFoods.LEMON_WINE);
     public static final Item POMEGRANATE_WINE = drink("pomegranate_wine", ModFoods.POMEGRANATE_WINE);
     public static final Item JUICE_BOTTLE = register("juice_bottle");
+    // 原味冰淇淋
+    public static final Item VANILLA_ICE_CREAM = food("vanilla_ice_cream", ModFoods.COCONUT_JUICE_ICE_CREAM);
     public static final Item CHOCOLATES_MILK_ICE_CREAM = food("chocolate_milk_ice_cream", ModFoods.CHOCOLATES_MILK_ICE_CREAM);
     public static final Item GRAPE_JUICE_ICE_CREAM = food("grape_juice_ice_cream", ModFoods.GRAPE_JUICE_ICE_CREAM);
     public static final Item APPLE_JUICE_ICE_CREAM = food("apple_juice_ice_cream", ModFoods.APPLE_JUICE_ICE_CREAM);
@@ -270,6 +270,8 @@ public class ModItems {
     public static final Item PEACH_BISCUIT = food("peach_biscuit", ModFoods.BISCUIT);
     public static final Item PEAR_BISCUIT = food("pear_biscuit", ModFoods.BISCUIT);
     public static final Item STRAWBERRY_BISCUIT = food("strawberry_biscuit", ModFoods.BISCUIT);
+
+    public static final Item PEANUT_OIL_BUCKET = register("peanut_oil_bucket", properties -> new BucketItem(ModFluids.COOKING_OIL_STILL, properties), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1));
 
     private static Item drink(String name, FoodProperties food) {
         return register(name, new Item.Properties().food(food).craftRemainder(Items.GLASS_BOTTLE));

@@ -1,6 +1,5 @@
 package com.crystal.foodcraft.recipe;
 
-import com.crystal.foodcraft.recipe.input.ChoppingRecipeInput;
 import com.google.gson.JsonParseException;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
@@ -15,7 +14,10 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class ChoppingRecipe implements Recipe<@NotNull ChoppingRecipeInput> {
+/**
+ * @see ShapelessRecipe
+ */
+public class ChoppingRecipe implements Recipe<@NotNull CraftingInput> {
     public static final int INGREDIENT_SLOTS = 3;
     public static final MapCodec<ChoppingRecipe> CODEC = RecordCodecBuilder.mapCodec(
             instance -> instance.group(
@@ -48,19 +50,18 @@ public class ChoppingRecipe implements Recipe<@NotNull ChoppingRecipeInput> {
     }
 
     @Override
-    public boolean matches(@NotNull ChoppingRecipeInput container, @NotNull Level level) {
-        for (int j = 0; j < ingredients.size(); ++j) {
-            var stack = container.getItem(j);
-            if (!ingredients.get(j).test(stack) && !(stack.isEmpty() && ingredients.get(j).isEmpty())) {
-                return false;
-            }
+    public boolean matches(@NotNull CraftingInput input, @NotNull Level level) {
+        if (input.ingredientCount() != this.ingredients.size()) {
+            return false;
+        } else {
+            boolean test = this.ingredients.getFirst().test(input.getItem(0));
+            return input.size() == 1 && this.ingredients.size() == 1 ? test : input.stackedContents().canCraft(this, null);
         }
-        return true;
     }
 
     @NotNull
     @Override
-    public ItemStack assemble(@NotNull ChoppingRecipeInput input) {
+    public ItemStack assemble(@NotNull CraftingInput input) {
         return this.output.create();
     }
 
@@ -82,13 +83,13 @@ public class ChoppingRecipe implements Recipe<@NotNull ChoppingRecipeInput> {
 
     @NotNull
     @Override
-    public RecipeSerializer<? extends @NotNull Recipe<@NotNull ChoppingRecipeInput>> getSerializer() {
+    public RecipeSerializer<? extends @NotNull Recipe<@NotNull CraftingInput>> getSerializer() {
         return ModRecipeTypes.CHOPPING_RECIPE_SERIALIZER;
     }
 
     @NotNull
     @Override
-    public RecipeType<? extends @NotNull Recipe<@NotNull ChoppingRecipeInput>> getType() {
+    public RecipeType<? extends @NotNull Recipe<@NotNull CraftingInput>> getType() {
         return ModRecipeTypes.CHOPPING_RECIPE_TYPE;
     }
 
@@ -102,5 +103,13 @@ public class ChoppingRecipe implements Recipe<@NotNull ChoppingRecipeInput> {
     @Override
     public RecipeBookCategory recipeBookCategory() {
         return new RecipeBookCategory();
+    }
+
+    public List<Ingredient> getIngredients() {
+        return ingredients;
+    }
+
+    public ItemStackTemplate getResult() {
+        return output;
     }
 }

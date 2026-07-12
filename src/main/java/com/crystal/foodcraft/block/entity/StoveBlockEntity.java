@@ -1,6 +1,9 @@
 package com.crystal.foodcraft.block.entity;
 
 import com.crystal.foodcraft.api.ItemHandlerProvider;
+import com.crystal.foodcraft.api.TickableBlockEntity;
+import com.crystal.foodcraft.block.basic.HeatableProvider;
+import com.crystal.foodcraft.network.NetWorkBlockEntity;
 import com.crystal.foodcraft.screenhandler.StoveMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
@@ -10,18 +13,17 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.storage.ValueOutput;
 import org.jetbrains.annotations.NotNull;
 
-public class StoveBlockEntity extends BaseBlockEntity implements ItemHandlerProvider {
+public class StoveBlockEntity extends NetWorkBlockEntity implements ItemHandlerProvider, TickableBlockEntity, HeatableProvider {
     public NonNullList<ItemStack> items = NonNullList.withSize(1, ItemStack.EMPTY);
     protected final ContainerData dataAccess = new ContainerData() {
         @Override
-        public int get(int i) {
-            return switch (i) {
+        public int get(int syncId) {
+            return switch (syncId) {
                 case 0 -> StoveBlockEntity.this.burnTime;
                 case 1 -> StoveBlockEntity.this.maxBurnTime;
                 default -> 0;
@@ -29,10 +31,10 @@ public class StoveBlockEntity extends BaseBlockEntity implements ItemHandlerProv
         }
 
         @Override
-        public void set(int i, int i1) {
-            switch (i) {
-                case 0 -> StoveBlockEntity.this.burnTime = i1;
-                case 1 -> StoveBlockEntity.this.maxBurnTime = i1;
+        public void set(int syncId, int value) {
+            switch (syncId) {
+                case 0 -> StoveBlockEntity.this.burnTime = value;
+                case 1 -> StoveBlockEntity.this.maxBurnTime = value;
             }
         }
 
@@ -52,6 +54,45 @@ public class StoveBlockEntity extends BaseBlockEntity implements ItemHandlerProv
 
     public StoveBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.STOVE, pos, state);
+    }
+
+    /**
+     * <p>初始化方块状态</p>
+     */
+    public void init() {
+        burnTime = 0;
+        maxBurnTime = 0;
+        detectLit(level, getBlockPos(), getBlockState(), false);
+        setChanged();
+    }
+
+    @Override
+    public void tick() {
+        // 获取燃料
+        ItemStack fuelItem = items.getFirst();
+        // 如果灶炉正在燃烧
+        if (burnTime > 0) {
+            burnTime--;
+            setChanged();
+            return;
+        } else if (burnTime == 0 && maxBurnTime > 0) {
+            init(); // 初始化
+            return;
+        }
+
+        // 如果灶炉库中的物品是燃料
+        if (!fuelItem.isEmpty() && level != null && level.fuelValues().isFuel(fuelItem)) {
+            // 获取该物品燃料时长
+            int burnDuration = getBurnTime(level.fuelValues(), fuelItem);
+            if (burnDuration > 0) {
+                burnDuration *= 2; // 延长时间
+                maxBurnTime = burnDuration;
+                burnTime = burnDuration;
+                fuelItem.shrink(1);
+                detectLit(level, getBlockPos(), getBlockState(), true);
+                setChanged();
+            }
+        }
     }
 
     @Override
@@ -76,8 +117,14 @@ public class StoveBlockEntity extends BaseBlockEntity implements ItemHandlerProv
 
     @NotNull
     @Override
-    public NonNullList<ItemStack> getItems() {
-        return items;
+    public AbstractContainerMenu createMenu(int containerId, @NotNull Inventory inventory) {
+        return new StoveMenu(containerId, inventory, this, dataAccess);
+    }
+
+    @NotNull
+    @Override
+    protected Component getDefaultName() {
+        return Component.translatable("container.foodcraft.stove");
     }
 
     @Override
@@ -87,49 +134,13 @@ public class StoveBlockEntity extends BaseBlockEntity implements ItemHandlerProv
 
     @NotNull
     @Override
-    protected Component getDefaultName() {
-        return Component.translatable("container.foodcraft.stove");
-    }
-
-    @NotNull
-    @Override
-    public AbstractContainerMenu createMenu(int containerId, @NotNull Inventory inventory) {
-        return new StoveMenu(containerId, inventory, this, dataAccess);
-    }
-
-    public static void tick(Level level, BlockPos blockPos, BlockState blockState, StoveBlockEntity stove) {
-        ItemStack fuelItem = stove.items.getFirst();
-        // 如果灶炉正在燃烧
-        if (stove.burnTime > 0) {
-            stove.burnTime--;
-            stove.setChanged();
-        }
-        // 如果灶炉库存有物品
-        else if (!fuelItem.isEmpty() && level.fuelValues().isFuel(fuelItem)) {
-            int burnTime = stove.getBurnItem(level.fuelValues(), fuelItem);
-            if (burnTime > 0) {
-                burnTime *= 2;
-                stove.maxBurnTime = burnTime;
-                stove.burnTime = burnTime;
-                consumeFuel(stove.items, 0, fuelItem);
-                detectLit(level, blockPos, blockState, true);
-                stove.setChanged();
-            } else {
-                detectLit(level, blockPos, blockState, false);
-                stove.setChanged();
-            }
-        }
-        // 如果灶炉熄火了
-        else {
-            stove.maxBurnTime = 0;
-            detectLit(level, blockPos, blockState, false);
-            stove.setChanged();
-        }
+    public NonNullList<ItemStack> getItems() {
+        return items;
     }
 
     @Override
     public int getContainerSize() {
-        return 1;
+        return items.size();
     }
 
     @Override

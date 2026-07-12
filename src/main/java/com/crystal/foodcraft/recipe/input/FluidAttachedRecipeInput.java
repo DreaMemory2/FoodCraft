@@ -1,21 +1,18 @@
 package com.crystal.foodcraft.recipe.input;
 
-import net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariant;
-import net.fabricmc.fabric.api.transfer.v1.storage.TransferVariant;
-import net.fabricmc.fabric.api.transfer.v1.storage.base.SingleVariantStorage;
-import net.minecraft.core.Holder;
-import net.minecraft.core.component.DataComponentMap;
-import net.minecraft.core.component.DataComponentPatch;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeInput;
 import net.minecraft.world.level.material.Fluid;
+import net.minecraft.world.level.material.FluidState;
 import org.jetbrains.annotations.NotNull;
 
-public class FluidAttachedRecipeInput extends SingleVariantStorage<@NotNull FluidVariant> implements RecipeInput {
+public class FluidAttachedRecipeInput implements RecipeInput {
     private final ItemStack item;
+    private final FluidState fluidState;
 
-    public FluidAttachedRecipeInput(ItemStack item) {
+    public FluidAttachedRecipeInput(ItemStack item, FluidState fluidState) {
         this.item = item;
+        this.fluidState = fluidState;
     }
 
     @NotNull
@@ -26,16 +23,14 @@ public class FluidAttachedRecipeInput extends SingleVariantStorage<@NotNull Flui
 
     @Override
     public int size() {
-        return 1;
+        return 2;
     }
 
-    @Override
-    protected FluidVariant getBlankVariant() {
-        return FluidVariant.blank();
+    public FluidState getFluidState() {
+        return fluidState;
     }
 
-    @Override
-    protected long getCapacity(FluidVariant variant) {
-        return 0;
+    public boolean isOf(Fluid fluid) {
+        return fluidState.is(fluid);
     }
 }

@@ -1,0 +1,21 @@
+{
+  "type": "foodcraft:potting",
+  "ingredients": [
+    "foodcraft:peanut_oil",
+    "#c:salt",
+    "foodcraft:soy_sauce"
+  ],
+  "maxTime": 500,
+  "minTime": 450,
+  "output": {
+    "id": "foodcraft:cola_chicken_rice"
+  },
+  "staples": [
+    {
+      "type": "foodcraft:cake",
+      "item": "foodcraft:juice"
+    },
+    "foodcraft:cooked_rice",
+    "foodcraft:chicken_wing"
+  ]
+}

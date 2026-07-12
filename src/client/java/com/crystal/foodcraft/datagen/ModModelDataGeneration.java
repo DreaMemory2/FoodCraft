@@ -128,6 +128,9 @@ public class ModModelDataGeneration extends FabricModelProvider {
         createCropBlock(model, ModBlocks.VEGETABLE);
         createCropBlock(model, ModBlocks.RICE);
         createCropBlock(model, ModBlocks.CORN);
+
+        // 液体模型
+        model.createNonTemplateModelBlock(ModBlocks.COOKING_OIL);
     }
 
     @Override
@@ -189,6 +192,7 @@ public class ModModelDataGeneration extends FabricModelProvider {
         createFlatItemModel(model, ModItems.LEMON_WINE);
         createFlatItemModel(model, ModItems.POMEGRANATE_WINE);
 
+        createFlatItemModel(model, ModItems.VANILLA_ICE_CREAM);
         createFlatItemModel(model, ModItems.CHOCOLATES_MILK_ICE_CREAM);
         createFlatItemModel(model, ModItems.GRAPE_JUICE_ICE_CREAM);
         createFlatItemModel(model, ModItems.APPLE_JUICE_ICE_CREAM);
@@ -351,6 +355,8 @@ public class ModModelDataGeneration extends FabricModelProvider {
         createFlatItemModel(model, ModItems.ULTIMATE_ETERNAL_STONE);
         model.generateFlatItem(ModItems.DARK_GREEN_MULTIFUNCTION_TOOLS, ModelTemplates.FLAT_HANDHELD_ITEM);
         model.generateFlatItem(ModItems.DARK_BLUE_MULTIFUNCTION_TOOLS, ModelTemplates.FLAT_HANDHELD_ITEM);
+
+        createFlatItemModel(model, ModItems.PEANUT_OIL_BUCKET);
     }
 
     /**
@@ -424,7 +430,7 @@ public class ModModelDataGeneration extends FabricModelProvider {
     /**
      * <p>创建蛋糕模型</p>
      */
-    private final void createCakeBlock(BlockModelGenerators model, Block block) {
+    private void createCakeBlock(BlockModelGenerators model, Block block) {
         model.registerSimpleFlatItemModel(block.asItem());
         Material topTexture = TextureMapping.getBlockTexture(block, "_top");
         Material sideTexture = TextureMapping.getBlockTexture(block, "_side");

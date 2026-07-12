@@ -15,4 +15,8 @@ public class ModDataComponents {
     public static <T> DataComponentType<T> register(String id, UnaryOperator<DataComponentType.Builder<T>> builder) {
         return Registry.register(BuiltInRegistries.DATA_COMPONENT_TYPE, FoodCraft.of(id), builder.apply(DataComponentType.builder()).build());
     }
+
+    public static void init() {
+
+    }
 }

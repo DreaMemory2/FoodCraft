@@ -2,16 +2,15 @@ package com.crystal.foodcraft.block;
 
 import com.crystal.foodcraft.FoodCraft;
 import com.crystal.foodcraft.block.crop.*;
+import com.crystal.foodcraft.block.machine.*;
+import com.crystal.foodcraft.register.ModFluids;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SaplingBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.grower.TreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 import net.minecraft.world.level.material.MapColor;
@@ -52,22 +51,22 @@ public class ModBlocks {
     public static final Block LEMON_CAKE = register("lemon_cake", FCCakeBlock::new, Properties.ofFullCopy(Blocks.CAKE));
     public static final Block COCONUT_CAKE = register("coconut_cake", FCCakeBlock::new, Properties.ofFullCopy(Blocks.CAKE));
     /* 树叶 */
-    public static final Block LEAVES = register("leaves", FCLeavesBlock::new, leavesProperties());
-    public static final Block PEAR_LEAVES = register("pear_leaves", FCLeavesBlock::new, leavesProperties());
-    public static final Block LYCHEE_LEAVES = register("lychee_leaves", FCLeavesBlock::new, leavesProperties());
-    public static final Block PEACH_LEAVES = register("peach_leaves", FCLeavesBlock::new, leavesProperties());
-    public static final Block ORANGE_LEAVES = register("orange_leaves", FCLeavesBlock::new, leavesProperties());
-    public static final Block LOQUAT_LEAVES = register("loquat_leaves", FCLeavesBlock::new, leavesProperties());
-    public static final Block MANGO_LEAVES = register("mango_leaves", FCLeavesBlock::new, leavesProperties());
-    public static final Block LEMON_LEAVES = register("lemon_leaves", FCLeavesBlock::new, leavesProperties());
-    public static final Block GRAPEFRUIT_LEAVES = register("grapefruit_leaves", FCLeavesBlock::new, leavesProperties());
-    public static final Block PERSIMMON_LEAVES = register("persimmon_leaves", FCLeavesBlock::new, leavesProperties());
-    public static final Block PAPAYA_LEAVES = register("papaya_leaves", FCLeavesBlock::new, leavesProperties());
-    public static final Block HAWTHORN_LEAVES = register("hawthorn_leaves", FCLeavesBlock::new, leavesProperties());
-    public static final Block LONGYAN_LEAVES = register("longyan_leaves", FCLeavesBlock::new, leavesProperties());
-    public static final Block POMEGRANATE_LEAVES = register("pomegranate_leaves", FCLeavesBlock::new, leavesProperties());
-    public static final Block CHINESE_DATE_LEAVES = register("chinese_date_leaves", FCLeavesBlock::new, leavesProperties());
-    public static final Block CHERRY_LEAVES = register("cherry_leaves", FCLeavesBlock::new, leavesProperties());
+    public static final Block LEAVES = register("leaves", properties -> new TintedParticleLeavesBlock(0, properties), leavesProperties());
+    public static final Block PEAR_LEAVES = register("pear_leaves", properties -> new TintedParticleLeavesBlock(0, properties), leavesProperties());
+    public static final Block LYCHEE_LEAVES = register("lychee_leaves", properties -> new TintedParticleLeavesBlock(0, properties), leavesProperties());
+    public static final Block PEACH_LEAVES = register("peach_leaves", properties -> new TintedParticleLeavesBlock(0, properties), leavesProperties());
+    public static final Block ORANGE_LEAVES = register("orange_leaves", properties -> new TintedParticleLeavesBlock(0, properties), leavesProperties());
+    public static final Block LOQUAT_LEAVES = register("loquat_leaves", properties -> new TintedParticleLeavesBlock(0, properties), leavesProperties());
+    public static final Block MANGO_LEAVES = register("mango_leaves", properties -> new TintedParticleLeavesBlock(0, properties), leavesProperties());
+    public static final Block LEMON_LEAVES = register("lemon_leaves", properties -> new TintedParticleLeavesBlock(0, properties), leavesProperties());
+    public static final Block GRAPEFRUIT_LEAVES = register("grapefruit_leaves", properties -> new TintedParticleLeavesBlock(0, properties), leavesProperties());
+    public static final Block PERSIMMON_LEAVES = register("persimmon_leaves", properties -> new TintedParticleLeavesBlock(0, properties), leavesProperties());
+    public static final Block PAPAYA_LEAVES = register("papaya_leaves", properties -> new TintedParticleLeavesBlock(0, properties), leavesProperties());
+    public static final Block HAWTHORN_LEAVES = register("hawthorn_leaves", properties -> new TintedParticleLeavesBlock(0, properties), leavesProperties());
+    public static final Block LONGYAN_LEAVES = register("longyan_leaves", properties -> new TintedParticleLeavesBlock(0, properties), leavesProperties());
+    public static final Block POMEGRANATE_LEAVES = register("pomegranate_leaves", properties -> new TintedParticleLeavesBlock(0, properties), leavesProperties());
+    public static final Block CHINESE_DATE_LEAVES = register("chinese_date_leaves", properties -> new TintedParticleLeavesBlock(0, properties), leavesProperties());
+    public static final Block CHERRY_LEAVES = register("cherry_leaves", properties -> new TintedParticleLeavesBlock(0, properties), leavesProperties());
     // 树苗
     public static final Block PEAR_SAPLING = sapling("pear_sapling", properties -> new SaplingBlock(ModTreeGrower.PEAR, properties));
     public static final Block LYCHEE_SAPLING = sapling("lychee_sapling", properties -> new SaplingBlock(ModTreeGrower.LYCHEE, properties));
@@ -104,6 +103,8 @@ public class ModBlocks {
     public static final Block VEGETABLE = crop("vegetable", VegetableCrop::new);
     public static final Block RICE = crop("rice", RiceCrop::new);
     public static final Block CORN = crop("corn", CornCrop::new);
+    // 液体
+    public static final Block COOKING_OIL = registerWithoutBlockItem("cooking_oil", properties -> new LiquidBlock(ModFluids.COOKING_OIL_STILL, properties), Properties.ofFullCopy(Blocks.WATER));
 
     private static Block crop(String name, Function<Properties, Block> factory) {
         return registerWithoutBlockItem(name, factory, Properties.ofFullCopy(Blocks.CARROTS));

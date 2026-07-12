@@ -1,6 +1,7 @@
 package com.crystal.foodcraft.recipe;
 
 import com.crystal.foodcraft.FoodCraft;
+import com.crystal.foodcraft.recipe.crafting.JuiceImbueRecipe;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -34,6 +35,16 @@ public class ModRecipeTypes {
             FoodCraft.of("frying"),
             new RecipeType<@NonNull FryingRecipe>() {}
     );
+    public static final RecipeType<@NotNull BrewingRecipe> BREWING_RECIPE_TYPE = Registry.register(
+            BuiltInRegistries.RECIPE_TYPE,
+            FoodCraft.of("brewing"),
+            new RecipeType<@NonNull BrewingRecipe>() {}
+    );
+    public static final RecipeType<@NotNull PressureCookingRecipe> PRESSURE_COOKING_RECIPE_TYPE = Registry.register(
+            BuiltInRegistries.RECIPE_TYPE,
+            FoodCraft.of("pressure_cooking"),
+            new RecipeType<@NonNull PressureCookingRecipe>() {}
+    );
 
     public static final RecipeSerializer<@NonNull ChoppingRecipe> CHOPPING_RECIPE_SERIALIZER = Registry.register(
             BuiltInRegistries.RECIPE_SERIALIZER,
@@ -59,5 +70,20 @@ public class ModRecipeTypes {
             BuiltInRegistries.RECIPE_SERIALIZER,
             FoodCraft.of("frying"),
             new RecipeSerializer<>(FryingRecipe.CODEC, FryingRecipe.PACKET_CODEC)
+    );
+    public static final RecipeSerializer<@NotNull BrewingRecipe> BREWING_RECIPE_SERIALIZER = Registry.register(
+            BuiltInRegistries.RECIPE_SERIALIZER,
+            FoodCraft.of("brewing"),
+            new RecipeSerializer<>(BrewingRecipe.CODEC, BrewingRecipe.PACKET_CODEC)
+    );
+    public static final RecipeSerializer<@NonNull PressureCookingRecipe> PRESSURE_COOKING_SERIALIZER = Registry.register(
+            BuiltInRegistries.RECIPE_SERIALIZER,
+            FoodCraft.of("pressure_cooking"),
+            new RecipeSerializer<>(PressureCookingRecipe.CODEC, PressureCookingRecipe.PACKET_CODEC)
+    );
+    public static final RecipeSerializer<@NotNull JuiceImbueRecipe> JUICE_IMBUE_RECIPE_SERIALIZER = Registry.register(
+            BuiltInRegistries.RECIPE_SERIALIZER,
+            FoodCraft.of("juice_imbue"),
+            new RecipeSerializer<>(JuiceImbueRecipe.MAP_CODEC, JuiceImbueRecipe.STREAM_CODEC)
     );
 }

@@ -1,6 +1,7 @@
 package com.crystal.foodcraft.screen;
 
 import com.crystal.foodcraft.FoodCraft;
+import com.crystal.foodcraft.block.entity.BrewBarrelBlockEntity;
 import com.crystal.foodcraft.screenhandler.BrewBarrelMenu;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
@@ -10,7 +11,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.player.Inventory;
 import org.jetbrains.annotations.NotNull;
 
-public class BrewBarrelScreen extends AbstractContainerScreen<BrewBarrelMenu> {
+public class BrewBarrelScreen extends AbstractContainerScreen<@NotNull BrewBarrelMenu> {
     public static final Identifier TEXTURE = FoodCraft.of("textures/gui/container/brew_barrel.png");
 
     public BrewBarrelScreen(BrewBarrelMenu menu, Inventory inventory, Component title) {
@@ -22,6 +23,9 @@ public class BrewBarrelScreen extends AbstractContainerScreen<BrewBarrelMenu> {
         super.init();
         // 设置标题在容器页面的中心位置上
         this.titleLabelX = (this.imageWidth - this.font.width(this.title)) / 2;
+        // 添加液体显示组件
+        BrewBarrelBlockEntity blockEntity = this.menu.getBlockEntity();
+        this.addRenderableWidget(FluidWidget.builder(blockEntity.getFluidStorage()).position(this.leftPos + 18, this.topPos + 14).size(11, 59).posSupplier(blockEntity::getBlockPos).build());
     }
 
     @Override

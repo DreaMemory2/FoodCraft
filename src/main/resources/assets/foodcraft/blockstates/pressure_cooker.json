@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
+    "facing=east": {
+      "model": "foodcraft:block/pressure_cooker",
+      "y": 90
+    },
+    "facing=north": {
       "model": "foodcraft:block/pressure_cooker"
+    },
+    "facing=south": {
+      "model": "foodcraft:block/pressure_cooker",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "foodcraft:block/pressure_cooker",
+      "y": 270
     }
   }
 }

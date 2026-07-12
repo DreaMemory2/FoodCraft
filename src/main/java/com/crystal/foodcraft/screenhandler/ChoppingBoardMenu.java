@@ -2,7 +2,6 @@ package com.crystal.foodcraft.screenhandler;
 
 import com.crystal.foodcraft.recipe.ChoppingRecipe;
 import com.crystal.foodcraft.recipe.ModRecipeTypes;
-import com.crystal.foodcraft.recipe.input.ChoppingRecipeInput;
 import com.crystal.foodcraft.tag.ModItemTags;
 import com.crystal.foodcraft.screenhandler.inventory.ChoppingBoardResultSlot;
 import com.crystal.foodcraft.screenhandler.inventory.KnifeInputSlot;
@@ -14,6 +13,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.CraftingInput;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.ticks.ContainerSingleItem;
@@ -22,6 +22,9 @@ import org.jspecify.annotations.NonNull;
 
 import java.util.Optional;
 
+/**
+ * @see CraftingMenu
+ */
 public class ChoppingBoardMenu extends ScreenHandler {
     private final ContainerLevelAccess access;
     private final Player player;
@@ -80,11 +83,11 @@ public class ChoppingBoardMenu extends ScreenHandler {
         return this.slots.get(4);
     }
 
-    protected static void slotChangedCraftingGrid(ChoppingBoardMenu menu, Level level, Player player, CraftingContainer craftSlots, ResultContainer resultSlots, Container knifeSlots, RecipeHolder<@NonNull ChoppingRecipe> recipe) {
+    protected static void slotChangedCraftingGrid(ChoppingBoardMenu menu, Level level, Player player, CraftingContainer container, ResultContainer resultSlots, Container knifeSlots, RecipeHolder<@NonNull ChoppingRecipe> recipe) {
         if (!level.isClientSide() && level instanceof ServerLevel serverLevel) {
             if (knifeSlots.getItem(0).isEmpty()) return;
 
-            ChoppingRecipeInput recipeInput = new ChoppingRecipeInput(craftSlots);
+            CraftingInput recipeInput = container.asCraftInput();
 
             ServerPlayer serverPlayer = (ServerPlayer) player;
             ItemStack itemStack = ItemStack.EMPTY;

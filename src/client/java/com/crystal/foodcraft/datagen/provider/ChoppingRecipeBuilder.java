@@ -16,6 +16,9 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @see net.minecraft.data.recipes.ShapelessRecipeBuilder ShapelessRecipeBuilder
+ */
 public class ChoppingRecipeBuilder extends ModRecipeBuilder {
     private final ItemStackTemplate result;
     private final HolderGetter<Item> items;
@@ -31,14 +34,17 @@ public class ChoppingRecipeBuilder extends ModRecipeBuilder {
     }
 
     public ChoppingRecipeBuilder ingredient(TagKey<Item> tag) {
-        return this.ingredient(Ingredient.of(this.items.getOrThrow(tag)), 1);
+        return this.ingredient(Ingredient.of(this.items.getOrThrow(tag)));
+    }
+
+    public ChoppingRecipeBuilder ingredient(Ingredient ingredient) {
+        this.ingredient(ingredient, 1);
+        return this;
     }
 
     public ChoppingRecipeBuilder ingredient(ItemLike item, int count) {
-        if (count <= 3) {
-            for (int i = 0; i < count; i++) {
-                this.ingredient(Ingredient.of(item), 1);
-            }
+        for (int i = 0; i < count; i++) {
+            this.ingredient(Ingredient.of(item), count);
         }
 
         return this;

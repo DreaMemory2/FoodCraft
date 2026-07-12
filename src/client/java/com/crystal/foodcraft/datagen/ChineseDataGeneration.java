@@ -6,7 +6,6 @@ import com.crystal.foodcraft.tag.ModItemTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.world.level.block.Block;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
@@ -18,6 +17,9 @@ public class ChineseDataGeneration extends FabricLanguageProvider {
 
     @Override
     public void generateTranslations(@NotNull HolderLookup.Provider provider, TranslationBuilder builder) {
+        // 添加Jade 显示信息
+        builder.add("config.jade.plugin_crystalmod.fermenting_time", "发酵时间");
+        builder.add("tooltip.crystalcraft.fermenting_time", "发酵时间：%d s");
         // Item Group
         builder.add("itemGroup.foodcraft.machine", "机器");
         builder.add("itemGroup.foodcraft.plant", "植物");
@@ -201,6 +203,7 @@ public class ChineseDataGeneration extends FabricLanguageProvider {
         builder.add(ModItems.LEMON_WINE, "柠檬酒");
         builder.add(ModItems.POMEGRANATE_WINE, "石榴酒");
 
+        builder.add(ModItems.VANILLA_ICE_CREAM, "原味冰淇淋");
         builder.add(ModItems.CHOCOLATES_MILK_ICE_CREAM, "巧克力奶油冰淇淋");
         builder.add(ModItems.GRAPE_JUICE_ICE_CREAM, "葡萄果汁冰淇淋");
         builder.add(ModItems.APPLE_JUICE_ICE_CREAM, "苹果果汁冰淇淋");
@@ -311,6 +314,7 @@ public class ChineseDataGeneration extends FabricLanguageProvider {
         builder.add(ModItems.ULTIMATE_ETERNAL_STONE, "终极千古之石[珍贵]");
         builder.add(ModItems.DARK_GREEN_MULTIFUNCTION_TOOLS, "暗碧多功能工具");
         builder.add(ModItems.DARK_BLUE_MULTIFUNCTION_TOOLS, "暗蓝多功能工具");
+        builder.add(ModItems.PEANUT_OIL_BUCKET, "桶装花生油");
 
         generateBlockTranslations(provider, builder);
     }
@@ -380,5 +384,7 @@ public class ChineseDataGeneration extends FabricLanguageProvider {
         builder.add(ModBlocks.CHERRY_SAPLING, "樱桃树苗");
         builder.add(ModBlocks.BANANA_SAPLING, "香蕉树苗");
         builder.add(ModBlocks.COCONUT_SAPLING, "椰子树苗");
+        // 液体
+        builder.add(ModBlocks.COOKING_OIL, "花生油");
     }
 }
