@@ -53,11 +53,11 @@ public class PanningRecipeCategory extends AbstractRecipeCategory<RecipeHolder<@
         PanningRecipe recipe = holder.value();
         Ingredient input = recipe.getInput();
         ItemStackTemplate output = recipe.getOutput();
+        // 输出槽位
+        builder.addSlot(RecipeIngredientRole.INPUT, 105 - 12, 36 - 13).add(output.create());
         // 花生油槽位
         builder.addSlot(RecipeIngredientRole.INPUT, 15 - 12, 36 - 13).add(Ingredient.of(ModItems.PEANUT_OIL));
         // 输入槽位
         builder.addSlot(RecipeIngredientRole.INPUT, 42 - 12, 36 - 13).add(input);
-        // 输出槽位
-        builder.addSlot(RecipeIngredientRole.INPUT, 105 - 12, 36 - 13).add(output.create());
     }
 }

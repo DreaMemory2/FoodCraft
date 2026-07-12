@@ -39,5 +39,23 @@ public class ModItemTagsProvider extends FabricTagsProvider.ItemTagsProvider {
         this.valueLookupBuilder(CommonItemTags.COOKED_FISH)
                 .add(Items.COOKED_COD)
                 .add(Items.COOKED_SALMON);
+        this.valueLookupBuilder(ModItemTags.TANGYUAN_STUFFING)
+                .add(ModItems.RED_BEAN_PASTE)
+                .add(ModItems.PEANUT_FILLING);
+        this.valueLookupBuilder(ModItemTags.EMERALD_TOOL_MATERIALS)
+                .add(Items.EMERALD);
+        this.valueLookupBuilder(CommonItemTags.BROWN)
+                .add(Items.BROWN_DYE)
+                .add(Items.COCOA_BEANS);
+        this.valueLookupBuilder(ModItemTags.MACHINE_INGREDIENT)
+                .add(Items.WHEAT)
+                .add(ModItems.BEANS)
+                .add(ModItems.PEANUT)
+                .add(ModItems.RICE);
+        this.valueLookupBuilder(ModItemTags.CIRCUIT_INGREDIENT)
+                .add(Items.WHEAT)
+                .add(ModItems.BEANS)
+                .add(ModItems.PEANUT)
+                .add(ModItems.RICE);
     }
 }

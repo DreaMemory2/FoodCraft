@@ -59,11 +59,13 @@ public class PressureCookingRecipeCategory extends AbstractRecipeCategory<Recipe
         List<Ingredient> ingredient = recipe.getIngredients();
         ItemStackTemplate result = recipe.getResult();
         FluidState fluid = recipe.getFluid();
-
+        // 结果输出槽位
+        builder.addSlot(RecipeIngredientRole.OUTPUT, 131 - 6 + 10, 26 - 7)
+                .add(result.create());
         // 液体容量槽位
         builder.addSlot(RecipeIngredientRole.INPUT, 8, 4)
                 .add(fluid.getType())
-                .setFluidRenderer(4000, true, 11, 57);
+                .setFluidRenderer(8000, true, 11, 57);
         // 液体输入槽位
         builder.addSlot(RecipeIngredientRole.CRAFTING_STATION, 27, 41 + 6)
                 .add(Ingredient.of(fluid.getType().getBucket()));
@@ -73,8 +75,5 @@ public class PressureCookingRecipeCategory extends AbstractRecipeCategory<Recipe
             builder.addSlot(RecipeIngredientRole.INPUT, i * 24 + 33 - 6 + 10, 26 - 7)
                     .add(ingredient.get(i));
         }
-        // 结果输出槽位
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 131 - 6 + 10, 26 - 7)
-                .add(result.create());
     }
 }

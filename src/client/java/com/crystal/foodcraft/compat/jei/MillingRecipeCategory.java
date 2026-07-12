@@ -52,9 +52,9 @@ public class MillingRecipeCategory extends AbstractRecipeCategory<RecipeHolder<@
         MillingRecipe recipe = holder.value();
         Ingredient ingredient = recipe.getIngredient();
         ItemStackTemplate result = recipe.getResultItem();
-
-        builder.addSlot(RecipeIngredientRole.INPUT, 48 - 41, 18 - 11).add(ingredient);
-
+        // 输出结果槽位
         builder.addSlot(RecipeIngredientRole.OUTPUT, 111 - 41, 18 - 11).add(result.create());
+        // 材料输入槽位
+        builder.addSlot(RecipeIngredientRole.INPUT, 48 - 41, 18 - 11).add(ingredient);
     }
 }

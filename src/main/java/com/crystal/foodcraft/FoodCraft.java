@@ -5,6 +5,7 @@ import com.crystal.foodcraft.block.entity.BrewBarrelBlockEntity;
 import com.crystal.foodcraft.block.entity.FryingMachineBlockEntity;
 import com.crystal.foodcraft.block.entity.ModBlockEntities;
 import com.crystal.foodcraft.block.entity.PressureCookerBlockEntity;
+import com.crystal.foodcraft.recipe.ModSlotDisplayTypes;
 import com.crystal.foodcraft.register.ModDataComponents;
 import com.crystal.foodcraft.register.ModFluids;
 import com.crystal.foodcraft.item.ModItemGroup;
@@ -30,6 +31,7 @@ public class FoodCraft implements ModInitializer {
 		ModBlockEntities.init();
 		ModItemGroup.init();
 		ModFluids.init();
+		ModSlotDisplayTypes.init();
 
 		// Synchronize recipe serializers for JEI/RRV/other recipe viewers
 		RecipeSynchronization.synchronizeRecipeSerializer(ModRecipeTypes.CHOPPING_RECIPE_SERIALIZER);

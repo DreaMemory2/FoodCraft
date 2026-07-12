@@ -11,6 +11,8 @@ public class CommonItemTags {
     public static final TagKey<Item> EGG = bind("egg");
     public static final TagKey<Item> FISH = bind("fish");
     public static final TagKey<Item> COOKED_FISH = bind("cooked_fish");
+    public static final TagKey<Item> DYES = bind("dyes");
+    public static final TagKey<Item> BROWN = bind("dyes/brown");
 
     private static TagKey<Item> bind(String name) {
         return TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("c", name));

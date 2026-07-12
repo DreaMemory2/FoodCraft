@@ -47,20 +47,20 @@ public class BrewingRecipeCategory extends AbstractRecipeCategory<RecipeHolder<@
         List<Ingredient> ingredients = recipe.getIngredients();
         List<ItemStackTemplate> results = recipe.getResults();
         FluidState fluid = recipe.getFluid();
+        // 结果输出槽位
+        for (int j = 0; j < results.size(); j++) {
+            builder.addSlot(RecipeIngredientRole.INPUT, 128, 20 + 27 * j).add(results.get(j).create());
+        }
         // 液体容量槽位
         builder.addSlot(RecipeIngredientRole.INPUT, 8, 5)
                 .add(fluid.getType())
-                .setFluidRenderer(8000, true, 11, 57);
+                .setFluidRenderer(4000, true, 11, 57);
         // 液体输入槽位
         builder.addSlot(RecipeIngredientRole.INPUT, 27, 47)
                 .add(Ingredient.of(fluid.getType().getBucket()));
         // 材料输入槽位
         for (int i = 0; i < ingredients.size(); i++) {
             builder.addSlot(RecipeIngredientRole.INPUT, 44 + 24 * i, 20).add(ingredients.get(i));
-        }
-        // 结果输出槽位
-        for (int j = 0; j < results.size(); j++) {
-            builder.addSlot(RecipeIngredientRole.INPUT, 128, 20 + 27 * j).add(results.get(j).create());
         }
     }
 }

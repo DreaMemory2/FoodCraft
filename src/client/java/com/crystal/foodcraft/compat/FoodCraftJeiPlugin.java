@@ -5,8 +5,10 @@ import com.crystal.foodcraft.block.ModBlocks;
 import com.crystal.foodcraft.compat.jei.*;
 import com.crystal.foodcraft.item.ModItems;
 import com.crystal.foodcraft.screenhandler.*;
+import com.crystal.foodcraft.tag.ModItemTags;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
+import mezz.jei.api.constants.RecipeTypes;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.registration.*;
 import net.minecraft.resources.Identifier;
@@ -23,6 +25,7 @@ public class FoodCraftJeiPlugin implements IModPlugin {
     @Override
     public void registerCategories(IRecipeCategoryRegistration register) {
         IGuiHelper helper = register.getJeiHelpers().getGuiHelper();
+        register.addRecipeCategories(new ChoppingRecipeCategory(helper));
         register.addRecipeCategories(new MillingRecipeCategory(helper));
         register.addRecipeCategories(new PottingRecipeCategory(helper));
         register.addRecipeCategories(new PanningRecipeCategory(helper));
@@ -35,6 +38,7 @@ public class FoodCraftJeiPlugin implements IModPlugin {
     public void registerRecipes(@NotNull IRecipeRegistration register) {
         FoodCraftRecipes recipes = new FoodCraftRecipes();
         // 自定义配方
+        register.addRecipes(ModRecipeHolderTypes.CHOPPING_RECIPE_TYPE, recipes.getChoppingRecipes());
         register.addRecipes(ModRecipeHolderTypes.MILLING_RECIPE_TYPE, recipes.getMillingRecipes());
         register.addRecipes(ModRecipeHolderTypes.POTTING_RECIPE_TYPE, recipes.getPottingRecipes());
         register.addRecipes(ModRecipeHolderTypes.PANNING_RECIPE_TYPE, recipes.getPanningRecipes());
@@ -51,6 +55,7 @@ public class FoodCraftJeiPlugin implements IModPlugin {
     @Override
     public void registerRecipeTransferHandlers(IRecipeTransferRegistration register) {
         // 将自定义JEI配方页面和对应配方方块和该方块屏幕绑定
+        register.addRecipeTransferHandler(ChoppingBoardMenu.class, ModMenuTypes.CHOPPING_BOARD, ModRecipeHolderTypes.CHOPPING_RECIPE_TYPE, 1, 3, 5, 36);
         register.addRecipeTransferHandler(MillMenu.class, ModMenuTypes.MILL, ModRecipeHolderTypes.MILLING_RECIPE_TYPE, 1, 1, 3, 36);
         register.addRecipeTransferHandler(PotMenu.class, ModMenuTypes.POT, ModRecipeHolderTypes.POTTING_RECIPE_TYPE, 0, 12, 13, 36);
         register.addRecipeTransferHandler(PanMenu.class, ModMenuTypes.PAN, ModRecipeHolderTypes.PANNING_RECIPE_TYPE, 0, 2, 4, 36);
@@ -61,6 +66,7 @@ public class FoodCraftJeiPlugin implements IModPlugin {
 
     @Override
     public void registerRecipeCatalysts(@NotNull IRecipeCatalystRegistration register) {
+        register.addCraftingStation(ModRecipeHolderTypes.CHOPPING_RECIPE_TYPE, ModBlocks.CHOPPING_BOARD);
         register.addCraftingStation(ModRecipeHolderTypes.MILLING_RECIPE_TYPE, ModBlocks.MILL);
         register.addCraftingStation(ModRecipeHolderTypes.POTTING_RECIPE_TYPE, ModBlocks.POT);
         register.addCraftingStation(ModRecipeHolderTypes.PANNING_RECIPE_TYPE, ModBlocks.PAN);

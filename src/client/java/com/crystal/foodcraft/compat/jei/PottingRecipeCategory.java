@@ -57,18 +57,18 @@ public class PottingRecipeCategory extends AbstractRecipeCategory<RecipeHolder<@
         PottingRecipe recipe = holder.value();
         List<Ingredient> ingredients = recipe.getIngredients();
         List<Ingredient> staples = recipe.getStaples();
-
+        // 输出结果槽位
+        builder.addSlot(RecipeIngredientRole.OUTPUT, 125 - 16, 1)
+                .add(recipe.getResultItem().create());
+        // 材料，佐料
         for (int i = 0; i < ingredients.size(); i++) {
             builder.addSlot(RecipeIngredientRole.INPUT, i * 18 + 1, 38 - 16 + 1)
                     .add(ingredients.get(i));
         }
-
+        // 食材，主料
         for (int j = 0; j < staples.size(); j++) {
             builder.addSlot(RecipeIngredientRole.INPUT, j * 18 + 1, 1)
                     .add(staples.get(j));
         }
-
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 125 - 16, 1)
-                .add(recipe.getResultItem().create());
     }
 }

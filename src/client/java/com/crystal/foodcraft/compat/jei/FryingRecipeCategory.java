@@ -59,6 +59,9 @@ public class FryingRecipeCategory extends AbstractRecipeCategory<RecipeHolder<@N
         ItemStackTemplate result = recipe.getResultItem();
         FluidState fluid = recipe.getFluid();
 
+        // 结果输出槽位
+        builder.addSlot(RecipeIngredientRole.OUTPUT, 126 - 6, 20 -7)
+                .add(result.create());
         // 液体容量槽位
         builder.addSlot(RecipeIngredientRole.INPUT, 8, 5)
                 .add(fluid.getType())
@@ -70,8 +73,5 @@ public class FryingRecipeCategory extends AbstractRecipeCategory<RecipeHolder<@N
         // 材料输入槽位
         builder.addSlot(RecipeIngredientRole.INPUT, 54 - 6, 20 - 7)
                 .add(ingredient);
-        // 结果输出槽位
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 126 - 6, 20 -7)
-                .add(result.create());
     }
 }

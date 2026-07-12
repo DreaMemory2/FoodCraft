@@ -203,6 +203,7 @@ public class ChineseDataGeneration extends FabricLanguageProvider {
         builder.add(ModItems.LEMON_WINE, "柠檬酒");
         builder.add(ModItems.POMEGRANATE_WINE, "石榴酒");
 
+        builder.add(ModItems.VANILLA_ICE_CREAM, "原味冰淇淋");
         builder.add(ModItems.CHOCOLATES_MILK_ICE_CREAM, "巧克力奶油冰淇淋");
         builder.add(ModItems.GRAPE_JUICE_ICE_CREAM, "葡萄果汁冰淇淋");
         builder.add(ModItems.APPLE_JUICE_ICE_CREAM, "苹果果汁冰淇淋");

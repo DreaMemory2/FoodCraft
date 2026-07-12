@@ -192,6 +192,7 @@ public class ModModelDataGeneration extends FabricModelProvider {
         createFlatItemModel(model, ModItems.LEMON_WINE);
         createFlatItemModel(model, ModItems.POMEGRANATE_WINE);
 
+        createFlatItemModel(model, ModItems.VANILLA_ICE_CREAM);
         createFlatItemModel(model, ModItems.CHOCOLATES_MILK_ICE_CREAM);
         createFlatItemModel(model, ModItems.GRAPE_JUICE_ICE_CREAM);
         createFlatItemModel(model, ModItems.APPLE_JUICE_ICE_CREAM);
