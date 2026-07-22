@@ -1,0 +1,63 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "fabric:type": "fabric:components",
+      "base": "foodcraft:juice",
+      "components": {
+        "foodcraft:juice": {
+          "juice": "foodcraft:carrot"
+        }
+      }
+    },
+    "B": {
+      "fabric:type": "fabric:components",
+      "base": "foodcraft:juice",
+      "components": {
+        "foodcraft:juice": {
+          "juice": "foodcraft:tea"
+        }
+      }
+    },
+    "C": {
+      "fabric:type": "fabric:components",
+      "base": "foodcraft:juice",
+      "components": {
+        "foodcraft:juice": {
+          "juice": "foodcraft:vegetable"
+        }
+      }
+    },
+    "D": "foodcraft:apple_juice_ice_cream",
+    "E": "foodcraft:grape_juice_ice_cream",
+    "F": {
+      "fabric:type": "fabric:components",
+      "base": "foodcraft:juice",
+      "components": {
+        "foodcraft:juice": {
+          "juice": "foodcraft:coffee"
+        }
+      }
+    },
+    "H": "foodcraft:melon_juice_ice_cream",
+    "I": "foodcraft:chocolate_milk_ice_cream",
+    "J": {
+      "fabric:type": "fabric:components",
+      "base": "foodcraft:juice",
+      "components": {
+        "foodcraft:juice": {
+          "juice": "foodcraft:milk_tea"
+        }
+      }
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "HIJ"
+  ],
+  "result": {
+    "id": "foodcraft:sweet_drinks_two"
+  }
+}

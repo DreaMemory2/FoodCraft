@@ -1,0 +1,19 @@
+{
+  "type": "foodcraft:potting",
+  "ingredients": [
+    "foodcraft:peanut_oil",
+    "#c:salt",
+    "minecraft:sugar",
+    "foodcraft:vinegar",
+    "foodcraft:soy_sauce"
+  ],
+  "maxTime": 500,
+  "minTime": 450,
+  "output": {
+    "id": "foodcraft:red_braised_pork_belly_rice"
+  },
+  "staples": [
+    "foodcraft:cooked_rice",
+    "minecraft:cooked_porkchop"
+  ]
+}

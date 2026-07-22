@@ -1,0 +1,17 @@
+{
+  "type": "foodcraft:potting",
+  "ingredients": [
+    "foodcraft:peanut_oil",
+    "#c:salt",
+    "minecraft:sugar"
+  ],
+  "maxTime": 500,
+  "output": {
+    "id": "foodcraft:tomato_egg_rice"
+  },
+  "staples": [
+    "foodcraft:cooked_rice",
+    "foodcraft:tomato",
+    "#c:egg"
+  ]
+}

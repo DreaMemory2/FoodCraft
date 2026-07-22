@@ -1,0 +1,7 @@
+{
+  "type": "foodcraft:milling",
+  "ingredient": "foodcraft:peanut",
+  "output": {
+    "id": "foodcraft:peanut_oil"
+  }
+}

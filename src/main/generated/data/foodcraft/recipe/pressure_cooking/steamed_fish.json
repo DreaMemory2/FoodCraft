@@ -1,0 +1,17 @@
+{
+  "type": "foodcraft:pressure_cooking",
+  "fluidInput": {
+    "Name": "minecraft:water",
+    "Properties": {
+      "falling": "true"
+    }
+  },
+  "ingredient": [
+    "#c:cooked_fish",
+    "foodcraft:scallion",
+    "foodcraft:scallion"
+  ],
+  "result": {
+    "id": "foodcraft:steamed_fish"
+  }
+}

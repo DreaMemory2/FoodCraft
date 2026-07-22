@@ -1,0 +1,17 @@
+{
+  "type": "foodcraft:potting",
+  "ingredients": [
+    "foodcraft:peanut_oil",
+    "#c:salt",
+    "foodcraft:soy_sauce"
+  ],
+  "maxTime": 500,
+  "output": {
+    "id": "foodcraft:chicken_scallion_oil"
+  },
+  "staples": [
+    "foodcraft:chili",
+    "foodcraft:scallion",
+    "minecraft:cooked_chicken"
+  ]
+}

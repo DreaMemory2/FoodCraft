@@ -1,0 +1,17 @@
+{
+  "type": "foodcraft:potting",
+  "ingredients": [
+    "foodcraft:peanut_oil",
+    "#c:salt",
+    "foodcraft:soy_sauce"
+  ],
+  "maxTime": 450,
+  "minTime": 350,
+  "output": {
+    "id": "foodcraft:spicy_fish"
+  },
+  "staples": [
+    "foodcraft:chili",
+    "#c:cooked_fish"
+  ]
+}

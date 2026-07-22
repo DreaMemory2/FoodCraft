@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "foodcraft:curry_chicken_rice",
+    "B": "foodcraft:sichuan_boiled_beef",
+    "C": "foodcraft:pasta",
+    "D": "foodcraft:japan_doufu",
+    "E": "foodcraft:vegetable",
+    "F": "foodcraft:pasta_pork",
+    "H": "foodcraft:steamed_vermicelli_roll",
+    "I": "foodcraft:pasta_chicken",
+    "J": "foodcraft:pasta_beef"
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "HIJ"
+  ],
+  "result": {
+    "id": "foodcraft:salivating_staple_food_three"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "type": "foodcraft:milling",
+  "ingredient": "minecraft:cocoa_beans",
+  "output": {
+    "id": "foodcraft:chocolate_dust"
+  }
+}

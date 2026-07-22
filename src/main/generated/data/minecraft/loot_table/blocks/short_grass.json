@@ -1,0 +1,383 @@
+{
+  "type": "minecraft:block",
+  "functions": [
+    {
+      "enchantment": "minecraft:fortune",
+      "formula": "minecraft:uniform_bonus_count",
+      "function": "minecraft:apply_bonus",
+      "parameters": {
+        "bonusMultiplier": 2
+      }
+    }
+  ],
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "items": "minecraft:shears"
+                  }
+                }
+              ],
+              "name": "minecraft:short_grass"
+            },
+            {
+              "type": "minecraft:alternatives",
+              "children": [
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.33,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "minecraft:wheat_seeds"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.33,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "foodcraft:cucumber_seeds"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.33,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "foodcraft:eggplant_seeds"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.33,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "foodcraft:chili"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.33,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "foodcraft:pepper_seeds"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.33,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "foodcraft:peanut"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.33,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "foodcraft:rice"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.33,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "foodcraft:sticky_rice"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.33,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "foodcraft:sweet_potato"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.33,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "foodcraft:tomato_seeds"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.33,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "foodcraft:white_raddish"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.33,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "foodcraft:vegetable"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.33,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "foodcraft:strawberry"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.33,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "foodcraft:green_bean"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.33,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "foodcraft:long_bean"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.33,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "foodcraft:red_bean"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.33,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "foodcraft:scallion"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.23,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "foodcraft:corn"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.23,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "foodcraft:cucumber"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.23,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "foodcraft:eggplant"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.23,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "foodcraft:chili"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.23,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "foodcraft:green_pepper"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.23,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "foodcraft:peanut"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.23,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "foodcraft:rice"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.23,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "foodcraft:sticky_rice"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.23,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "foodcraft:sweet_potato"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.23,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "foodcraft:tomato"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.23,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "foodcraft:grapes"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.23,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "foodcraft:white_raddish"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.23,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "foodcraft:vegetable"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.23,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "foodcraft:strawberry"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.23,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "foodcraft:beans"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.23,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "foodcraft:longyan"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.23,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "foodcraft:red_bean"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rolls": 1.0
+    }
+  ]
+}

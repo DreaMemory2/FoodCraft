@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "foodcraft:orley_chicken_rice",
+    "B": "foodcraft:spicy_chicken",
+    "C": "foodcraft:steamed_chicken_chili_sauce",
+    "D": "foodcraft:white_sliced_chicken",
+    "E": "foodcraft:chicken_scallion_oil",
+    "F": "foodcraft:boiled_fish_sichuan_pickles",
+    "H": "foodcraft:spicy_fish",
+    "I": "foodcraft:steamed_fish",
+    "J": "foodcraft:cola_chicken_rice"
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "HIJ"
+  ],
+  "result": {
+    "id": "foodcraft:salivating_staple_food_two"
+  }
+}

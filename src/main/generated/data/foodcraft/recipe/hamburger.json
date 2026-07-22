@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "foodcraft:vegetable",
+    "minecraft:bread",
+    "minecraft:bread",
+    "#minecraft:meat"
+  ],
+  "result": {
+    "id": "foodcraft:hamburger"
+  }
+}

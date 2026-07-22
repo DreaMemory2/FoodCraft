@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_sticky_rice": {
+      "conditions": {
+        "items": [
+          {
+            "items": "foodcraft:sticky_rice"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "foodcraft:sticky_rice_dumpling"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_zongye": {
+      "conditions": {
+        "items": [
+          {
+            "items": "foodcraft:bamboo_leaves"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_sticky_rice",
+      "has_zongye"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "foodcraft:sticky_rice_dumpling"
+    ]
+  }
+}

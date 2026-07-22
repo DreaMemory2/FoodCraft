@@ -1,0 +1,17 @@
+{
+  "type": "foodcraft:pressure_cooking",
+  "fluidInput": {
+    "Name": "minecraft:water",
+    "Properties": {
+      "falling": "true"
+    }
+  },
+  "ingredient": [
+    "minecraft:egg",
+    "foodcraft:soy_sauce",
+    "foodcraft:scallion"
+  ],
+  "result": {
+    "id": "foodcraft:egg_soup"
+  }
+}

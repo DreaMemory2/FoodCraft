@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "#minecraft:planks",
+    "B": "foodcraft:machine_core",
+    "C": "#c:dyes/brown",
+    "O": "foodcraft:rice_machine_shell"
+  },
+  "pattern": [
+    "ABA",
+    "COC",
+    "ABA"
+  ],
+  "result": {
+    "id": "foodcraft:brew_barrel"
+  }
+}

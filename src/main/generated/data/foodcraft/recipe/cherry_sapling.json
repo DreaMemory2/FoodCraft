@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": "foodcraft:cherry",
+    "S": "#minecraft:saplings"
+  },
+  "pattern": [
+    " C ",
+    "CSC",
+    " C "
+  ],
+  "result": {
+    "id": "foodcraft:cherry_sapling"
+  }
+}

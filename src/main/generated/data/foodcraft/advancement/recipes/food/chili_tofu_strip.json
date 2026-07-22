@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "foodcraft:chili_tofu_strip"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tofu_strip": {
+      "conditions": {
+        "items": [
+          {
+            "items": "foodcraft:tofu_strip"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_tofu_strip"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "foodcraft:chili_tofu_strip"
+    ]
+  }
+}

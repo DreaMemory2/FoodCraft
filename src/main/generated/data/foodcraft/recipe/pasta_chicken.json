@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "foodcraft:pasta",
+    "minecraft:cooked_chicken"
+  ],
+  "result": {
+    "id": "foodcraft:pasta_chicken"
+  }
+}

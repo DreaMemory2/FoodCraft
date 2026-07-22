@@ -11,12 +11,15 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.Consumables;
+import net.minecraft.world.item.component.ItemLore;
 import net.minecraft.world.level.block.Block;
 
+import java.util.List;
 import java.util.function.Function;
 
 /**
@@ -226,7 +229,7 @@ public class ModItems {
     public static final Item STEAMED_BUNS = food("steamed_buns", ModFoods.STEAMED_BUNS);
     public static final Item SAUERKRAUT_CAKE = food("sauerkraut_cake", ModFoods.SAUERKRAUT_CAKE);
     public static final Item FRIED_NEW_YEAR_CAKE = food("fried_new_year_cake", ModFoods.FRIED_NEW_YEAR_CAKE);
-    public static final Item FRIED_BREAD = food("fired_beard", ModFoods.FRIED_BREAD);
+    public static final Item FRIED_BREAD = food("fried_beard", ModFoods.FRIED_BREAD);
     public static final Item HOT_DOG = food("hot_dog", ModFoods.HOT_DOG);
     public static final Item SMILEY_COOKIE = food("smiley_cookie", ModFoods.SMILEY_COOKIE);
     public static final Item BISCUIT = food("biscuit", ModFoods.BISCUIT);
@@ -241,9 +244,9 @@ public class ModItems {
             .component(DataComponents.RARITY, Rarity.RARE));
     public static final Item ULTIMATE_ETERNAL_STONE = register("dark_eternal_stone", Item::new, new Item.Properties()
             .component(DataComponents.RARITY, Rarity.EPIC));
-    public static final Item DARK_GREEN_MULTIFUNCTION_TOOLS = register("dark_green_multifunction_tools", Item::new, new Item.Properties()
+    public static final Item DARK_GREEN_MULTIFUNCTION_TOOLS = register("dark_green_multifunction_tools", DarkGreenMultifunctionTools::new, MultifunctionTool.applyToolProperties(new Item.Properties())
             .component(DataComponents.RARITY, Rarity.RARE));
-    public static final Item DARK_BLUE_MULTIFUNCTION_TOOLS = register("dark_blue_multifunction_tools", Item::new, new Item.Properties()
+    public static final Item DARK_BLUE_MULTIFUNCTION_TOOLS = register("dark_blue_multifunction_tools", DarkBlueMultifunctionTools::new, MultifunctionTool.applyToolProperties(new Item.Properties())
             .component(DataComponents.RARITY, Rarity.EPIC));
     // 复杂
     // 果汁
@@ -270,6 +273,21 @@ public class ModItems {
     public static final Item PEACH_BISCUIT = food("peach_biscuit", ModFoods.BISCUIT);
     public static final Item PEAR_BISCUIT = food("pear_biscuit", ModFoods.BISCUIT);
     public static final Item STRAWBERRY_BISCUIT = food("strawberry_biscuit", ModFoods.BISCUIT);
+    // 手册
+    public static final Item BLOCK_LOVERS = register("block_lovers", Item::new, hasBookTooltip());
+    public static final Item LOVELY_PLANT = register("lovely_plant", Item::new, hasBookTooltip());
+    public static final Item DELICIOUS_FOOD_I = register("delicious_food_one", Item::new, hasBookTooltip());
+    public static final Item DELICIOUS_FOOD_II = register("delicious_food_two", Item::new, hasBookTooltip());
+    public static final Item KFC_FOOD = register("kfc_food", Item::new, hasBookTooltip());
+    public static final Item CHINA_TRADITIONAL_FOOD = register("china_traditional_food", Item::new, hasBookTooltip());
+    public static final Item FRIED_FOOD = register("fried_food", Item::new, hasBookTooltip());
+    public static final Item ALCOHOLIC_RICH = register("alcoholic_rich", Item::new, hasBookTooltip());
+    public static final Item SWEET_DRINKS_I = register("sweet_drinks_one", Item::new, hasBookTooltip());
+    public static final Item SWEET_DRINKS_II = register("sweet_drinks_two", Item::new, hasBookTooltip());
+    public static final Item SALIVATING_STAPLE_FOOD_I = register("salivating_staple_food_one", Item::new, hasBookTooltip());
+    public static final Item SALIVATING_STAPLE_FOOD_II = register("salivating_staple_food_two", Item::new, hasBookTooltip());
+    public static final Item SALIVATING_STAPLE_FOOD_III = register("salivating_staple_food_three", Item::new, hasBookTooltip());
+    public static final Item SYMBOL_RICH = register("symbol_rich", Item::new, hasBookTooltip());
 
     public static final Item PEANUT_OIL_BUCKET = register("peanut_oil_bucket", properties -> new BucketItem(ModFluids.COOKING_OIL_STILL, properties), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1));
 
@@ -296,6 +314,10 @@ public class ModItems {
     private static Item register(String name, Function<Item.Properties, Item> factory, Item.Properties properties) {
         ResourceKey<Item> key = ResourceKey.create(Registries.ITEM, FoodCraft.of(name));
         return Registry.register(BuiltInRegistries.ITEM, key, factory.apply(properties.setId(key)));
+    }
+
+    public static Item.Properties hasBookTooltip() {
+        return new Item.Properties().component(DataComponents.LORE, new ItemLore(List.of(Component.translatable("tooltip.foodcraft.handbook.desc"))));
     }
 
     public static void init() {

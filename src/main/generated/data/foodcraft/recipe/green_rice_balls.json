@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "foodcraft:sticky_rice_cake",
+    "#minecraft:leaves"
+  ],
+  "result": {
+    "id": "foodcraft:green_rice_balls"
+  }
+}

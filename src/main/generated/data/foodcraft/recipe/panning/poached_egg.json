@@ -1,0 +1,9 @@
+{
+  "type": "foodcraft:panning",
+  "input": "minecraft:egg",
+  "maxTime": 400,
+  "minTime": 250,
+  "output": {
+    "id": "foodcraft:poached_egg"
+  }
+}

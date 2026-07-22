@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_milled_rice": {
+      "conditions": {
+        "items": [
+          {
+            "items": "foodcraft:milled_rice"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "foodcraft:crossing_bridge_noodles"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_milled_rice"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "foodcraft:crossing_bridge_noodles"
+    ]
+  }
+}

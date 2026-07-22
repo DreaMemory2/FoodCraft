@@ -1,0 +1,18 @@
+{
+  "type": "foodcraft:potting",
+  "ingredients": [
+    "foodcraft:peanut_oil",
+    "#c:salt",
+    "foodcraft:pixian_watercress"
+  ],
+  "maxTime": 450,
+  "minTime": 350,
+  "output": {
+    "id": "foodcraft:twice_cooked_pork_slices"
+  },
+  "staples": [
+    "foodcraft:cooked_rice",
+    "foodcraft:chili",
+    "minecraft:cooked_porkchop"
+  ]
+}

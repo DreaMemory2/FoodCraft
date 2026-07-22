@@ -1,0 +1,7 @@
+{
+  "type": "foodcraft:milling",
+  "ingredient": "foodcraft:sticky_rice",
+  "output": {
+    "id": "foodcraft:sticky_rice_flour"
+  }
+}

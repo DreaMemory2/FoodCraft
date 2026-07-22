@@ -1,0 +1,20 @@
+{
+  "type": "foodcraft:brewing",
+  "fluidInput": {
+    "Name": "minecraft:water",
+    "Properties": {
+      "falling": "true"
+    }
+  },
+  "ingredients": [
+    "minecraft:golden_apple",
+    "minecraft:golden_apple",
+    "minecraft:golden_apple"
+  ],
+  "results": [
+    {
+      "count": 3,
+      "id": "foodcraft:golden_cider"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "foodcraft:rice",
+    "B": "foodcraft:peanut",
+    "C": "foodcraft:beans",
+    "D": "foodcraft:vegetable",
+    "E": "foodcraft:chili",
+    "F": "foodcraft:tomato",
+    "H": "foodcraft:eggplant",
+    "I": "foodcraft:grapes",
+    "J": "minecraft:sugar"
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "HIJ"
+  ],
+  "result": {
+    "id": "foodcraft:lovely_plant"
+  }
+}

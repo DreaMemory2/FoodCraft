@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "foodcraft:flour",
+    "B": "minecraft:water_bucket"
+  },
+  "pattern": [
+    "ABA",
+    "ABA",
+    "   "
+  ],
+  "result": {
+    "id": "foodcraft:pasta"
+  }
+}

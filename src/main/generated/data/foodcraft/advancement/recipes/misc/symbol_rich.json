@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_symbol_rich": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#foodcraft:symbol_rich"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "foodcraft:symbol_rich"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_symbol_rich"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "foodcraft:symbol_rich"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "foodcraft:peanut_oil",
+    "B": "minecraft:glass",
+    "C": "foodcraft:machine_core",
+    "O": "foodcraft:rice_machine_shell"
+  },
+  "pattern": [
+    "AAA",
+    "BOB",
+    "CCC"
+  ],
+  "result": {
+    "id": "foodcraft:frying_machine"
+  }
+}

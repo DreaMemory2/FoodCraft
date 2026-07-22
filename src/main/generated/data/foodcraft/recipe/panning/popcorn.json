@@ -1,0 +1,9 @@
+{
+  "type": "foodcraft:panning",
+  "input": "foodcraft:corn",
+  "maxTime": 330,
+  "minTime": 250,
+  "output": {
+    "id": "foodcraft:popcorn"
+  }
+}

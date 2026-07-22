@@ -1,0 +1,10 @@
+{
+  "type": "foodcraft:chopping",
+  "ingredients": [
+    "foodcraft:white_raddish"
+  ],
+  "result": {
+    "count": 3,
+    "id": "foodcraft:white_raddish_strip"
+  }
+}

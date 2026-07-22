@@ -1,0 +1,13 @@
+{
+  "type": "foodcraft:frying",
+  "fluidInput": {
+    "Name": "foodcraft:cooking_oil",
+    "Properties": {
+      "falling": "true"
+    }
+  },
+  "ingredient": "foodcraft:new_year_cake",
+  "result": {
+    "id": "foodcraft:fried_new_year_cake"
+  }
+}

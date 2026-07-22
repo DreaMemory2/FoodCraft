@@ -1,0 +1,19 @@
+{
+  "type": "foodcraft:potting",
+  "ingredients": [
+    "foodcraft:peanut_oil",
+    "#c:salt",
+    "minecraft:sugar",
+    "foodcraft:soy_sauce"
+  ],
+  "maxTime": 450,
+  "minTime": 350,
+  "output": {
+    "id": "foodcraft:spicy_chicken"
+  },
+  "staples": [
+    "minecraft:cooked_chicken",
+    "foodcraft:peanut",
+    "foodcraft:chili"
+  ]
+}

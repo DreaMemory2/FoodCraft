@@ -1,0 +1,20 @@
+{
+  "type": "foodcraft:potting",
+  "ingredients": [
+    "foodcraft:peanut_oil",
+    "#c:salt",
+    "foodcraft:soy_sauce",
+    "foodcraft:starches"
+  ],
+  "maxTime": 500,
+  "minTime": 450,
+  "output": {
+    "id": "foodcraft:boiled_fish_sichuan_pickles"
+  },
+  "staples": [
+    "foodcraft:green_pepper",
+    "foodcraft:scallion",
+    "#c:cooked_fish",
+    "foodcraft:vegetable"
+  ]
+}

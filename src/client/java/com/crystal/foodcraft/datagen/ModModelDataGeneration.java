@@ -18,6 +18,7 @@ import net.minecraft.client.resources.model.sprite.Material;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.Property;
@@ -355,6 +356,21 @@ public class ModModelDataGeneration extends FabricModelProvider {
         createFlatItemModel(model, ModItems.ULTIMATE_ETERNAL_STONE);
         model.generateFlatItem(ModItems.DARK_GREEN_MULTIFUNCTION_TOOLS, ModelTemplates.FLAT_HANDHELD_ITEM);
         model.generateFlatItem(ModItems.DARK_BLUE_MULTIFUNCTION_TOOLS, ModelTemplates.FLAT_HANDHELD_ITEM);
+        // 手册
+        model.generateFlatItem(ModItems.BLOCK_LOVERS, Items.KNOWLEDGE_BOOK, ModelTemplates.FLAT_ITEM);
+        model.generateFlatItem(ModItems.LOVELY_PLANT, Items.KNOWLEDGE_BOOK, ModelTemplates.FLAT_ITEM);
+        model.generateFlatItem(ModItems.DELICIOUS_FOOD_I, Items.KNOWLEDGE_BOOK, ModelTemplates.FLAT_ITEM);
+        model.generateFlatItem(ModItems.DELICIOUS_FOOD_II, Items.KNOWLEDGE_BOOK, ModelTemplates.FLAT_ITEM);
+        model.generateFlatItem(ModItems.KFC_FOOD, Items.KNOWLEDGE_BOOK, ModelTemplates.FLAT_ITEM);
+        model.generateFlatItem(ModItems.CHINA_TRADITIONAL_FOOD, Items.KNOWLEDGE_BOOK, ModelTemplates.FLAT_ITEM);
+        model.generateFlatItem(ModItems.FRIED_FOOD, Items.KNOWLEDGE_BOOK, ModelTemplates.FLAT_ITEM);
+        model.generateFlatItem(ModItems.ALCOHOLIC_RICH, Items.KNOWLEDGE_BOOK, ModelTemplates.FLAT_ITEM);
+        model.generateFlatItem(ModItems.SWEET_DRINKS_I, Items.KNOWLEDGE_BOOK, ModelTemplates.FLAT_ITEM);
+        model.generateFlatItem(ModItems.SWEET_DRINKS_II, Items.KNOWLEDGE_BOOK, ModelTemplates.FLAT_ITEM);
+        model.generateFlatItem(ModItems.SALIVATING_STAPLE_FOOD_I, Items.KNOWLEDGE_BOOK, ModelTemplates.FLAT_ITEM);
+        model.generateFlatItem(ModItems.SALIVATING_STAPLE_FOOD_II, Items.KNOWLEDGE_BOOK, ModelTemplates.FLAT_ITEM);
+        model.generateFlatItem(ModItems.SALIVATING_STAPLE_FOOD_III, Items.KNOWLEDGE_BOOK, ModelTemplates.FLAT_ITEM);
+        model.generateFlatItem(ModItems.SYMBOL_RICH, Items.KNOWLEDGE_BOOK, ModelTemplates.FLAT_ITEM);
 
         createFlatItemModel(model, ModItems.PEANUT_OIL_BUCKET);
     }

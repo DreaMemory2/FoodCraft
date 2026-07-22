@@ -1,0 +1,13 @@
+{
+  "type": "foodcraft:frying",
+  "fluidInput": {
+    "Name": "foodcraft:cooking_oil",
+    "Properties": {
+      "falling": "true"
+    }
+  },
+  "ingredient": "foodcraft:dough_twist",
+  "result": {
+    "id": "foodcraft:fried_dough_twist"
+  }
+}

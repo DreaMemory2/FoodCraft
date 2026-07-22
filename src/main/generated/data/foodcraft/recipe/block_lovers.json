@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "foodcraft:chocolate_block",
+    "B": "foodcraft:watercress_block",
+    "C": "foodcraft:carrot_block",
+    "D": "foodcraft:bean_block",
+    "E": "foodcraft:peanut_block",
+    "F": "foodcraft:sticky_rice_block",
+    "H": "foodcraft:potato_block",
+    "I": "foodcraft:salt_block",
+    "J": "foodcraft:sugar_block"
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "HIJ"
+  ],
+  "result": {
+    "id": "foodcraft:block_lovers"
+  }
+}

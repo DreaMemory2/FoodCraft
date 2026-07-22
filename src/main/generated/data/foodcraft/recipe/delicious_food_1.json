@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "foodcraft:poached_egg",
+    "B": "foodcraft:pancakes",
+    "C": "foodcraft:dried_tofu",
+    "D": "foodcraft:fried_potato_chips",
+    "E": "foodcraft:sausage",
+    "F": "foodcraft:walnut_short_bread",
+    "H": "foodcraft:green_rice_balls",
+    "I": "foodcraft:new_year_cake",
+    "J": "foodcraft:spring_rolls"
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "HIJ"
+  ],
+  "result": {
+    "id": "foodcraft:delicious_food_one"
+  }
+}

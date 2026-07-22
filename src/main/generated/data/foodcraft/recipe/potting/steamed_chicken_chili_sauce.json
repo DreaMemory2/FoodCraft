@@ -1,0 +1,19 @@
+{
+  "type": "foodcraft:potting",
+  "ingredients": [
+    "foodcraft:peanut_oil",
+    "#c:salt",
+    "minecraft:sugar",
+    "foodcraft:pixian_watercress"
+  ],
+  "maxTime": 500,
+  "minTime": 450,
+  "output": {
+    "id": "foodcraft:steamed_chicken_chili_sauce"
+  },
+  "staples": [
+    "foodcraft:green_pepper",
+    "foodcraft:scallion",
+    "minecraft:cooked_chicken"
+  ]
+}

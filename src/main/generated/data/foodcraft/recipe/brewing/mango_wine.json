@@ -1,0 +1,20 @@
+{
+  "type": "foodcraft:brewing",
+  "fluidInput": {
+    "Name": "minecraft:water",
+    "Properties": {
+      "falling": "true"
+    }
+  },
+  "ingredients": [
+    "foodcraft:mango",
+    "foodcraft:mango",
+    "foodcraft:mango"
+  ],
+  "results": [
+    {
+      "count": 3,
+      "id": "foodcraft:mango_wine"
+    }
+  ]
+}

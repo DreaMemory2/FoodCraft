@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_squid_meat": {
+      "conditions": {
+        "items": [
+          {
+            "items": "foodcraft:squid_meat"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "foodcraft:cooked_squid_meat"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_squid_meat"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "foodcraft:cooked_squid_meat"
+    ]
+  }
+}

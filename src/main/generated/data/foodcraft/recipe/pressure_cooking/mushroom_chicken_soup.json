@@ -1,0 +1,17 @@
+{
+  "type": "foodcraft:pressure_cooking",
+  "fluidInput": {
+    "Name": "minecraft:water",
+    "Properties": {
+      "falling": "true"
+    }
+  },
+  "ingredient": [
+    "#c:mushroom",
+    "#c:salt",
+    "foodcraft:drumstick"
+  ],
+  "result": {
+    "id": "foodcraft:mushrooms_chicken_soup"
+  }
+}

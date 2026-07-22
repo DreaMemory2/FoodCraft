@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "minecraft:flint_and_steel",
+    "B": "foodcraft:rice_machine_shell",
+    "C": "foodcraft:machine_core",
+    "D": "minecraft:bricks",
+    "E": "minecraft:redstone",
+    "F": "minecraft:glass"
+  },
+  "pattern": [
+    "AFA",
+    "DBD",
+    "ECE"
+  ],
+  "result": {
+    "id": "foodcraft:stove"
+  }
+}

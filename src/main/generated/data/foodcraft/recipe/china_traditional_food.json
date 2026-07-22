@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "foodcraft:dumpling",
+    "B": "foodcraft:sticky_rice_dumpling",
+    "C": "foodcraft:mooncake",
+    "D": "foodcraft:tangyuan",
+    "E": "foodcraft:new_year_cake",
+    "F": "foodcraft:spring_rolls",
+    "H": "foodcraft:sticky_rice_cake",
+    "I": "foodcraft:walnut_short_bread",
+    "J": "foodcraft:rice"
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "HIJ"
+  ],
+  "result": {
+    "id": "foodcraft:china_traditional_food"
+  }
+}

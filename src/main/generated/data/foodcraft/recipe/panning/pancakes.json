@@ -1,0 +1,9 @@
+{
+  "type": "foodcraft:panning",
+  "input": "foodcraft:flour",
+  "maxTime": 350,
+  "minTime": 250,
+  "output": {
+    "id": "foodcraft:pancakes"
+  }
+}

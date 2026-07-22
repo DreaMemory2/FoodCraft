@@ -1,0 +1,10 @@
+{
+  "type": "foodcraft:chopping",
+  "ingredients": [
+    "foodcraft:dumpling_wrappers"
+  ],
+  "result": {
+    "count": 3,
+    "id": "foodcraft:noodle"
+  }
+}

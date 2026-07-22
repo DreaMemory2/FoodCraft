@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_salivating_staple_food_one": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#foodcraft:salivating_staple_food_one"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "foodcraft:salivating_staple_food_one"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_salivating_staple_food_one"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "foodcraft:salivating_staple_food_one"
+    ]
+  }
+}

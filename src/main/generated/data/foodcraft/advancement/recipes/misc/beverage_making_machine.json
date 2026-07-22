@@ -1,0 +1,54 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ice": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:ice"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_machine_core": {
+      "conditions": {
+        "items": [
+          {
+            "items": "foodcraft:machine_core"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_rice_machine_shell": {
+      "conditions": {
+        "items": [
+          {
+            "items": "foodcraft:rice_machine_shell"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "foodcraft:beverage_making_machine"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_ice",
+      "has_machine_core",
+      "has_rice_machine_shell"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "foodcraft:beverage_making_machine"
+    ]
+  }
+}

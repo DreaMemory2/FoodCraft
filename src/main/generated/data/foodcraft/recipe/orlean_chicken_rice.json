@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "foodcraft:orlean_wing",
+    "foodcraft:cooked_rice"
+  ],
+  "result": {
+    "id": "foodcraft:orley_chicken_rice"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "foodcraft:soy_sauce",
+    "foodcraft:tofu"
+  ],
+  "result": {
+    "id": "foodcraft:dried_tofu"
+  }
+}

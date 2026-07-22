@@ -1,0 +1,9 @@
+{
+  "type": "foodcraft:panning",
+  "input": "foodcraft:potato_chips",
+  "maxTime": 325,
+  "minTime": 225,
+  "output": {
+    "id": "foodcraft:fried_potato_chips"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "foodcraft:frying",
+  "fluidInput": {
+    "Name": "foodcraft:cooking_oil",
+    "Properties": {
+      "falling": "true"
+    }
+  },
+  "ingredient": "minecraft:bread",
+  "result": {
+    "id": "foodcraft:fried_beard"
+  }
+}

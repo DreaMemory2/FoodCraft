@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "foodcraft:red_wine",
+    "B": "foodcraft:spirit",
+    "C": "foodcraft:grape_wine",
+    "D": "foodcraft:golden_grapes",
+    "E": "minecraft:golden_apple",
+    "F": "foodcraft:cider",
+    "H": "foodcraft:golden_grape_wine",
+    "I": "foodcraft:golden_cider"
+  },
+  "pattern": [
+    "ABC",
+    "DED",
+    "FHI"
+  ],
+  "result": {
+    "id": "foodcraft:alcoholic_rich"
+  }
+}

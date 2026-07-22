@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "minecraft:redstone",
+    "B": "minecraft:ice",
+    "C": "foodcraft:machine_core",
+    "D": "#c:dyes/brown",
+    "O": "foodcraft:rice_machine_shell"
+  },
+  "pattern": [
+    "ABA",
+    "DOD",
+    " C "
+  ],
+  "result": {
+    "id": "foodcraft:beverage_making_machine"
+  }
+}

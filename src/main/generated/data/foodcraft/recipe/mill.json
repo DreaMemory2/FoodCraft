@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "minecraft:wheat",
+    "B": "minecraft:glass",
+    "C": "foodcraft:machine_core",
+    "D": "minecraft:milk_bucket",
+    "O": "foodcraft:rice_machine_shell"
+  },
+  "pattern": [
+    "AAA",
+    "BOB",
+    "DCD"
+  ],
+  "result": {
+    "id": "foodcraft:mill"
+  }
+}

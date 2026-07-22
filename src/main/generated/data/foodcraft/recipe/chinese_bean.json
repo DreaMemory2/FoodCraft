@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "foodcraft:smoothed_material",
+    "minecraft:cooked_porkchop"
+  ],
+  "result": {
+    "id": "foodcraft:chinese_bean"
+  }
+}

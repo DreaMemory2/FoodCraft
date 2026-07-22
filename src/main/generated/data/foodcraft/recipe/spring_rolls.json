@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "foodcraft:tofu_strip",
+    "foodcraft:white_raddish_strip",
+    "#minecraft:meat",
+    "foodcraft:vegetable"
+  ],
+  "result": {
+    "id": "foodcraft:spring_rolls"
+  }
+}

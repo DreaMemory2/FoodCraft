@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "#minecraft:planks",
+    "O": "foodcraft:machine_core"
+  },
+  "pattern": [
+    "AAA",
+    "A A",
+    "AOA"
+  ],
+  "result": {
+    "id": "foodcraft:chopping_board"
+  }
+}

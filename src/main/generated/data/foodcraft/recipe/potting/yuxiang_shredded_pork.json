@@ -1,0 +1,20 @@
+{
+  "type": "foodcraft:potting",
+  "ingredients": [
+    "foodcraft:peanut_oil",
+    "#c:salt",
+    "minecraft:sugar",
+    "foodcraft:vinegar"
+  ],
+  "maxTime": 450,
+  "minTime": 350,
+  "output": {
+    "id": "foodcraft:yuxiang_shredded_pork"
+  },
+  "staples": [
+    "foodcraft:cooked_rice",
+    "minecraft:cooked_porkchop",
+    "minecraft:carrot",
+    "foodcraft:green_pepper"
+  ]
+}

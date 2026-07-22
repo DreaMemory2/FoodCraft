@@ -1,0 +1,15 @@
+{
+  "type": "foodcraft:potting",
+  "ingredients": [
+    "minecraft:sugar"
+  ],
+  "maxTime": 500,
+  "minTime": 450,
+  "output": {
+    "id": "foodcraft:white_sliced_chicken"
+  },
+  "staples": [
+    "minecraft:cooked_chicken",
+    "foodcraft:scallion"
+  ]
+}

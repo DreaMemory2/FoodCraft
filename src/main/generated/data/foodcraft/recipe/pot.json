@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "minecraft:iron_ingot",
+    "B": "foodcraft:rice_machine_shell",
+    "C": "foodcraft:machine_core",
+    "D": "minecraft:white_dye"
+  },
+  "pattern": [
+    "AAA",
+    "DBD",
+    " C "
+  ],
+  "result": {
+    "id": "foodcraft:pot"
+  }
+}

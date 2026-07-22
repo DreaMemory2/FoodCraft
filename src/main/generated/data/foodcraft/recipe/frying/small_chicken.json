@@ -1,0 +1,13 @@
+{
+  "type": "foodcraft:frying",
+  "fluidInput": {
+    "Name": "foodcraft:cooking_oil",
+    "Properties": {
+      "falling": "true"
+    }
+  },
+  "ingredient": "foodcraft:small_chicken",
+  "result": {
+    "id": "foodcraft:popcorn_chicken"
+  }
+}

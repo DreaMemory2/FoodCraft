@@ -1,0 +1,11 @@
+{
+  "type": "foodcraft:chopping",
+  "ingredients": [
+    "minecraft:chicken",
+    "minecraft:chicken"
+  ],
+  "result": {
+    "count": 3,
+    "id": "foodcraft:big_chicken"
+  }
+}

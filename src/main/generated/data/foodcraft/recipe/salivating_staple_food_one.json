@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "foodcraft:tomato_egg_rice",
+    "B": "foodcraft:potato_pepper_eggplant",
+    "C": "foodcraft:yuxiang_shredded_pork",
+    "D": "foodcraft:kung_pao_chicken",
+    "E": "foodcraft:cooked_potato_wire_rice",
+    "F": "foodcraft:steamed_fish_head",
+    "H": "foodcraft:pepper_doufu_rice",
+    "I": "foodcraft:red_braised_pork_belly_rice",
+    "J": "foodcraft:twice_cooked_pork_slices"
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "HIJ"
+  ],
+  "result": {
+    "id": "foodcraft:salivating_staple_food_one"
+  }
+}

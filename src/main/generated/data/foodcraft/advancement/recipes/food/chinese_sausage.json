@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_smoked_material": {
+      "conditions": {
+        "items": [
+          {
+            "items": "foodcraft:smoothed_material"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "foodcraft:chinese_sausage"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_smoked_material"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "foodcraft:chinese_sausage"
+    ]
+  }
+}

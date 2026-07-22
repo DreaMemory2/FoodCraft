@@ -290,6 +290,21 @@ public class ModItemGroup {
             entries.accept(ModItems.PEACH_BISCUIT);
             entries.accept(ModItems.PEAR_BISCUIT);
             entries.accept(ModItems.STRAWBERRY_BISCUIT);
+            // 手册
+            entries.accept(ModItems.BLOCK_LOVERS);
+            entries.accept(ModItems.LOVELY_PLANT);
+            entries.accept(ModItems.DELICIOUS_FOOD_I);
+            entries.accept(ModItems.DELICIOUS_FOOD_II);
+            entries.accept(ModItems.KFC_FOOD);
+            entries.accept(ModItems.CHINA_TRADITIONAL_FOOD);
+            entries.accept(ModItems.FRIED_FOOD);
+            entries.accept(ModItems.ALCOHOLIC_RICH);
+            entries.accept(ModItems.SWEET_DRINKS_I);
+            entries.accept(ModItems.SWEET_DRINKS_II);
+            entries.accept(ModItems.SALIVATING_STAPLE_FOOD_I);
+            entries.accept(ModItems.SALIVATING_STAPLE_FOOD_II);
+            entries.accept(ModItems.SALIVATING_STAPLE_FOOD_III);
+            entries.accept(ModItems.SYMBOL_RICH);
         };
     }
 

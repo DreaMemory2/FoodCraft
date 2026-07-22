@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cooked_rice": {
+      "conditions": {
+        "items": [
+          {
+            "items": "foodcraft:cooked_rice"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_orlean_wing": {
+      "conditions": {
+        "items": [
+          {
+            "items": "foodcraft:orlean_wing"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "foodcraft:orlean_chicken_rice"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_orlean_wing",
+      "has_cooked_rice"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "foodcraft:orlean_chicken_rice"
+    ]
+  }
+}

@@ -20,6 +20,8 @@ public class ChineseDataGeneration extends FabricLanguageProvider {
         // 添加Jade 显示信息
         builder.add("config.jade.plugin_crystalmod.fermenting_time", "发酵时间");
         builder.add("tooltip.crystalcraft.fermenting_time", "发酵时间：%d s");
+        // 描述
+        builder.add("tooltip.foodcraft.handbook.desc", "合成材料，无其他用途。");
         // Item Group
         builder.add("itemGroup.foodcraft.machine", "机器");
         builder.add("itemGroup.foodcraft.plant", "植物");
@@ -177,7 +179,7 @@ public class ChineseDataGeneration extends FabricLanguageProvider {
         builder.add(ModItems.WHITE_SLICED_CHICKEN, "白切鸡");
         builder.add(ModItems.CHICKEN_SCALLION_OIL, "葱油鸡");
         builder.add(ModItems.BOILED_FISH_SICHUAN_PICKLES, "酸菜鱼");
-        builder.add(ModItems.SPICY_FISH, "麻辣鱼肉");
+        builder.add(ModItems.SPICY_FISH, "麻辣鱼");
         builder.add(ModItems.STEAMED_FISH, "清蒸鱼");
         builder.add(ModItems.COLA_CHICKEN_RICE, "可乐鸡翅配米饭");
         builder.add(ModItems.CURRY_CHICKEN_RICE, "咖喱鸡肉配米饭");
@@ -270,15 +272,15 @@ public class ChineseDataGeneration extends FabricLanguageProvider {
         builder.add(ModItems.SPRING_ROLLS, "春卷");
         builder.add(ModItems.CHIPS, "薯片");
         builder.add(ModItems.SAUSAGE, "香肠");
-        builder.add(ModItems.CHINESE_SAUSAGE, "香肠");
+        builder.add(ModItems.CHINESE_SAUSAGE, "腊肠");
         builder.add(ModItems.CHINESE_BEAN, "腊肉");
         builder.add(ModItems.FRIED_SAUSAGE, "炸香肠");
         builder.add(ModItems.PIZZA, "披萨");
         builder.add(ModItems.HAMBURGER, "汉堡");
         builder.add(ModItems.BREAD_STICK, "油条");
         builder.add(ModItems.CHILI_TOFU_STRIP, "辣条");
-        builder.add(ModItems.FRIED_CHICKEN, "烤鸡肉");
-        builder.add(ModItems.ORIGINAL_RECIPE, "食谱");
+        builder.add(ModItems.FRIED_CHICKEN, "炸鸡块");
+        builder.add(ModItems.ORIGINAL_RECIPE, "原味鸡块");
         builder.add(ModItems.FRENCH_FRIES, "薯条");
         builder.add(ModItems.POPCORN_CHICKEN, "鸡米花");
         builder.add(ModItems.ORLEAN_WING, "奥尔良鸡翅");
@@ -315,6 +317,21 @@ public class ChineseDataGeneration extends FabricLanguageProvider {
         builder.add(ModItems.DARK_GREEN_MULTIFUNCTION_TOOLS, "暗碧多功能工具");
         builder.add(ModItems.DARK_BLUE_MULTIFUNCTION_TOOLS, "暗蓝多功能工具");
         builder.add(ModItems.PEANUT_OIL_BUCKET, "桶装花生油");
+        // 手册
+        builder.add(ModItems.BLOCK_LOVERS, "方块爱好者【手册】");
+        builder.add(ModItems.LOVELY_PLANT, "可爱的植物【手册】");
+        builder.add(ModItems.DELICIOUS_FOOD_I, "美味的食物 I【手册】");
+        builder.add(ModItems.DELICIOUS_FOOD_II, "美味的食物 II【手册】");
+        builder.add(ModItems.KFC_FOOD, "肯德基食物【手册】");
+        builder.add(ModItems.CHINA_TRADITIONAL_FOOD, "中国传统食品【手册】");
+        builder.add(ModItems.FRIED_FOOD, "油炸食品【手册】");
+        builder.add(ModItems.ALCOHOLIC_RICH, "酒鬼土豪【手册】");
+        builder.add(ModItems.SWEET_DRINKS_I, "香甜的饮料 I【手册】");
+        builder.add(ModItems.SWEET_DRINKS_II, "香甜的饮料 II【手册】");
+        builder.add(ModItems.SALIVATING_STAPLE_FOOD_I, "垂涎欲滴的主食 I【手册】");
+        builder.add(ModItems.SALIVATING_STAPLE_FOOD_II, "垂涎欲滴的主食 II【手册】");
+        builder.add(ModItems.SALIVATING_STAPLE_FOOD_III, "垂涎欲滴的主食 III【手册】");
+        builder.add(ModItems.SYMBOL_RICH, "土豪的象征【手册】");
 
         generateBlockTranslations(provider, builder);
     }

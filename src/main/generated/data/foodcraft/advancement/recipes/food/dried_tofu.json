@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "foodcraft:dried_tofu"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tofu": {
+      "conditions": {
+        "items": [
+          {
+            "items": "foodcraft:tofu"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_tofu"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "foodcraft:dried_tofu"
+    ]
+  }
+}

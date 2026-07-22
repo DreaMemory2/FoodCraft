@@ -1,0 +1,20 @@
+{
+  "type": "foodcraft:potting",
+  "ingredients": [
+    "foodcraft:peanut_oil",
+    "#c:salt",
+    "minecraft:sugar",
+    "foodcraft:soy_sauce"
+  ],
+  "maxTime": 500,
+  "minTime": 450,
+  "output": {
+    "id": "foodcraft:potato_pepper_eggplant"
+  },
+  "staples": [
+    "foodcraft:cooked_rice",
+    "foodcraft:green_pepper",
+    "minecraft:potato",
+    "foodcraft:eggplant"
+  ]
+}

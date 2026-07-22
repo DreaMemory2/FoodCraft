@@ -1,0 +1,19 @@
+{
+  "type": "foodcraft:potting",
+  "ingredients": [
+    "foodcraft:peanut_oil",
+    "#c:salt",
+    "foodcraft:soy_sauce"
+  ],
+  "maxTime": 450,
+  "minTime": 350,
+  "output": {
+    "id": "foodcraft:japan_doufu"
+  },
+  "staples": [
+    "foodcraft:cooked_rice",
+    "foodcraft:tofu",
+    "foodcraft:scallion",
+    "foodcraft:green_pepper"
+  ]
+}

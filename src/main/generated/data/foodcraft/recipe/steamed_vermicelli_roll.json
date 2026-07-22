@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "foodcraft:milled_rice",
+    "B": "minecraft:water_bucket",
+    "C": "foodcraft:scallion",
+    "D": "#minecraft:meat",
+    "E": "foodcraft:sausage"
+  },
+  "pattern": [
+    "AAA",
+    "BBB",
+    "CDE"
+  ],
+  "result": {
+    "id": "foodcraft:steamed_vermicelli_roll"
+  }
+}

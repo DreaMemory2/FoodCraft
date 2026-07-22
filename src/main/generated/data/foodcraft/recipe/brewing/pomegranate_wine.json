@@ -1,0 +1,20 @@
+{
+  "type": "foodcraft:brewing",
+  "fluidInput": {
+    "Name": "minecraft:water",
+    "Properties": {
+      "falling": "true"
+    }
+  },
+  "ingredients": [
+    "foodcraft:pomegranate",
+    "foodcraft:pomegranate",
+    "foodcraft:pomegranate"
+  ],
+  "results": [
+    {
+      "count": 3,
+      "id": "foodcraft:pomegranate_wine"
+    }
+  ]
+}

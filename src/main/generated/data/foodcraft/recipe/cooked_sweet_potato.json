@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": "foodcraft:sweet_potato",
+  "result": {
+    "id": "foodcraft:cooked_sweet_potato"
+  }
+}

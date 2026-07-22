@@ -1,0 +1,19 @@
+{
+  "type": "foodcraft:potting",
+  "ingredients": [
+    "foodcraft:peanut_oil",
+    "#c:salt",
+    "minecraft:sugar",
+    "foodcraft:vinegar"
+  ],
+  "maxTime": 500,
+  "output": {
+    "id": "foodcraft:kung_pao_chicken"
+  },
+  "staples": [
+    "foodcraft:cooked_rice",
+    "foodcraft:peanut",
+    "foodcraft:green_pepper",
+    "minecraft:cooked_chicken"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "type": "foodcraft:frying",
+  "fluidInput": {
+    "Name": "foodcraft:cooking_oil",
+    "Properties": {
+      "falling": "true"
+    }
+  },
+  "ingredient": "foodcraft:chicken_wing",
+  "result": {
+    "id": "foodcraft:orlean_wing"
+  }
+}

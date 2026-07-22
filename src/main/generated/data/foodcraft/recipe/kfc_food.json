@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "foodcraft:hamburger",
+    "B": "foodcraft:french_fries",
+    "C": "foodcraft:chicken_wing",
+    "D": "foodcraft:popcorn_chicken",
+    "E": "foodcraft:fried_chicken",
+    "F": "foodcraft:fried_chicken",
+    "H": "foodcraft:dough_twist",
+    "I": {
+      "fabric:type": "fabric:components",
+      "base": "foodcraft:juice",
+      "components": {
+        "foodcraft:juice": {
+          "juice": "foodcraft:coke"
+        }
+      }
+    },
+    "J": {
+      "fabric:type": "fabric:components",
+      "base": "foodcraft:juice",
+      "components": {
+        "foodcraft:juice": {
+          "juice": "foodcraft:sprite"
+        }
+      }
+    }
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "HIJ"
+  ],
+  "result": {
+    "id": "foodcraft:kfc_food"
+  }
+}

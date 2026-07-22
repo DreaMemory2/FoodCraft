@@ -1,0 +1,7 @@
+{
+  "type": "foodcraft:milling",
+  "ingredient": "foodcraft:beans",
+  "output": {
+    "id": "foodcraft:soy_bean_milk"
+  }
+}

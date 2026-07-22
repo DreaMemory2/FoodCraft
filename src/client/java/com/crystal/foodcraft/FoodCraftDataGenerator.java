@@ -15,7 +15,6 @@ public class FoodCraftDataGenerator implements DataGeneratorEntrypoint {
 		FabricDataGenerator.Pack pack = generator.createPack();
 		pack.addProvider(ModModelDataGeneration::new);
 		pack.addProvider(ChineseDataGeneration::new);
-		pack.addProvider(EnglishDataGeneration::new);
 		pack.addProvider(ModWorldgenGeneration::new);
 		pack.addProvider(ModItemTagsProvider::new);
 		pack.addProvider(ModBlockTagsProvider::new);

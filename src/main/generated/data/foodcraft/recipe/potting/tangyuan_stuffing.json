@@ -1,0 +1,13 @@
+{
+  "type": "foodcraft:potting",
+  "ingredients": [
+    "foodcraft:sticky_rice_flour"
+  ],
+  "maxTime": 500,
+  "output": {
+    "id": "foodcraft:tangyuan"
+  },
+  "staples": [
+    "#foodcraft:tangyuan_stuffing"
+  ]
+}

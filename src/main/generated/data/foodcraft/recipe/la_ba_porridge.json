@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:wheat",
+    "foodcraft:milled_rice",
+    "foodcraft:peanut",
+    "foodcraft:beans",
+    "foodcraft:chinese_bean",
+    "foodcraft:chinese_sausage",
+    "foodcraft:sticky_rice",
+    "minecraft:carrot"
+  ],
+  "result": {
+    "id": "foodcraft:la_ba_porridge"
+  }
+}

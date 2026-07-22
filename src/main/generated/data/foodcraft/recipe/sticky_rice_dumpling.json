@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "foodcraft:bamboo_leaves",
+    "minecraft:string",
+    "foodcraft:sticky_rice",
+    "#minecraft:meat"
+  ],
+  "result": {
+    "id": "foodcraft:sticky_rice_dumpling"
+  }
+}

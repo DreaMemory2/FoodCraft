@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "foodcraft:chocolate_dust",
+    "minecraft:sugar"
+  ],
+  "result": {
+    "id": "foodcraft:chocolate"
+  }
+}

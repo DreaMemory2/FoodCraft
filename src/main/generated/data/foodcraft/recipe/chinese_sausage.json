@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "foodcraft:smoothed_material",
+    "foodcraft:fried_sausage"
+  ],
+  "result": {
+    "id": "foodcraft:chinese_sausage"
+  }
+}

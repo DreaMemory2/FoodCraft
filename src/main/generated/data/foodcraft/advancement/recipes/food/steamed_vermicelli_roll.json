@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "A": {
+      "conditions": {
+        "items": [
+          {
+            "items": "foodcraft:milled_rice"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "B": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:water_bucket"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "foodcraft:steamed_vermicelli_roll"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "A",
+      "B"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "foodcraft:steamed_vermicelli_roll"
+    ]
+  }
+}

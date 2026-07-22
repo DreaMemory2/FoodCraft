@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "minecraft:water_bucket",
+    "B": "foodcraft:milled_rice"
+  },
+  "pattern": [
+    "ABA",
+    "ABA",
+    "ABA"
+  ],
+  "result": {
+    "id": "foodcraft:crossing_bridge_noodles"
+  }
+}

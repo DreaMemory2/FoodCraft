@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": "foodcraft:dark_blue_stone",
+    "B": "foodcraft:dark_eternal_stone",
+    "C": "minecraft:emerald"
+  },
+  "pattern": [
+    "ABA",
+    "ACA",
+    " C "
+  ],
+  "result": {
+    "id": "foodcraft:dark_blue_multifunction_tools"
+  }
+}

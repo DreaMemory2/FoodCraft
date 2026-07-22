@@ -1,0 +1,9 @@
+{
+  "type": "foodcraft:panning",
+  "input": "foodcraft:dough_twist",
+  "maxTime": 380,
+  "minTime": 300,
+  "output": {
+    "id": "foodcraft:fried_dough_twist"
+  }
+}

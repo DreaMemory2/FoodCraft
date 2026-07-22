@@ -1,0 +1,20 @@
+{
+  "type": "foodcraft:brewing",
+  "fluidInput": {
+    "Name": "minecraft:water",
+    "Properties": {
+      "falling": "true"
+    }
+  },
+  "ingredients": [
+    "foodcraft:rice",
+    "foodcraft:rice",
+    "foodcraft:rice"
+  ],
+  "results": [
+    {
+      "count": 3,
+      "id": "foodcraft:spirit"
+    }
+  ]
+}

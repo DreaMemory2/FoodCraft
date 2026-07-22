@@ -1,0 +1,7 @@
+{
+  "type": "foodcraft:milling",
+  "ingredient": "foodcraft:red_bean",
+  "output": {
+    "id": "foodcraft:red_bean_paste"
+  }
+}

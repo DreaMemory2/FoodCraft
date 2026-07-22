@@ -1,0 +1,17 @@
+{
+  "type": "foodcraft:pressure_cooking",
+  "fluidInput": {
+    "Name": "minecraft:water",
+    "Properties": {
+      "falling": "true"
+    }
+  },
+  "ingredient": [
+    "foodcraft:cooked_rice",
+    "#c:egg",
+    "minecraft:cooked_porkchop"
+  ],
+  "result": {
+    "id": "foodcraft:preserved_egg_porridge"
+  }
+}

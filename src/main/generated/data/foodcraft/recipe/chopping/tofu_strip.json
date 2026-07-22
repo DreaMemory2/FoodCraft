@@ -1,0 +1,10 @@
+{
+  "type": "foodcraft:chopping",
+  "ingredients": [
+    "foodcraft:tofu"
+  ],
+  "result": {
+    "count": 3,
+    "id": "foodcraft:tofu_strip"
+  }
+}

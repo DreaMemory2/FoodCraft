@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_sticky_rice": {
+      "conditions": {
+        "items": [
+          {
+            "items": "foodcraft:sticky_rice"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_sticky_rice_flour": {
+      "conditions": {
+        "items": [
+          {
+            "items": "foodcraft:sticky_rice_flour"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "foodcraft:sticky_rice_dough"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_sticky_rice_flour",
+      "has_sticky_rice"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "foodcraft:sticky_rice_dough"
+    ]
+  }
+}

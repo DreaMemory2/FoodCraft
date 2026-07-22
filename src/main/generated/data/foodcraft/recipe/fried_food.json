@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "foodcraft:fried_potato_chips",
+    "B": "foodcraft:new_year_cake",
+    "C": "foodcraft:sausage",
+    "D": "foodcraft:fried_beard",
+    "E": "foodcraft:fried_dough_twist",
+    "F": "foodcraft:fried_drum_stick",
+    "H": "foodcraft:popcorn_chicken",
+    "I": "foodcraft:fried_chicken",
+    "J": "foodcraft:original_recipe"
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "HIJ"
+  ],
+  "result": {
+    "id": "foodcraft:fried_food"
+  }
+}

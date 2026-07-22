@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "foodcraft:flour",
+    "B": "#foodcraft:tangyuan_stuffing",
+    "X": "minecraft:yellow_dye"
+  },
+  "pattern": [
+    "AAA",
+    "XBX",
+    "AAA"
+  ],
+  "result": {
+    "id": "foodcraft:mooncake"
+  }
+}

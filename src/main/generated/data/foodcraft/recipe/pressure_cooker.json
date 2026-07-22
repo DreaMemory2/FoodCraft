@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "minecraft:iron_ingot",
+    "B": "foodcraft:rice_machine_shell",
+    "C": "foodcraft:machine_core",
+    "D": "minecraft:white_dye",
+    "E": "minecraft:black_dye"
+  },
+  "pattern": [
+    "AAA",
+    "DBD",
+    "ECE"
+  ],
+  "result": {
+    "id": "foodcraft:pressure_cooker"
+  }
+}

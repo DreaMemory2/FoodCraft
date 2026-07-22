@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "foodcraft:sticky_rice_flour",
+    "foodcraft:sticky_rice_flour",
+    "foodcraft:sticky_rice",
+    "minecraft:water_bucket"
+  ],
+  "result": {
+    "id": "foodcraft:sticky_rice_dough"
+  }
+}

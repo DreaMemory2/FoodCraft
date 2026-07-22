@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "foodcraft:hot_dog",
+    "B": "foodcraft:cheese",
+    "C": "foodcraft:pasta",
+    "D": "foodcraft:steamed_buns",
+    "E": "foodcraft:sauerkraut_cake",
+    "F": "foodcraft:chili_tofu_strip",
+    "H": "foodcraft:dough_twist",
+    "I": "foodcraft:chinese_sausage",
+    "J": "foodcraft:chinese_bean"
+  },
+  "pattern": [
+    "ABC",
+    "DEF",
+    "HIJ"
+  ],
+  "result": {
+    "id": "foodcraft:delicious_food_two"
+  }
+}

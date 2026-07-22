@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_dark_green_stone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "foodcraft:dark_green_stone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "foodcraft:dark_green_multifunction_tools"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_ultimate_eternal_stone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "foodcraft:dark_eternal_stone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_dark_green_stone",
+      "has_ultimate_eternal_stone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "foodcraft:dark_green_multifunction_tools"
+    ]
+  }
+}

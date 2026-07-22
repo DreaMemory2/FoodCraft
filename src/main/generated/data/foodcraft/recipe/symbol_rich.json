@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "foodcraft:golden_cider",
+    "B": {
+      "fabric:type": "fabric:components",
+      "base": "foodcraft:juice",
+      "components": {
+        "foodcraft:juice": {
+          "juice": "foodcraft:golden_grape"
+        }
+      }
+    },
+    "C": "minecraft:golden_apple",
+    "D": "foodcraft:golden_grapes",
+    "E": "foodcraft:golden_apple_juice_ice_cream",
+    "F": {
+      "fabric:type": "fabric:components",
+      "base": "foodcraft:juice",
+      "components": {
+        "foodcraft:juice": {
+          "juice": "foodcraft:golden_apple"
+        }
+      }
+    },
+    "G": "foodcraft:golden_grape_juice_ice_cream"
+  },
+  "pattern": [
+    "ABA",
+    "CDC",
+    "EFG"
+  ],
+  "result": {
+    "id": "foodcraft:symbol_rich"
+  }
+}

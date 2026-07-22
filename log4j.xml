@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %highlight{%-5level} [%t] %c{36}:%L - %msg%n"/>
+            <Filters>
+                <!-- 正则匹配：包含 "(Minecraft) Recipe " + 任意内容 + 固定后半句 -->
+                <RegexFilter
+                        regex="\(Minecraft\) Recipe .* can't be placed due to empty ingredients and will be ignored"
+                        onMatch="DENY"
+                        onMismatch="NEUTRAL"/>
+            </Filters>
+        </Console>
+    </Appenders>
+</Configuration>
