@@ -90,8 +90,14 @@ public class ModItems {
     public static final Item SPIRIT = drink("spirit", ModFoods.SPIRIT);
     public static final Item GRAPE_WINE = drink("grape_wine", ModFoods.GRAPE_WINE);
     public static final Item CIDER = drink("cider", ModFoods.CIDER);
-    public static final Item GOLDEN_GRAPE_WINE = drink("golden_grape_wine", ModFoods.GOLDEN_GRAPE_WINE);
-    public static final Item GOLDEN_CIDER = drink("golden_cider", ModFoods.GOLDEN_CIDER);
+    public static final Item GOLDEN_GRAPE_WINE = register("golden_grape_wine", Item::new, new Item.Properties()
+            .craftRemainder(Items.GLASS_BOTTLE)
+            .food(ModFoods.GOLDEN_GRAPE_WINE, ModConsumables.GOLDEN_GRAPE_WINE)
+    );
+    public static final Item GOLDEN_CIDER = register("golden_cider", Item::new, new Item.Properties()
+            .craftRemainder(Items.GLASS_BOTTLE)
+            .food(ModFoods.GOLDEN_CIDER, ModConsumables.GOLDEN_CIDER)
+    );
     public static final Item PEACH_WINE = drink("peach_wine", ModFoods.PEACH_WINE);
     public static final Item LYCHEE_WINE = drink("lychee_wine", ModFoods.LYCHEE_WINE);
     public static final Item PEAR_WINE = drink("pear_wine", ModFoods.PEAR_WINE);
@@ -188,7 +194,7 @@ public class ModItems {
     public static final Item POACHED_EGG = food("poached_egg", ModFoods.POACHED_EGG);
     public static final Item PANCAKES = food("pancakes", ModFoods.PANCAKES);
     public static final Item DUMPLING = food("dumpling", ModFoods.DUMPLING);
-    public static final Item FIRED_DUMPLING = food("fired_dumpling", ModFoods.FIRED_DUMPLING);
+    public static final Item FRIED_DUMPLING = food("fried_dumpling", ModFoods.FIRED_DUMPLING);
     public static final Item TOFU = food("tofu", ModFoods.TOFU);
     public static final Item DRIED_TOFU = food("dried_tofu", ModFoods.DRIED_TOFU);
     public static final Item FRIED_POTATO_CHIPS = food("fried_potato_chips", ModFoods.FIRED_POTATO_CHIPS);
@@ -249,7 +255,10 @@ public class ModItems {
     public static final Item DARK_BLUE_MULTIFUNCTION_TOOLS = register("dark_blue_multifunction_tools", DarkBlueMultifunctionTools::new, MultifunctionTool.applyToolProperties(new Item.Properties())
             .component(DataComponents.RARITY, Rarity.EPIC));
     // 复杂
-    // 果汁
+    /**
+     * <p>果汁</p>
+     * @see Items#POTION
+     */
     public static final Item JUICE = register("juice", JuiceItem::new, new Item.Properties()
             .component(ModDataComponents.JUICE, new JuiceContents(Juices.WATER))
             .component(DataComponents.FOOD, ModFoods.JUICE)
@@ -292,15 +301,15 @@ public class ModItems {
     public static final Item PEANUT_OIL_BUCKET = register("peanut_oil_bucket", properties -> new BucketItem(ModFluids.COOKING_OIL_STILL, properties), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1));
 
     private static Item drink(String name, FoodProperties food) {
-        return register(name, new Item.Properties().food(food).craftRemainder(Items.GLASS_BOTTLE));
+        return register(name, Item::new, new Item.Properties()
+                .food(food)
+                .craftRemainder(Items.GLASS_BOTTLE)
+                .component(DataComponents.CONSUMABLE, Consumables.DEFAULT_DRINK)
+        );
     }
 
     private static Item food(String name, FoodProperties food) {
-        return register(name, new Item.Properties().food(food));
-    }
-
-    private static Item register(String name, Item.Properties properties) {
-        return register(name, Item::new, properties);
+        return register(name, Item::new, new Item.Properties().food(food));
     }
 
     private static Item register(String name) {

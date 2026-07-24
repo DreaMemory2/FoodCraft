@@ -11,7 +11,15 @@
     "id": "foodcraft:cola_chicken_rice"
   },
   "staples": [
-    "foodcraft:juice",
+    {
+      "fabric:type": "fabric:components",
+      "base": "foodcraft:juice",
+      "components": {
+        "foodcraft:juice": {
+          "juice": "foodcraft:coke"
+        }
+      }
+    },
     "foodcraft:cooked_rice",
     "foodcraft:chicken_wing"
   ]

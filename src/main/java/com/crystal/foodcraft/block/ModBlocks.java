@@ -67,6 +67,10 @@ public class ModBlocks {
     public static final Block POMEGRANATE_LEAVES = register("pomegranate_leaves", properties -> new TintedParticleLeavesBlock(0, properties), leavesProperties());
     public static final Block CHINESE_DATE_LEAVES = register("chinese_date_leaves", properties -> new TintedParticleLeavesBlock(0, properties), leavesProperties());
     public static final Block CHERRY_LEAVES = register("cherry_leaves", properties -> new TintedParticleLeavesBlock(0, properties), leavesProperties());
+    /**
+     * @see Blocks#JUNGLE_LEAVES
+     */
+    public static final Block JUNGLE_LEAVES = register("big_jungle_leaves", properties -> new BigLeavesBlock(0.01F, properties), leavesProperties());
     // 树苗
     public static final Block PEAR_SAPLING = sapling("pear_sapling", properties -> new SaplingBlock(ModTreeGrower.PEAR, properties));
     public static final Block LYCHEE_SAPLING = sapling("lychee_sapling", properties -> new SaplingBlock(ModTreeGrower.LYCHEE, properties));
@@ -83,8 +87,8 @@ public class ModBlocks {
     public static final Block POMEGRANATE_SAPLING = sapling("pomegranate_sapling", properties -> new SaplingBlock(ModTreeGrower.POMEGRANATE, properties));
     public static final Block CHINESE_DATE_SAPLING = sapling("chinese_date_sapling", properties -> new SaplingBlock(ModTreeGrower.CHINSES_DATE, properties));
     public static final Block CHERRY_SAPLING = sapling("cherry_sapling", properties -> new SaplingBlock(ModTreeGrower.CHERRY, properties));
-    public static final Block BANANA_SAPLING = sapling("banana_sapling", properties -> new SaplingBlock(TreeGrower.OAK, properties));
-    public static final Block COCONUT_SAPLING = sapling("coconut_sapling", properties -> new SaplingBlock(TreeGrower.OAK, properties));
+    public static final Block BANANA_SAPLING = sapling("banana_sapling", properties -> new SaplingBlock(ModTreeGrower.BANANA, properties));
+    public static final Block COCONUT_SAPLING = sapling("coconut_sapling", properties -> new SaplingBlock(ModTreeGrower.COCONUT, properties));
     // 作物
     public static final Block WHITE_RADDISH = crop("white_raddish", WhiteRaddishCrop::new);
     public static final Block STRAWBERRY = crop("strawberry", StrawBerryCrop::new);

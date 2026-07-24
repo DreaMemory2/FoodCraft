@@ -30,6 +30,9 @@ public class ModItemTags {
     public static final TagKey<Item> SALIVATING_STAPLE_FOOD_II = bind("salivating_staple_food_two");
     public static final TagKey<Item> SALIVATING_STAPLE_FOOD_III = bind("salivating_staple_food_three");
     public static final TagKey<Item> SYMBOL_RICH = bind("symbol_rich");
+    // 宝石制作标签
+    public static final TagKey<Item> DARK_BLUE_STONE = bind("dark_blue_stone");
+    public static final TagKey<Item> DARK_GREEN_STONE = bind("dark_green_stone");
 
     public static final TagKey<Juice> JUICE = TagKey.create(ModRegistryKeys.JUICE, FoodCraft.of("juice"));
 

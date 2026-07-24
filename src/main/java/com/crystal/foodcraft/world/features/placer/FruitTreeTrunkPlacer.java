@@ -1,9 +1,6 @@
 package com.crystal.foodcraft.world.features.placer;
 
 import com.crystal.foodcraft.world.features.config.FruitTreeConfiguration;
-import com.google.common.collect.ImmutableList;
-import com.mojang.serialization.MapCodec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.WorldGenLevel;

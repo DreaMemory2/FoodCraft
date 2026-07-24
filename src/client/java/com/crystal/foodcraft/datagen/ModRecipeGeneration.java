@@ -415,7 +415,7 @@ public class ModRecipeGeneration extends FabricRecipeProvider {
                     .unlockedBy("has_egg", has(Items.EGG))
                     .save(output, "panning/poached_egg");
             // 煎饺
-            this.panning(ModItems.FIRED_DUMPLING, 250, 350)
+            this.panning(ModItems.FRIED_DUMPLING, 250, 350)
                     .ingredient(ModItems.DUMPLING)
                     .unlockedBy("has_dumpling", has(ModItems.DUMPLING))
                     .save(output, "panning/fired_dumpling");
@@ -1684,6 +1684,49 @@ public class ModRecipeGeneration extends FabricRecipeProvider {
                     .define('G', ModItems.GOLDEN_GRAPE_JUICE_ICE_CREAM)
                     .unlockedBy("has_symbol_rich", has(ModItemTags.SYMBOL_RICH))
                     .save(output, "symbol_rich");
+            // 暗蓝之石
+            this.shaped(RecipeCategory.MISC, ModItems.DARK_BLUE_STONE)
+                    .pattern("ABC")
+                    .pattern("DED")
+                    .pattern("FGH")
+                    .define('A', ModItems.SWEET_DRINKS_I)
+                    .define('B', ModItems.SWEET_DRINKS_II)
+                    .define('C', ModItems.SALIVATING_STAPLE_FOOD_I)
+                    .define('D', Items.IRON_INGOT)
+                    .define('E', Items.DIAMOND)
+                    .define('F', ModItems.SALIVATING_STAPLE_FOOD_II)
+                    .define('G', ModItems.SALIVATING_STAPLE_FOOD_III)
+                    .define('H', ModItems.BLOCK_LOVERS)
+                    .unlockedBy("has_dark_blue_stone", has(ModItemTags.DARK_BLUE_STONE))
+                    .save(output, "dark_blue_stone");
+            // 暗碧之石
+            this.shaped(RecipeCategory.MISC, ModItems.DARK_GREEN_STONE)
+                    .pattern("ABC")
+                    .pattern("DED")
+                    .pattern("FGH")
+                    .define('A', ModItems.DELICIOUS_FOOD_I)
+                    .define('B', ModItems.DELICIOUS_FOOD_II)
+                    .define('C', ModItems.KFC_FOOD)
+                    .define('D', Items.IRON_INGOT)
+                    .define('E', Items.EMERALD)
+                    .define('F', ModItems.CHINA_TRADITIONAL_FOOD)
+                    .define('G', ModItems.FRIED_FOOD)
+                    .define('H', ModItems.LOVELY_PLANT)
+                    .unlockedBy("has_dark_green_stone", has(ModItemTags.DARK_GREEN_STONE))
+                    .save(output, "dark_green_stone");
+            // 终极千古之石
+            this.shaped(RecipeCategory.MISC, ModItems.ULTIMATE_ETERNAL_STONE)
+                    .pattern("AAA")
+                    .pattern("BCD")
+                    .pattern("EEE")
+                    .define('A', ModItems.DARK_BLUE_STONE)
+                    .define('B', ModItems.SYMBOL_RICH)
+                    .define('C', Items.DIAMOND)
+                    .define('D', ModItems.ALCOHOLIC_RICH)
+                    .define('E', ModItems.DARK_GREEN_STONE)
+                    .unlockedBy("has_dark_green_stone", has(ModItems.DARK_GREEN_STONE))
+                    .unlockedBy("has_dark_blue_stone", has(ModItems.DARK_BLUE_STONE))
+                    .save(output, "has_ulimate_eternal_stone");
         }
 
         public void smelting() {

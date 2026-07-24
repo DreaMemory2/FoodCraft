@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "foodcraft:delicious_food_one",
+    "B": "foodcraft:delicious_food_two",
+    "C": "foodcraft:kfc_food",
+    "D": "minecraft:iron_ingot",
+    "E": "minecraft:emerald",
+    "F": "foodcraft:china_traditional_food",
+    "G": "foodcraft:fried_food",
+    "H": "foodcraft:lovely_plant"
+  },
+  "pattern": [
+    "ABC",
+    "DED",
+    "FGH"
+  ],
+  "result": {
+    "id": "foodcraft:dark_green_stone"
+  }
+}

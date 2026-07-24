@@ -260,7 +260,7 @@ public class ChineseDataGeneration extends FabricLanguageProvider {
         builder.add(ModItems.POACHED_EGG, "荷包蛋");
         builder.add(ModItems.PANCAKES, "烙饼");
         builder.add(ModItems.DUMPLING, "饺子");
-        builder.add(ModItems.FIRED_DUMPLING, "煎饺");
+        builder.add(ModItems.FRIED_DUMPLING, "煎饺");
         builder.add(ModItems.TOFU, "豆腐");
         builder.add(ModItems.DRIED_TOFU, "干豆腐");
         builder.add(ModItems.FRIED_POTATO_CHIPS, "炸薯片");
@@ -363,6 +363,8 @@ public class ChineseDataGeneration extends FabricLanguageProvider {
         builder.add(ModBlocks.CHINESE_DATE_LEAVES, "红枣树叶");
         builder.add(ModBlocks.CHERRY_LEAVES, "樱桃树叶");
         builder.add(ModBlocks.LEAVES, "树叶");
+        builder.add(ModBlocks.JUNGLE_LEAVES, "丛林树叶");
+
         builder.add(ModBlocks.STRAWBERRY_CAKE, "草莓蛋糕");
         builder.add(ModBlocks.GRAPES_CAKE, "葡萄蛋糕");
         builder.add(ModBlocks.GOLDEN_GRAPES_CAKE, "金葡萄蛋糕");

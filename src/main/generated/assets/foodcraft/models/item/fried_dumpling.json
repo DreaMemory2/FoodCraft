@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "foodcraft:item/fired_dumpling"
+    "layer0": "foodcraft:item/fried_dumpling"
   }
 }

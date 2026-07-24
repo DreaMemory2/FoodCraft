@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "foodcraft:sweet_drinks_one",
+    "B": "foodcraft:sweet_drinks_two",
+    "C": "foodcraft:salivating_staple_food_one",
+    "D": "minecraft:iron_ingot",
+    "E": "minecraft:diamond",
+    "F": "foodcraft:salivating_staple_food_two",
+    "G": "foodcraft:salivating_staple_food_three",
+    "H": "foodcraft:block_lovers"
+  },
+  "pattern": [
+    "ABC",
+    "DED",
+    "FGH"
+  ],
+  "result": {
+    "id": "foodcraft:dark_blue_stone"
+  }
+}

@@ -48,7 +48,7 @@ public class ModItemGroup {
             .build());
 
     public static final CreativeModeTab SNACK = register("snack", FabricCreativeModeTab.builder()
-            .icon(() -> new ItemStack(ModItems.FIRED_DUMPLING))
+            .icon(() -> new ItemStack(ModItems.FRIED_DUMPLING))
             .title(Component.translatable("itemGroup.foodcraft.snack"))
             .displayItems(snacks())
             .build());
@@ -85,6 +85,7 @@ public class ModItemGroup {
             entries.accept(ModBlocks.CARROT_BLOCK);
 
             entries.accept(ModBlocks.LEAVES);
+            entries.accept(ModBlocks.JUNGLE_LEAVES);
             entries.accept(ModBlocks.PEAR_LEAVES);
             entries.accept(ModBlocks.LYCHEE_LEAVES);
             entries.accept(ModBlocks.PEACH_LEAVES);
@@ -316,7 +317,7 @@ public class ModItemGroup {
             entries.accept(ModItems.POACHED_EGG);
             entries.accept(ModItems.PANCAKES);
             entries.accept(ModItems.DUMPLING);
-            entries.accept(ModItems.FIRED_DUMPLING);
+            entries.accept(ModItems.FRIED_DUMPLING);
             entries.accept(ModItems.TOFU);
             entries.accept(ModItems.DRIED_TOFU);
             entries.accept(ModItems.FRIED_POTATO_CHIPS);

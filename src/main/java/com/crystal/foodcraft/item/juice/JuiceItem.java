@@ -6,6 +6,9 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * @see net.minecraft.world.item.PotionItem PotionItem
+ */
 public class JuiceItem extends Item {
 
     public JuiceItem(Properties properties) {

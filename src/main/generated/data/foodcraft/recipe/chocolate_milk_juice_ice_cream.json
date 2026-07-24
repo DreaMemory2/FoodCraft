@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ice_cream",
+  "ingredients": [
+    {
+      "fabric:type": "fabric:components",
+      "base": "foodcraft:juice",
+      "components": {
+        "foodcraft:juice": {
+          "juice": "foodcraft:chocolate_milk"
+        }
+      }
+    },
+    "foodcraft:vanilla_ice_cream"
+  ],
+  "result": {
+    "id": "foodcraft:chocolate_milk_ice_cream"
+  }
+}

@@ -6,7 +6,6 @@ import com.crystal.foodcraft.world.features.config.FruitTreeConfiguration;
 import com.crystal.foodcraft.world.features.placer.CrossFoliagePlacer;
 import com.crystal.foodcraft.world.features.placer.ForkingTrunkPlacer;
 import com.crystal.foodcraft.world.features.placer.FruitPlacer;
-import com.crystal.foodcraft.world.features.placer.FruitTreeTrunkPlacer;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.features.FeatureUtils;

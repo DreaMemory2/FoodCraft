@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "foodcraft:dark_blue_stone",
+    "B": "foodcraft:symbol_rich",
+    "C": "minecraft:diamond",
+    "D": "foodcraft:alcoholic_rich",
+    "E": "foodcraft:dark_green_stone"
+  },
+  "pattern": [
+    "AAA",
+    "BCD",
+    "EEE"
+  ],
+  "result": {
+    "id": "foodcraft:dark_eternal_stone"
+  }
+}

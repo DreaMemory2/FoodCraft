@@ -178,5 +178,23 @@ public class ModItemTagsProvider extends FabricTagsProvider.ItemTagsProvider {
                 .add(ModItems.GOLDEN_GRAPES)
                 .add(ModItems.GOLDEN_APPLE_JUICE_ICE_CREAM)
                 .add(ModItems.GOLDEN_GRAPE_JUICE_ICE_CREAM);
+        this.valueLookupBuilder(ModItemTags.DARK_BLUE_STONE)
+                .add(ModItems.SWEET_DRINKS_I)
+                .add(ModItems.SWEET_DRINKS_II)
+                .add(ModItems.SALIVATING_STAPLE_FOOD_I)
+                .add(Items.IRON_INGOT)
+                .add(Items.DIAMOND)
+                .add(ModItems.SALIVATING_STAPLE_FOOD_II)
+                .add(ModItems.SALIVATING_STAPLE_FOOD_III)
+                .add(ModItems.BLOCK_LOVERS);
+        this.valueLookupBuilder(ModItemTags.DARK_GREEN_STONE)
+                .add(ModItems.DELICIOUS_FOOD_I)
+                .add(ModItems.DELICIOUS_FOOD_II)
+                .add(ModItems.KFC_FOOD)
+                .add(Items.IRON_INGOT)
+                .add(Items.EMERALD)
+                .add(ModItems.CHINA_TRADITIONAL_FOOD)
+                .add(ModItems.FRIED_FOOD)
+                .add(ModItems.LOVELY_PLANT);
     }
 }

@@ -4,6 +4,10 @@ import com.crystal.foodcraft.FoodCraft;
 import com.crystal.foodcraft.register.ModRegistries;
 import net.minecraft.core.Holder.Reference;
 import net.minecraft.core.Registry;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+
+import java.util.List;
 
 /**
  * @see net.minecraft.world.item.alchemy.Potions
@@ -16,8 +20,8 @@ public class Juices {
     public static final Reference<Juice> APPLE = register("apple", new Juice("apple", 16392281));
     public static final Reference<Juice> VEGETABLE = register("vegetable", new Juice("vegetable", 6994969));
     public static final Reference<Juice> MELON = register("melon", new Juice("melon", 15222969));
-    public static final Reference<Juice> GOLDEN_GRAPE = register("golden_grape", new Juice("golden_grape", 14735938));
-    public static final Reference<Juice> GOLDEN_APPLE = register("golden_apple", new Juice("golden_apple", 15197312));
+    public static final Reference<Juice> GOLDEN_GRAPE = register("golden_grape", new Juice("golden_grape", 14735938, List.of(new MobEffectInstance(MobEffects.STRENGTH, 36000, 0), new MobEffectInstance(MobEffects.INSTANT_HEALTH, 36000, 0), new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 36000, 0))));
+    public static final Reference<Juice> GOLDEN_APPLE = register("golden_apple", new Juice("golden_apple", 15197312, List.of(new MobEffectInstance(MobEffects.ABSORPTION, 36000, 0), new MobEffectInstance(MobEffects.REGENERATION, 36000, 0), new MobEffectInstance(MobEffects.RESISTANCE, 36000, 0))));
     public static final Reference<Juice> COKE = register("coke", new Juice("coke", 5316616));
     public static final Reference<Juice> SPRITE = register("sprite", new Juice("sprite", 15592941));
     public static final Reference<Juice> MILK_TEA = register("milk_tea", new Juice("milk_tea", 12752947));

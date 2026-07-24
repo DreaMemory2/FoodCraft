@@ -71,6 +71,8 @@ public class ModModelDataGeneration extends FabricModelProvider {
         createLeaves(model, ModBlocks.POMEGRANATE_LEAVES);
         createLeaves(model, ModBlocks.CHINESE_DATE_LEAVES);
         createLeaves(model, ModBlocks.CHERRY_LEAVES);
+        // 原版染色树叶
+        model.createTintedLeaves(ModBlocks.JUNGLE_LEAVES, TexturedModel.LEAVES, -12012264);
         // CAKE
         createCakeBlock(model, ModBlocks.STRAWBERRY_CAKE);
         createCakeBlock(model, ModBlocks.GRAPES_CAKE);
@@ -280,7 +282,7 @@ public class ModModelDataGeneration extends FabricModelProvider {
         createFlatItemModel(model, ModItems.POACHED_EGG);
         createFlatItemModel(model, ModItems.PANCAKES);
         createFlatItemModel(model, ModItems.DUMPLING);
-        createFlatItemModel(model, ModItems.FIRED_DUMPLING);
+        createFlatItemModel(model, ModItems.FRIED_DUMPLING);
         createFlatItemModel(model, ModItems.TOFU);
         createFlatItemModel(model, ModItems.DRIED_TOFU);
         createFlatItemModel(model, ModItems.FRIED_POTATO_CHIPS);

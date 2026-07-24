@@ -8,6 +8,7 @@ import com.crystal.foodcraft.screen.*;
 import com.crystal.foodcraft.screenhandler.ModMenuTypes;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderingRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.BlockColorRegistry;
 import net.minecraft.client.color.block.BlockTintSources;
 import net.minecraft.client.color.item.ItemTintSources;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -15,6 +16,8 @@ import net.minecraft.client.renderer.block.FluidModel;
 import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
 import net.minecraft.client.resources.model.sprite.Material;
 import net.minecraft.resources.Identifier;
+
+import java.util.List;
 
 public class FoodCraftClient implements ClientModInitializer {
 	@Override
@@ -42,6 +45,7 @@ public class FoodCraftClient implements ClientModInitializer {
 		);
 
 		ItemTintSources.ID_MAPPER.put(FoodCraft.of("juice"), JuiceColor.MAP_CODEC);
+		BlockColorRegistry.register(List.of(BlockTintSources.constant(-12012264)), ModBlocks.JUNGLE_LEAVES);
 
 		// 机器页面
 		MenuScreens.register(ModMenuTypes.CHOPPING_BOARD, ChoppingBoardScreen::new);

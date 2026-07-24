@@ -10,6 +10,10 @@ import com.crystal.foodcraft.item.ModItems;
 import com.crystal.foodcraft.recipe.ModRecipeTypes;
 import com.crystal.foodcraft.register.ModDataComponents;
 import com.crystal.foodcraft.register.ModFluids;
+import com.crystal.foodcraft.world.features.ModFeature;
+import com.crystal.foodcraft.world.features.placer.FruitPlacerType;
+import com.crystal.foodcraft.world.features.placer.IFoliagePlacerType;
+import com.crystal.foodcraft.world.features.placer.ITrunkPlacerType;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.recipe.v1.sync.RecipeSynchronization;
 import net.fabricmc.fabric.api.transfer.v1.fluid.FluidStorage;
@@ -30,6 +34,10 @@ public class FoodCraft implements ModInitializer {
 		ModBlockEntities.init();
 		ModItemGroup.init();
 		ModFluids.init();
+		IFoliagePlacerType.init();
+		ITrunkPlacerType.init();
+		FruitPlacerType.init();
+		ModFeature.init();
 
 		// Synchronize recipe serializers for JEI/RRV/other recipe viewers
 		RecipeSynchronization.synchronizeRecipeSerializer(ModRecipeTypes.CHOPPING_RECIPE_SERIALIZER);

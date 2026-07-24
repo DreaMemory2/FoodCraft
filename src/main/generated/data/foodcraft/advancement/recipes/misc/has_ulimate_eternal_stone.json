@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_dark_blue_stone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "foodcraft:dark_blue_stone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_dark_green_stone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "foodcraft:dark_green_stone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "foodcraft:has_ulimate_eternal_stone"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_dark_green_stone",
+      "has_dark_blue_stone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "foodcraft:has_ulimate_eternal_stone"
+    ]
+  }
+}

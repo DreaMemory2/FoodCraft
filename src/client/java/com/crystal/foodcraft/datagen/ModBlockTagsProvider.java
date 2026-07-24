@@ -6,6 +6,7 @@ import com.crystal.foodcraft.tag.ModBlockTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.tags.BlockTags;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
@@ -32,6 +33,7 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
         this.valueLookupBuilder(ModBlockTags.INCORRECT_FOR_EMERALD_TOOL);
         this.valueLookupBuilder(ModBlockTags.LEAVES)
                 .add(ModBlocks.LEAVES)
+                .add(ModBlocks.JUNGLE_LEAVES)
                 .add(ModBlocks.PEAR_LEAVES)
                 .add(ModBlocks.LYCHEE_LEAVES)
                 .add(ModBlocks.PEACH_LEAVES)
