@@ -28,6 +28,8 @@ public class ModTreePlacements {
     public static final ResourceKey<PlacedFeature> POMEGRANATE_CHECKED = createKey("pomegranate_checked");
     public static final ResourceKey<PlacedFeature> CHINESE_DATE_CHECKED = createKey("chinese_date_checked");
     public static final ResourceKey<PlacedFeature> CHERRY = createKey("cherry_checked");
+    public static final ResourceKey<PlacedFeature> BANANA = createKey("banana_checked");
+    public static final ResourceKey<PlacedFeature> COCONUT = createKey("coconut_checked");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -46,6 +48,8 @@ public class ModTreePlacements {
         Holder<ConfiguredFeature<?, ?>> pomegranate = configuredFeatures.getOrThrow(ModTreeFeatures.POMEGRANATE);
         Holder<ConfiguredFeature<?, ?>> chineseDate = configuredFeatures.getOrThrow(ModTreeFeatures.CHINESE_DATE);
         Holder<ConfiguredFeature<?, ?>> cherry = configuredFeatures.getOrThrow(ModTreeFeatures.CHERRY);
+        Holder<ConfiguredFeature<?, ?>> banana = configuredFeatures.getOrThrow(ModTreeFeatures.BANANA);
+        Holder<ConfiguredFeature<?, ?>> coconut = configuredFeatures.getOrThrow(ModTreeFeatures.COCONUT);
         PlacementUtils.register(context, PEAR_CHECKED, pear, PlacementUtils.filteredByBlockSurvival(ModBlocks.PEAR_SAPLING));
         PlacementUtils.register(context, LYCHEE_CHECKED, lychee, PlacementUtils.filteredByBlockSurvival(ModBlocks.LYCHEE_SAPLING));
         PlacementUtils.register(context, PEACH_CHECKED, peach, PlacementUtils.filteredByBlockSurvival(ModBlocks.PEACH_SAPLING));
@@ -61,6 +65,8 @@ public class ModTreePlacements {
         PlacementUtils.register(context, POMEGRANATE_CHECKED, pomegranate, PlacementUtils.filteredByBlockSurvival(ModBlocks.POMEGRANATE_SAPLING));
         PlacementUtils.register(context, CHINESE_DATE_CHECKED, chineseDate, PlacementUtils.filteredByBlockSurvival(ModBlocks.CHINESE_DATE_SAPLING));
         PlacementUtils.register(context, CHERRY, cherry, PlacementUtils.filteredByBlockSurvival(ModBlocks.CHERRY_SAPLING));
+        PlacementUtils.register(context, BANANA, banana, PlacementUtils.filteredByBlockSurvival(ModBlocks.BANANA_SAPLING));
+        PlacementUtils.register(context, COCONUT, coconut, PlacementUtils.filteredByBlockSurvival(ModBlocks.COCONUT_SAPLING));
     }
 
     public static ResourceKey<PlacedFeature> createKey(String name) {

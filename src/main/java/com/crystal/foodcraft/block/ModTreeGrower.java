@@ -23,6 +23,8 @@ public class ModTreeGrower {
     public static final TreeGrower POMEGRANATE = createTree("pomegranate", ModTreeFeatures.POMEGRANATE);
     public static final TreeGrower CHINSES_DATE = createTree("chinese_date", ModTreeFeatures.CHINESE_DATE);
     public static final TreeGrower CHERRY = createTree("cherry", ModTreeFeatures.CHERRY);
+    public static final TreeGrower BANANA = createTree("banana", ModTreeFeatures.BANANA);
+    public static final TreeGrower COCONUT = createTree("coconut", ModTreeFeatures.COCONUT);
 
     public static TreeGrower createTree(String name, ResourceKey<ConfiguredFeature<?, ?>> tree) {
         return new TreeGrower(

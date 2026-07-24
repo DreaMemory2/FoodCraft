@@ -2,6 +2,11 @@ package com.crystal.foodcraft.world.features;
 
 import com.crystal.foodcraft.FoodCraft;
 import com.crystal.foodcraft.block.ModBlocks;
+import com.crystal.foodcraft.world.features.config.FruitTreeConfiguration;
+import com.crystal.foodcraft.world.features.placer.CrossFoliagePlacer;
+import com.crystal.foodcraft.world.features.placer.ForkingTrunkPlacer;
+import com.crystal.foodcraft.world.features.placer.FruitPlacer;
+import com.crystal.foodcraft.world.features.placer.FruitTreeTrunkPlacer;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.features.FeatureUtils;
@@ -20,6 +25,9 @@ import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvi
 import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 
+/**
+ * @see net.minecraft.data.worldgen.features.TreeFeatures TreeFeatures
+ */
 public class ModTreeFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> PEAR = createKey("pear");
     public static final ResourceKey<ConfiguredFeature<?, ?>> LYCHEE = createKey("lychee");
@@ -36,6 +44,8 @@ public class ModTreeFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> POMEGRANATE = createKey("pomegranate");
     public static final ResourceKey<ConfiguredFeature<?, ?>> CHINESE_DATE = createKey("chinese_date");
     public static final ResourceKey<ConfiguredFeature<?, ?>> CHERRY = createKey("cherry");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BANANA = createKey("banana");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> COCONUT = createKey("coconut");
 
     private static TreeConfiguration.TreeConfigurationBuilder createTreeWithLeaves(Block leaves) {
         return new TreeConfiguration.TreeConfigurationBuilder(
@@ -45,6 +55,30 @@ public class ModTreeFeatures {
                         .add(ModBlocks.LEAVES.defaultBlockState(), 3)
                         .add(leaves.defaultBlockState(), 1)),
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
+                new TwoLayersFeatureSize(1, 0, 1)
+        );
+    }
+
+    private static FruitTreeConfiguration.Builder createBananaTree() {
+        return new FruitTreeConfiguration.Builder(
+                BlockStateProvider.simple(Blocks.JUNGLE_LOG),
+                new com.crystal.foodcraft.world.features.placer.StraightTrunkPlacer(5, 2, 2),
+                BlockStateProvider.simple(ModBlocks.JUNGLE_LEAVES),
+                new CrossFoliagePlacer(ConstantInt.of(4), ConstantInt.of(0), 4),
+                BlockStateProvider.simple(ModBlocks.BANANA),
+                new FruitPlacer(ConstantInt.of(0)),
+                new TwoLayersFeatureSize(1, 0, 1)
+        );
+    }
+
+    private static FruitTreeConfiguration.Builder createCoconutTree() {
+        return new FruitTreeConfiguration.Builder(
+                BlockStateProvider.simple(Blocks.JUNGLE_LOG),
+                new ForkingTrunkPlacer(5, 3, 0),
+                BlockStateProvider.simple(ModBlocks.JUNGLE_LEAVES),
+                new CrossFoliagePlacer(ConstantInt.of(4), ConstantInt.of(0), 4),
+                BlockStateProvider.simple(ModBlocks.COCONUT),
+                new FruitPlacer(ConstantInt.of(0)),
                 new TwoLayersFeatureSize(1, 0, 1)
         );
     }
@@ -66,7 +100,9 @@ public class ModTreeFeatures {
         FeatureUtils.register(context, CHINESE_DATE, Feature.TREE, createTreeWithLeaves(ModBlocks.CHINESE_DATE_LEAVES).build());
         FeatureUtils.register(context, CHERRY, Feature.TREE, createTreeWithLeaves(ModBlocks.CHERRY_LEAVES).build());
         // 香蕉树
+        FeatureUtils.register(context, BANANA, ModFeature.FRUIT_TREE, createBananaTree().build());
         // 椰子树
+        FeatureUtils.register(context, COCONUT, ModFeature.FRUIT_TREE, createCoconutTree().build());
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> createKey(String name) {
