@@ -1,7 +1,6 @@
 package com.crystal.foodcraft.screenhandler;
 
 import com.crystal.foodcraft.block.entity.BMMachineBlockEntity;
-import com.crystal.foodcraft.block.entity.BeverageMakingMode;
 import com.crystal.foodcraft.network.BlockPosPayload;
 import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
