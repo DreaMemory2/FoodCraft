@@ -1,0 +1,19 @@
+{
+  "type": "foodcraft:beverage_making",
+  "fluidInput": {
+    "Name": "minecraft:water",
+    "Properties": {
+      "falling": "true"
+    }
+  },
+  "ingredient": "foodcraft:chocolate",
+  "mode": "heat",
+  "result": {
+    "components": {
+      "foodcraft:juice": {
+        "juice": "foodcraft:chocolate_water"
+      }
+    },
+    "id": "foodcraft:juice"
+  }
+}

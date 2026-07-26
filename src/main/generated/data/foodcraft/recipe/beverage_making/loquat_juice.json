@@ -1,0 +1,19 @@
+{
+  "type": "foodcraft:beverage_making",
+  "fluidInput": {
+    "Name": "minecraft:water",
+    "Properties": {
+      "falling": "true"
+    }
+  },
+  "ingredient": "foodcraft:loquat",
+  "mode": "cool",
+  "result": {
+    "components": {
+      "foodcraft:juice": {
+        "juice": "foodcraft:loquat"
+      }
+    },
+    "id": "foodcraft:juice"
+  }
+}

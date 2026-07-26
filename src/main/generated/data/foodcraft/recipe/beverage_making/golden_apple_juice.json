@@ -1,0 +1,19 @@
+{
+  "type": "foodcraft:beverage_making",
+  "fluidInput": {
+    "Name": "minecraft:water",
+    "Properties": {
+      "falling": "true"
+    }
+  },
+  "ingredient": "minecraft:golden_apple",
+  "mode": "cool",
+  "result": {
+    "components": {
+      "foodcraft:juice": {
+        "juice": "foodcraft:golden_apple"
+      }
+    },
+    "id": "foodcraft:juice"
+  }
+}

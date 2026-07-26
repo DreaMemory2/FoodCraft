@@ -1,0 +1,19 @@
+{
+  "type": "foodcraft:beverage_making",
+  "fluidInput": {
+    "Name": "minecraft:water",
+    "Properties": {
+      "falling": "true"
+    }
+  },
+  "ingredient": "foodcraft:golden_grapes",
+  "mode": "cool",
+  "result": {
+    "components": {
+      "foodcraft:juice": {
+        "juice": "foodcraft:golden_grape"
+      }
+    },
+    "id": "foodcraft:juice"
+  }
+}

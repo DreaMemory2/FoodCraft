@@ -1,0 +1,19 @@
+{
+  "type": "foodcraft:beverage_making",
+  "fluidInput": {
+    "Name": "minecraft:water",
+    "Properties": {
+      "falling": "true"
+    }
+  },
+  "ingredient": "foodcraft:white_raddish",
+  "mode": "cool",
+  "result": {
+    "components": {
+      "foodcraft:juice": {
+        "juice": "foodcraft:white_radish"
+      }
+    },
+    "id": "foodcraft:juice"
+  }
+}

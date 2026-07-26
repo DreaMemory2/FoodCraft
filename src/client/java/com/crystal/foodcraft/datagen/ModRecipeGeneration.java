@@ -694,11 +694,185 @@ public class ModRecipeGeneration extends FabricRecipeProvider {
          * <p>饮料制作机配方</p>
          */
         public void beverageMaking() {
+            // 苹果果汁
             this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.APPLE)))
                     .ingredient(Items.APPLE)
                     .fluidState(Fluids.WATER)
                     .unlockedBy("has_apple", has(Items.APPLE))
                     .save(output, "beverage_making/apple_juice");
+            // 香蕉果汁
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.BANANA)))
+                    .ingredient(ModItems.BANANA)
+                    .fluidState(Fluids.WATER)
+                    .unlockedBy("has_banana", has(ModItems.BANANA))
+                    .save(output, "beverage_making/banana_juice");
+            // 蔬菜果汁
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.VEGETABLE, content(Juices.VEGETABLE)))
+                    .ingredient(ModItems.VEGETABLE)
+                    .fluidState(Fluids.WATER)
+                    .unlockedBy("has_vegetable", has(ModItems.VEGETABLE))
+                    .save(output, "beverage_making/vegetable_juice");
+            // 胡萝卜汁
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.CARROT)))
+                    .ingredient(Items.CARROT)
+                    .fluidState(Fluids.WATER)
+                    .unlockedBy("has_carrot", has(Items.CARROT))
+                    .save(output, "beverage_making/carrot_juice");
+            // 巧克力牛奶
+            // 椰子汁
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.VEGETABLE, content(Juices.COCONUT)))
+                    .ingredient(ModItems.COCONUT)
+                    .fluidState(Fluids.WATER)
+                    .unlockedBy("has_coconut", has(ModItems.COCONUT))
+                    .save(output, "beverage_making/coconut_juice");
+            // 椰奶
+            // 可乐
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.COKE)))
+                    .ingredient(Items.BROWN_DYE)
+                    .fluidState(Fluids.WATER)
+                    .unlockedBy("has_brown_dye", has(Items.BROWN_DYE))
+                    .save(output, "beverage_making/coke_juice");
+            // 黄瓜汁
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.CUCUMBER)))
+                    .ingredient(ModItems.CUCUMBER)
+                    .fluidState(Fluids.WATER)
+                    .unlockedBy("has_cucumber", has(ModItems.CUCUMBER))
+                    .save(output, "beverage_making/cucumber_juice");
+            // 红枣汁
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.CHINESE_DATE)))
+                    .ingredient(ModItems.CHINESE_DATES)
+                    .fluidState(Fluids.WATER)
+                    .unlockedBy("has_chinese_date", has(ModItems.CHINESE_DATES))
+                    .save(output, "beverage_making/chinese_date_juice");
+            // 橘子汁
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.ORANGE)))
+                    .ingredient(ModItems.ORANGE)
+                    .fluidState(Fluids.WATER)
+                    .unlockedBy("has_orange", has(ModItems.ORANGE))
+                    .save(output, "beverage_making/orange_juice");
+            // 金苹果汁
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.GOLDEN_APPLE)))
+                    .ingredient(Items.GOLDEN_APPLE)
+                    .fluidState(Fluids.WATER)
+                    .unlockedBy("has_golden_apple", has(Items.GOLDEN_APPLE))
+                    .save(output, "beverage_making/golden_apple_juice");
+            // 金葡萄汁
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.GOLDEN_GRAPE)))
+                    .ingredient(ModItems.GOLDEN_GRAPES)
+                    .fluidState(Fluids.WATER)
+                    .unlockedBy("has_golden_grape", has(ModItems.GOLDEN_GRAPES))
+                    .save(output, "beverage_making/golden_grape_juice");
+            // 葡萄汁
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.GRAPE)))
+                    .ingredient(ModItems.GRAPES)
+                    .fluidState(Fluids.WATER)
+                    .unlockedBy("has_grape", has(ModItems.GRAPES))
+                    .save(output, "beverage_making/grape_juice");
+            // 柚子汁
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.GRAPEFRUIT)))
+                    .ingredient(ModItems.GRAPEFRUIT)
+                    .fluidState(Fluids.WATER)
+                    .unlockedBy("has_grapefruit", has(ModItems.GRAPEFRUIT))
+                    .save(output, "beverage_making/grapefruit_juice");
+            // 山楂汁
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.HAWTHORN)))
+                    .ingredient(ModItems.HAWTHORN)
+                    .fluidState(Fluids.WATER)
+                    .unlockedBy("has_hawthorn", has(ModItems.HAWTHORN))
+                    .save(output, "beverage_making/hawthorn_juice");
+            // 巧克力水
+            this.beverageMaking(BeverageMakingMode.HEAT, new ItemStackTemplate(ModItems.JUICE, content(Juices.CHOCOLATES_WATER)))
+                    .ingredient(ModItems.CHOCOLATE)
+                    .fluidState(Fluids.WATER)
+                    .unlockedBy("has_chocolate", has(ModItems.CHOCOLATE))
+                    .save(output, "beverage_making/chocolate_juice");
+            // 柠檬汁
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.LEMON)))
+                    .ingredient(ModItems.LEMON)
+                    .fluidState(Fluids.WATER)
+                    .unlockedBy("has_lemon", has(ModItems.LEMON))
+                    .save(output, "beverage_making/lemon_juice");
+            // 荔枝汁
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.LYCHEE)))
+                    .ingredient(ModItems.LYCHEE)
+                    .fluidState(Fluids.WATER)
+                    .unlockedBy("has_lychee", has(ModItems.LYCHEE))
+                    .save(output, "beverage_making/lychee_juice");
+            // 龙眼汁
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.LOQUAT)))
+                    .ingredient(ModItems.LOQUAT)
+                    .fluidState(Fluids.WATER)
+                    .unlockedBy("has_loquat", has(ModItems.LOQUAT))
+                    .save(output, "beverage_making/loquat_juice");
+            // 芒果汁
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.MANGO)))
+                    .ingredient(ModItems.MANGO)
+                    .fluidState(Fluids.WATER)
+                    .unlockedBy("has_mango", has(ModItems.MANGO))
+                    .save(output, "beverage_making/mango_juice");
+            // 西瓜汁
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.MELON)))
+                    .ingredient(Items.MELON_SLICE)
+                    .fluidState(Fluids.WATER)
+                    .unlockedBy("has_melon_slice", has(Items.MELON_SLICE))
+                    .save(output, "beverage_making/melon_juice_1");
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE.builtInRegistryHolder(), 8, content(Juices.MELON)))
+                    .ingredient(Items.MELON)
+                    .fluidState(Fluids.WATER)
+                    .unlockedBy("has_melon", has(Items.MELON))
+                    .save(output, "beverage_making/melon_juice_2");
+            // 奶茶
+            // 原味冰淇淋
+            // 木瓜汁
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.PAPAYA)))
+                    .ingredient(ModItems.PAPAYA)
+                    .fluidState(Fluids.WATER)
+                    .unlockedBy("has_papaya", has(ModItems.PAPAYA))
+                    .save(output, "beverage_making/papaya_juice");
+            // 桃子汁
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.PEACH)))
+                    .ingredient(ModItems.PEACH)
+                    .fluidState(Fluids.WATER)
+                    .unlockedBy("has_peach", has(ModItems.PEACH))
+                    .save(output, "beverage_making/peach_juice");
+            // 柿子汁
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.PERSIMMON)))
+                    .ingredient(ModItems.PERSIMMON)
+                    .fluidState(Fluids.WATER)
+                    .unlockedBy("has_persimmon", has(ModItems.PERSIMMON))
+                    .save(output, "beverage_making/persimmon_juice");
+            // 石榴汁
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.POMEGRANATE)))
+                    .ingredient(ModItems.POMEGRANATE)
+                    .fluidState(Fluids.WATER)
+                    .unlockedBy("has_pomegranate", has(ModItems.POMEGRANATE))
+                    .save(output, "beverage_making/pomegranate_juice");
+            // 豆奶
+            // 雪碧
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.SPRITE)))
+                    .ingredient(Items.WHITE_DYE)
+                    .fluidState(Fluids.WATER)
+                    .unlockedBy("has_dye_radish", has(Items.WHITE_DYE))
+                    .save(output, "beverage_making/white_dye_juice");
+            // 草莓汁
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.STRAWBERRY)))
+                    .ingredient(ModItems.STRAWBERRY)
+                    .fluidState(Fluids.WATER)
+                    .unlockedBy("has_strawberry", has(ModItems.STRAWBERRY))
+                    .save(output, "beverage_making/strawberry_juice");
+            // 茶
+            // 西红柿汁
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.TOMATO)))
+                    .ingredient(ModItems.TOMATO)
+                    .fluidState(Fluids.WATER)
+                    .unlockedBy("has_tomato", has(ModItems.TOMATO))
+                    .save(output, "beverage_making/tomato_juice");
+            // 白萝卜汁
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.WHITE_RADISH)))
+                    .ingredient(ModItems.WHITE_RADDISH)
+                    .fluidState(Fluids.WATER)
+                    .unlockedBy("has_white_radish", has(ModItems.WHITE_RADDISH))
+                    .save(output, "beverage_making/white_radish_juice");
         }
 
         /**
