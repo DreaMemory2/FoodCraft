@@ -9,6 +9,10 @@ import com.crystal.foodcraft.screenhandler.ModMenuTypes;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderingRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockColorRegistry;
+import net.fabricmc.fabric.api.transfer.v1.fluid.FluidConstants;
+import net.fabricmc.fabric.api.transfer.v1.fluid.FluidStorage;
+import net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariant;
+import net.fabricmc.fabric.api.transfer.v1.fluid.base.FullItemFluidStorage;
 import net.minecraft.client.color.block.BlockTintSources;
 import net.minecraft.client.color.item.ItemTintSources;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -16,6 +20,7 @@ import net.minecraft.client.renderer.block.FluidModel;
 import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
 import net.minecraft.client.resources.model.sprite.Material;
 import net.minecraft.resources.Identifier;
+import net.minecraft.world.item.Items;
 
 import java.util.List;
 
@@ -68,5 +73,18 @@ public class FoodCraftClient implements ClientModInitializer {
 						BlockTintSources.constant(-1)
 				)
 		);
+		FluidRenderingRegistry.register(
+				ModFluids.MILK_STILL,
+				ModFluids.MILK_FLOWING,
+				new FluidModel.Unbaked(
+						new Material(FoodCraft.of("block/milk_still")),
+						new Material(FoodCraft.of("block/milk_flow")),
+						new Material(Identifier.withDefaultNamespace("block/water_overlay")),
+						BlockTintSources.constant(-1)
+				)
+		);
+		// 桶与液体绑定
+		FluidStorage.combinedItemApiProvider(Items.MILK_BUCKET).register(context ->
+				new FullItemFluidStorage(context, Items.BUCKET, FluidVariant.of(ModFluids.MILK_STILL), FluidConstants.BUCKET));
 	}
 }
