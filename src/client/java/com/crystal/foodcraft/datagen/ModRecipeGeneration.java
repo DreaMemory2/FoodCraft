@@ -1,8 +1,10 @@
 package com.crystal.foodcraft.datagen;
 
 import com.crystal.foodcraft.block.ModBlocks;
+import com.crystal.foodcraft.block.entity.BeverageMakingMode;
 import com.crystal.foodcraft.datagen.provider.ModRecipeProvider;
 import com.crystal.foodcraft.item.ModItems;
+import com.crystal.foodcraft.item.juice.Juice;
 import com.crystal.foodcraft.item.juice.JuiceContents;
 import com.crystal.foodcraft.item.juice.Juices;
 import com.crystal.foodcraft.register.ModDataComponents;
@@ -12,11 +14,14 @@ import com.crystal.foodcraft.tag.ModItemTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.fabricmc.fabric.api.recipe.v1.ingredient.DefaultCustomIngredients;
+import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.component.DataComponentPatch;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.ItemStackTemplate;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
@@ -55,6 +60,7 @@ public class ModRecipeGeneration extends FabricRecipeProvider {
             frying();
             brewing();
             pressureCooking();
+            beverageMaking();
             crafting();
             smelting();
         }
@@ -682,6 +688,17 @@ public class ModRecipeGeneration extends FabricRecipeProvider {
                     .ingredient(ModItems.SCALLION)
                     .unlockedBy("has_cooked_fish", has(CommonItemTags.COOKED_FISH))
                     .save(output, "pressure_cooking/steamed_fish");
+        }
+
+        /**
+         * <p>饮料制作机配方</p>
+         */
+        public void beverageMaking() {
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.APPLE)))
+                    .ingredient(Items.APPLE)
+                    .fluidState(Fluids.WATER)
+                    .unlockedBy("has_apple", has(Items.APPLE))
+                    .save(output, "beverage_making/apple_juice");
         }
 
         /**
@@ -1738,6 +1755,14 @@ public class ModRecipeGeneration extends FabricRecipeProvider {
             this.smeltingResultFromBase(ModItems.COOKED_SQUID_MEAT, ModItems.SQUID_MEAT);
             // 烤红薯
             this.smeltingResultFromBase(ModItems.COOKED_SWEET_POTATO, ModItems.SWEET_POTATO);
+        }
+
+        public Ingredient juiceIngredients(Holder<Juice> juice) {
+            return DefaultCustomIngredients.components(Ingredient.of(ModItems.JUICE), builder -> builder.set(ModDataComponents.JUICE, new JuiceContents(juice)));
+        }
+
+        public DataComponentPatch content(Holder<Juice> juice) {
+            return DataComponentPatch.builder().set(ModDataComponents.JUICE, new JuiceContents(juice)).build();
         }
     }
 

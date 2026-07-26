@@ -61,6 +61,10 @@ public abstract class BaseContainerScreen<T extends BaseMachineMenu> extends Abs
         guiGraphics.blitSprite(RenderPipelines.GUI_TEXTURED, OVERCOOKED_INDICATOR_SPRITE, 1, 5, 0, 0, x + maxCookedLine + this.leftPos, y + this.topPos, 1, 5);
     }
 
+    public void renderBurn(GuiGraphicsExtractor guiGraphics, int x, int y) {
+        renderBurn(guiGraphics, PROGRESS_SPRITE, x, y);
+    }
+
     public void renderBurn(GuiGraphicsExtractor guiGraphics, Identifier sprite, int x, int y) {
         if (getBurnProgress() > 0) {
             int j1 = Mth.floor(getBurnProgress() * 24.0F);

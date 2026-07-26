@@ -44,6 +44,11 @@ public class ModRecipeTypes {
             FoodCraft.of("pressure_cooking"),
             new RecipeType<@NonNull PressureCookingRecipe>() {}
     );
+    public static final RecipeType<@NotNull BeverageMakingRecipe> BEVERAGE_MAKING_RECIPE_TYPE = Registry.register(
+            BuiltInRegistries.RECIPE_TYPE,
+            FoodCraft.of("beverage_making"),
+            new RecipeType<@NotNull BeverageMakingRecipe>() {}
+    );
 
     public static final RecipeSerializer<@NonNull ChoppingRecipe> CHOPPING_RECIPE_SERIALIZER = Registry.register(
             BuiltInRegistries.RECIPE_SERIALIZER,
@@ -75,9 +80,15 @@ public class ModRecipeTypes {
             FoodCraft.of("brewing"),
             new RecipeSerializer<>(BrewingRecipe.CODEC, BrewingRecipe.PACKET_CODEC)
     );
-    public static final RecipeSerializer<@NonNull PressureCookingRecipe> PRESSURE_COOKING_SERIALIZER = Registry.register(
+    public static final RecipeSerializer<@NotNull PressureCookingRecipe> PRESSURE_COOKING_SERIALIZER = Registry.register(
             BuiltInRegistries.RECIPE_SERIALIZER,
             FoodCraft.of("pressure_cooking"),
             new RecipeSerializer<>(PressureCookingRecipe.CODEC, PressureCookingRecipe.PACKET_CODEC)
+    );
+
+    public static final RecipeSerializer<@NotNull BeverageMakingRecipe> BEVERAGE_MAKING_SERIALIZER = Registry.register(
+            BuiltInRegistries.RECIPE_SERIALIZER,
+            FoodCraft.of("beverage_making"),
+            new RecipeSerializer<>(BeverageMakingRecipe.CODEC, BeverageMakingRecipe.PACKET_CODEC)
     );
 }

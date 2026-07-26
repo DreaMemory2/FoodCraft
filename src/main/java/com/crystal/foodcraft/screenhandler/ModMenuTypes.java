@@ -19,10 +19,10 @@ public final class ModMenuTypes {
     public static final MenuType<@NotNull PressureCookerMenu> PRESSURE_COOKER = register("pressure_cooker", PressureCookerMenu::new, BlockPosPayload.PACKET_CODEC);
     public static final MenuType<@NotNull BrewBarrelMenu> BREW_BARREL = register("brew_barrel", BrewBarrelMenu::new, BlockPosPayload.PACKET_CODEC);
     public static final MenuType<@NotNull PanMenu> PAN = register("pan", PanMenu::new);
-    public static final MenuType<@NotNull BeverageMakingMachineMenu> BEVERAGE_MAKING_MACHINE = register("beverage_making_machine", BeverageMakingMachineMenu::new);
+    public static final MenuType<@NotNull BeverageMakingMachineMenu> BEVERAGE_MAKING_MACHINE = register("beverage_making_machine", BeverageMakingMachineMenu::new, BlockPosPayload.PACKET_CODEC);
     public static final MenuType<@NotNull MillMenu> MILL = register("mill", MillMenu::new);
     public static final MenuType<@NotNull StoveMenu> STOVE = register("stove", StoveMenu::new);
-    public static final ExtendedMenuType<@NotNull FryingMachineMenu, BlockPosPayload> FRYING_MACHINE = register("frying_machine", FryingMachineMenu::new, BlockPosPayload.PACKET_CODEC);
+    public static final MenuType<@NotNull FryingMachineMenu> FRYING_MACHINE = register("frying_machine", FryingMachineMenu::new, BlockPosPayload.PACKET_CODEC);
 
     public static <T extends AbstractContainerMenu> MenuType<@NotNull T> register(String name, MenuType.MenuSupplier<@NotNull T> constructor) {
         return Registry.register(BuiltInRegistries.MENU, name, new MenuType<>(constructor, FeatureFlagSet.of()));

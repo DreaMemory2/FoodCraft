@@ -1,11 +1,13 @@
 package com.crystal.foodcraft.datagen.provider;
 
+import com.crystal.foodcraft.block.entity.BeverageMakingMode;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStackTemplate;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.material.Fluid;
 
@@ -70,5 +72,13 @@ public abstract class ModRecipeProvider extends RecipeProvider {
 
     public PressureCookingBuilder pressureCooking(Item result) {
         return PressureCookingBuilder.pressureCooking(this.items, this.fluids, result);
+    }
+
+    public BeverageMakingBuilder beverageMaking(BeverageMakingMode mode, ItemStackTemplate result) {
+        return BeverageMakingBuilder.beverageMaking(this.items, this.fluids, mode, result);
+    }
+
+    public BeverageMakingBuilder beverageMaking(BeverageMakingMode mode, Item result) {
+        return BeverageMakingBuilder.beverageMaking(this.items, this.fluids, mode, result);
     }
 }
