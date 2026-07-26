@@ -30,6 +30,7 @@ public class FoodCraftJeiPlugin implements IModPlugin {
         register.addRecipeCategories(new FryingRecipeCategory(helper));
         register.addRecipeCategories(new BrewingRecipeCategory(helper));
         register.addRecipeCategories(new PressureCookingRecipeCategory(helper));
+        register.addRecipeCategories(new BeverageMakingRecipeCategory(helper));
     }
 
     @Override
@@ -43,6 +44,7 @@ public class FoodCraftJeiPlugin implements IModPlugin {
         register.addRecipes(ModRecipeHolderTypes.FRYING_RECIPE_TYPE, recipes.getFryingRecipes());
         register.addRecipes(ModRecipeHolderTypes.BREWING_RECIPE_TYPE, recipes.getBrewingRecipes());
         register.addRecipes(ModRecipeHolderTypes.PRESSURE_COOKING_RECIPE_TYPE, recipes.getPressureCookingRecipes());
+        register.addRecipes(ModRecipeHolderTypes.BEVERAGE_MAKING_RECIPE_TYPE, recipes.getBeverageMakingRecipes());
     }
 
     @Override
@@ -60,6 +62,7 @@ public class FoodCraftJeiPlugin implements IModPlugin {
         register.addRecipeTransferHandler(FryingMachineMenu.class, ModMenuTypes.FRYING_MACHINE, ModRecipeHolderTypes.FRYING_RECIPE_TYPE, 2, 1, 4, 36);
         register.addRecipeTransferHandler(BrewBarrelMenu.class, ModMenuTypes.BREW_BARREL, ModRecipeHolderTypes.BREWING_RECIPE_TYPE, 1, 3, 6, 36);
         register.addRecipeTransferHandler(PressureCookerMenu.class, ModMenuTypes.PRESSURE_COOKER, ModRecipeHolderTypes.PRESSURE_COOKING_RECIPE_TYPE, 2, 3, 6, 36);
+        register.addRecipeTransferHandler(BeverageMakingMachineMenu.class, ModMenuTypes.BEVERAGE_MAKING_MACHINE, ModRecipeHolderTypes.BEVERAGE_MAKING_RECIPE_TYPE, 3, 1, 5, 36);
     }
 
     @Override
@@ -71,6 +74,7 @@ public class FoodCraftJeiPlugin implements IModPlugin {
         register.addCraftingStation(ModRecipeHolderTypes.FRYING_RECIPE_TYPE, ModBlocks.FRYING_MACHINE);
         register.addCraftingStation(ModRecipeHolderTypes.BREWING_RECIPE_TYPE, ModBlocks.BREW_BARREL);
         register.addCraftingStation(ModRecipeHolderTypes.PRESSURE_COOKING_RECIPE_TYPE, ModBlocks.PRESSURE_COOKER);
+        register.addCraftingStation(ModRecipeHolderTypes.BEVERAGE_MAKING_RECIPE_TYPE, ModBlocks.BEVERAGE_MAKING_MACHINE);
     }
 
     @Override

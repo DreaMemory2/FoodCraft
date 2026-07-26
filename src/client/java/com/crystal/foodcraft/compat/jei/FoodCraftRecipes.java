@@ -49,4 +49,8 @@ public class FoodCraftRecipes {
     public List<RecipeHolder<@NotNull PressureCookingRecipe>> getPressureCookingRecipes() {
         return recipeManager.getAllOfType(ModRecipeTypes.PRESSURE_COOKING_RECIPE_TYPE).stream().toList();
     }
+
+    public List<RecipeHolder<@NotNull BeverageMakingRecipe>> getBeverageMakingRecipes() {
+        return recipeManager.getAllOfType(ModRecipeTypes.BEVERAGE_MAKING_RECIPE_TYPE).stream().toList();
+    }
 }

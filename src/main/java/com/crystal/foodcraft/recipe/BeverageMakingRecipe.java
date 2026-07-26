@@ -100,6 +100,18 @@ public class BeverageMakingRecipe implements Recipe<@NotNull BMMachineInput> {
     }
 
     public BeverageMakingMode getMode() {
-        return mode;
+        return this.mode;
+    }
+
+    public Ingredient getIngredient() {
+        return this.ingredient;
+    }
+
+    public ItemStackTemplate getResult() {
+        return this.result;
+    }
+
+    public FluidState getFluid() {
+        return this.fluidState;
     }
 }

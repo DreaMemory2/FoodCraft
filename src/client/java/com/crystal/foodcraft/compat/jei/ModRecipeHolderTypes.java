@@ -12,6 +12,5 @@ public final class ModRecipeHolderTypes {
     public static final IRecipeHolderType<@NotNull FryingRecipe> FRYING_RECIPE_TYPE = IRecipeHolderType.create(ModRecipeTypes.FRYING_RECIPE_TYPE);
     public static final IRecipeHolderType<@NotNull BrewingRecipe> BREWING_RECIPE_TYPE = IRecipeHolderType.create(ModRecipeTypes.BREWING_RECIPE_TYPE);
     public static final IRecipeHolderType<@NotNull PressureCookingRecipe> PRESSURE_COOKING_RECIPE_TYPE = IRecipeHolderType.create(ModRecipeTypes.PRESSURE_COOKING_RECIPE_TYPE);
-    // 饮料制作机
-    // public static final IRecipeHolderType<@NotNull BeverageMakingRecipe> BEVERAGE_MAKING_RECIPE_TYPE = IRecipeHolderType.create(ModRecipeType.BEVERAGE_MAKING_RECIPE_TYPE);
+    public static final IRecipeHolderType<@NotNull BeverageMakingRecipe> BEVERAGE_MAKING_RECIPE_TYPE = IRecipeHolderType.create(ModRecipeTypes.BEVERAGE_MAKING_RECIPE_TYPE);
 }

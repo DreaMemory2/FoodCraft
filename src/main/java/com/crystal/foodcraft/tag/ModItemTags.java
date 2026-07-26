@@ -15,6 +15,11 @@ public class ModItemTags {
     public static final TagKey<Item> LEAVES = vanillaBind("leaves");
     public static final TagKey<Item> CIRCUIT_INGREDIENT = bind("circuit_ingredient");
     public static final TagKey<Item> MACHINE_INGREDIENT = bind("machine_ingredient");
+    // 制冷配方
+    public static final TagKey<Item> COOLANTS = bind("coolants");
+    public static final TagKey<Item> COOLANTS_LOW = bind("coolants/low");
+    public static final TagKey<Item> COOLANTS_MEDIUM = bind("coolants/medium");
+    public static final TagKey<Item> COOLANTS_HIGH = bind("coolants/high");
     // 手册解锁配方
     public static final TagKey<Item> BLOCK_LOVERS = bind("block_lovers");
     public static final TagKey<Item> LOVELY_PLANT = bind("lovely_plant");

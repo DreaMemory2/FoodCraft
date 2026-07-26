@@ -8,7 +8,6 @@ import com.crystal.foodcraft.network.BlockPosPayload;
 import com.crystal.foodcraft.recipe.BeverageMakingRecipe;
 import com.crystal.foodcraft.recipe.ModRecipeTypes;
 import com.crystal.foodcraft.recipe.input.BMMachineInput;
-import com.crystal.foodcraft.recipe.input.PressureCookerInput;
 import com.crystal.foodcraft.screenhandler.BeverageMakingMachineMenu;
 import net.fabricmc.fabric.api.menu.v1.ExtendedMenuProvider;
 import net.fabricmc.fabric.api.transfer.v1.context.ContainerItemContext;
@@ -127,7 +126,11 @@ public class BMMachineBlockEntity extends BaseMachineBlockEntity implements Cook
                 ItemStack result = recipe.get().value().assemble(input);
                 if (result.isEmpty()) return;
                 // 消耗材料
-                consumeIngredient(PressureCookerInput.input(items, getFluidStorage()));
+                if (!this.items.getFirst().isEmpty()) {
+                    ItemStack copy = this.items.getFirst().copy();
+                    copy.shrink(1);
+                    this.items.set(0, copy);
+                }
                 // 消耗液体
                 consumeFluid(getFluidStorage(), FluidConstants.BUCKET);
                 // 生产食物
