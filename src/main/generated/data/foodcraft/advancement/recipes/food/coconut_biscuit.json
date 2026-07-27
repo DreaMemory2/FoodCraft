@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_biscuit": {
+      "conditions": {
+        "items": [
+          {
+            "items": "foodcraft:biscuit"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_coconut_jam": {
+      "conditions": {
+        "items": [
+          {
+            "items": "foodcraft:coconut_jam"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "foodcraft:coconut_biscuit"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_biscuit",
+      "has_coconut_jam"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "foodcraft:coconut_biscuit"
+    ]
+  }
+}

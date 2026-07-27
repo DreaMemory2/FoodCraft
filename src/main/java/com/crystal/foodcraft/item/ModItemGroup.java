@@ -56,7 +56,7 @@ public class ModItemGroup {
     private static DisplayItemsGenerator machines() {
         return (context, entries) -> {
             entries.accept(ModItems.IRON_SHEET);
-            entries.accept(ModItems.ITEM_BUCKET);
+            entries.accept(ModItems.CLEANING_BUCKET);
             entries.accept(ModItems.MACHINE_CORE);
             entries.accept(ModItems.KITCHEN_KNIFE);
             entries.accept(ModItems.GOLDEN_KITCHEN_KNIFE);
@@ -112,7 +112,7 @@ public class ModItemGroup {
             entries.accept(ModItems.STICKY_RICE);
             entries.accept(ModItems.RED_BEAN);
             entries.accept(ModItems.GREEN_BEAN);
-            entries.accept(ModItems.WHITE_RADDISH);
+            entries.accept(ModItems.WHITE_RADISH);
             entries.accept(ModItems.VEGETABLE);
             entries.accept(ModItems.CHILI);
             entries.accept(ModItems.GREEN_PEPPER);
@@ -256,7 +256,7 @@ public class ModItemGroup {
             entries.accept(ModItems.MILLED_RICE);
             entries.accept(ModItems.FLOUR);
             entries.accept(ModItems.SALT);
-            entries.accept(ModItems.DUMPLING_WRAPPERS);
+            entries.accept(ModItems.FLOUR_DOUGH);
             entries.accept(ModItems.WATERCRESS);
             entries.accept(ModItems.CHOCOLATE_DUST);
             entries.accept(ModItems.DUMPLING_MEAT);
@@ -277,8 +277,8 @@ public class ModItemGroup {
             entries.accept(ModItems.PEANUT_FILLING);
             entries.accept(ModItems.TOFU_STRIP);
             entries.accept(ModItems.CARROT_STRIP);
-            entries.accept(ModItems.WHITE_RADDISH_STRIP);
-            entries.accept(ModItems.NOODLE);
+            entries.accept(ModItems.WHITE_RADISH_STRIP);
+            entries.accept(ModItems.NOODLE_STRING);
             entries.accept(ModItems.BLOCK_CURRY);
             entries.accept(ModItems.SMOKED_MATERIAL);
             entries.accept(ModItems.CHARRED_FOOD);

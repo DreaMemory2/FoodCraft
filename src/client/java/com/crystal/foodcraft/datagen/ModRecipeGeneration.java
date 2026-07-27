@@ -75,7 +75,7 @@ public class ModRecipeGeneration extends FabricRecipeProvider {
             this.chopping(ModItems.CARROT_STRIP, 2)
                     .ingredient(Items.CARROT, 1)
                     .unlockedBy("has_carrot", has(Items.CARROT))
-                    .save(output, "choping/carrot_strip");
+                    .save(output, "chopping/carrot_strip");
             // 大块鸡肉
             this.chopping(ModItems.BIG_CHICKEN, 3)
                     .ingredient(Items.CHICKEN, 1)
@@ -98,9 +98,9 @@ public class ModRecipeGeneration extends FabricRecipeProvider {
                     .unlockedBy("has_cooked_chicken", has(Items.COOKED_CHICKEN))
                     .save(output, "chopping/chicken_wing");
             // 面条，面丝
-            this.chopping(ModItems.NOODLE, 3)
-                    .ingredient(ModItems.DUMPLING_WRAPPERS, 1)
-                    .unlockedBy("has_dumpling_wrappers", has(ModItems.DUMPLING_WRAPPERS))
+            this.chopping(ModItems.NOODLE_STRING, 3)
+                    .ingredient(ModItems.FLOUR_DOUGH, 1)
+                    .unlockedBy("has_dumpling_wrappers", has(ModItems.FLOUR_DOUGH))
                     .save(output, "chopping/dough_shredded");
             // 饺子馅
             this.chopping(ModItems.DUMPLING_MEAT, 2)
@@ -124,9 +124,9 @@ public class ModRecipeGeneration extends FabricRecipeProvider {
                     .unlockedBy("has_tofu", has(ModItems.TOFU))
                     .save(output, "chopping/tofu_strip");
             // 白萝卜丝
-            this.chopping(ModItems.WHITE_RADDISH_STRIP, 3)
-                    .ingredient(ModItems.WHITE_RADDISH, 1)
-                    .unlockedBy("has_white_raddish", has(ModItems.WHITE_RADDISH))
+            this.chopping(ModItems.WHITE_RADISH_STRIP, 3)
+                    .ingredient(ModItems.WHITE_RADISH, 1)
+                    .unlockedBy("has_white_raddish", has(ModItems.WHITE_RADISH))
                     .save(output, "chopping/white_raddish_strip");
         }
 
@@ -410,6 +410,11 @@ public class ModRecipeGeneration extends FabricRecipeProvider {
          * <p>平板锅所有配方</p>
          */
         public void panning() {
+            // 麻花
+            this.panning(ModItems.DOUGH_TWIST, 250, 350)
+                    .ingredient(ModItems.NOODLE_STRING)
+                    .unlockedBy("has_noodle", has(ModItems.NOODLE_STRING))
+                    .save(output, "panning/noodle");
             // 烙饼
             this.panning(ModItems.PANCAKES, 250, 350)
                     .ingredient(ModItems.FLOUR)
@@ -501,11 +506,11 @@ public class ModRecipeGeneration extends FabricRecipeProvider {
                     .unlockedBy("has_tofu", has(ModItems.TOFU))
                     .save(output, "frying/fried_tofu");
             // 原味鸡块
-            this.frying(ModItems.FRIED_CHICKEN)
+            this.frying(ModItems.ORIGINAL_RECIPE)
                     .fluidState(ModFluids.COOKING_OIL_STILL)
                     .ingredient(ModItems.BIG_CHICKEN)
                     .unlockedBy("has_big_chicken", has(ModItems.BIG_CHICKEN))
-                    .save(output, "frying/fried_chicken");
+                    .save(output, "frying/original_recipe");
             // 奥尔良鸡翅
             this.frying(ModItems.ORLEAN_WING)
                     .fluidState(ModFluids.COOKING_OIL_STILL)
@@ -632,6 +637,22 @@ public class ModRecipeGeneration extends FabricRecipeProvider {
                     .ingredient(Items.SUGAR)
                     .unlockedBy("has_beans", has(ModItems.BEANS))
                     .save(output, "brewing/vinegar");
+            // 梨子酒
+            this.brewing(ModItems.PEAR_WINE, 3)
+                    .fluidState(Fluids.WATER)
+                    .ingredient(ModItems.PEAR)
+                    .ingredient(ModItems.PEAR)
+                    .ingredient(ModItems.PEAR)
+                    .unlockedBy("has_pear", has(ModItems.PEAR))
+                    .save(output, "brewing/pear");
+            // 红酒
+            this.brewing(ModItems.RED_WINE, 9)
+                    .fluidState(Fluids.WATER)
+                    .ingredient(ModItems.GRAPE_WINE)
+                    .ingredient(ModItems.GRAPE_WINE)
+                    .ingredient(ModItems.GRAPE_WINE)
+                    .unlockedBy("has_grape_wine", has(ModItems.GRAPE_WINE))
+                    .save(output, "brewing/red_wine");
         }
 
         /**
@@ -707,7 +728,7 @@ public class ModRecipeGeneration extends FabricRecipeProvider {
                     .unlockedBy("has_banana", has(ModItems.BANANA))
                     .save(output, "beverage_making/banana_juice");
             // 蔬菜果汁
-            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.VEGETABLE, content(Juices.VEGETABLE)))
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.VEGETABLE)))
                     .ingredient(ModItems.VEGETABLE)
                     .fluidState(Fluids.WATER)
                     .unlockedBy("has_vegetable", has(ModItems.VEGETABLE))
@@ -719,13 +740,23 @@ public class ModRecipeGeneration extends FabricRecipeProvider {
                     .unlockedBy("has_carrot", has(Items.CARROT))
                     .save(output, "beverage_making/carrot_juice");
             // 巧克力牛奶
+            this.beverageMaking(BeverageMakingMode.HEAT, new ItemStackTemplate(ModItems.JUICE, content(Juices.CHOCOLATES_MILK)))
+                    .ingredient(ModItems.CHOCOLATE)
+                    .fluidState(ModFluids.MILK_STILL)
+                    .unlockedBy("has_chocolate", has(ModItems.CHOCOLATE))
+                    .save(output, "beverage_making/chocolate_milk_juice");
             // 椰子汁
-            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.VEGETABLE, content(Juices.COCONUT)))
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.COCONUT)))
                     .ingredient(ModItems.COCONUT)
                     .fluidState(Fluids.WATER)
                     .unlockedBy("has_coconut", has(ModItems.COCONUT))
                     .save(output, "beverage_making/coconut_juice");
             // 椰奶
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.COCONUT_MILK)))
+                    .ingredient(ModItems.COCONUT)
+                    .fluidState(ModFluids.MILK_STILL)
+                    .unlockedBy("has_coconut", has(ModItems.COCONUT))
+                    .save(output, "beverage_making/coconut_milk_juice");
             // 可乐
             this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.COKE)))
                     .ingredient(Items.BROWN_DYE)
@@ -823,6 +854,11 @@ public class ModRecipeGeneration extends FabricRecipeProvider {
                     .save(output, "beverage_making/melon_juice_2");
             // 奶茶
             // 原味冰淇淋
+            this.beverageMaking(BeverageMakingMode.COOL, ModItems.VANILLA_ICE_CREAM)
+                    .ingredient(Items.SNOWBALL)
+                    .fluidState(ModFluids.MILK_STILL)
+                    .unlockedBy("has_snowball", has(Items.SNOWBALL))
+                    .save(output, "beverage_making/vanilla_ice_cream");
             // 木瓜汁
             this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.PAPAYA)))
                     .ingredient(ModItems.PAPAYA)
@@ -848,6 +884,11 @@ public class ModRecipeGeneration extends FabricRecipeProvider {
                     .unlockedBy("has_pomegranate", has(ModItems.POMEGRANATE))
                     .save(output, "beverage_making/pomegranate_juice");
             // 豆奶
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.SOY_MILK)))
+                    .ingredient(ModItems.SOY_BEAN_MILK)
+                    .fluidState(ModFluids.MILK_STILL)
+                    .unlockedBy("has_soy_bean_milk", has(ModItems.SOY_BEAN_MILK))
+                    .save(output, "beverage_making/soy_milk");
             // 雪碧
             this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.SPRITE)))
                     .ingredient(Items.WHITE_DYE)
@@ -861,6 +902,11 @@ public class ModRecipeGeneration extends FabricRecipeProvider {
                     .unlockedBy("has_strawberry", has(ModItems.STRAWBERRY))
                     .save(output, "beverage_making/strawberry_juice");
             // 茶
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.TEA)))
+                    .ingredient(ItemTags.LEAVES)
+                    .fluidState(Fluids.WATER)
+                    .unlockedBy("has_leaves", has(ItemTags.LEAVES))
+                    .save(output, "beverage_making/tea");
             // 西红柿汁
             this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.TOMATO)))
                     .ingredient(ModItems.TOMATO)
@@ -869,10 +915,22 @@ public class ModRecipeGeneration extends FabricRecipeProvider {
                     .save(output, "beverage_making/tomato_juice");
             // 白萝卜汁
             this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.WHITE_RADISH)))
-                    .ingredient(ModItems.WHITE_RADDISH)
+                    .ingredient(ModItems.WHITE_RADISH)
                     .fluidState(Fluids.WATER)
-                    .unlockedBy("has_white_radish", has(ModItems.WHITE_RADDISH))
+                    .unlockedBy("has_white_radish", has(ModItems.WHITE_RADISH))
                     .save(output, "beverage_making/white_radish_juice");
+            // 玉米汁
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.CORN)))
+                    .ingredient(ModItems.CORN)
+                    .fluidState(Fluids.WATER)
+                    .unlockedBy("has_corn", has(ModItems.CORN))
+                    .save(output, "beverage_making/corn_juice");
+            // 樱桃汁
+            this.beverageMaking(BeverageMakingMode.COOL, new ItemStackTemplate(ModItems.JUICE, content(Juices.CHERRY)))
+                    .ingredient(ModItems.CHERRY)
+                    .fluidState(Fluids.WATER)
+                    .unlockedBy("has_cherry", has(ModItems.CHERRY))
+                    .save(output, "beverage_making/cherry_juice");
         }
 
         /**
@@ -927,6 +985,11 @@ public class ModRecipeGeneration extends FabricRecipeProvider {
                     builder -> builder.set(ModDataComponents.JUICE, new JuiceContents(Juices.STRAWBERRY)));
             Ingredient peachJuice = DefaultCustomIngredients.components(Ingredient.of(ModItems.JUICE),
                     builder -> builder.set(ModDataComponents.JUICE, new JuiceContents(Juices.PEACH)));
+            // 奶酪
+            this.shapeless(RecipeCategory.FOOD, ModItems.CHEESE)
+                    .requires(Items.MILK_BUCKET)
+                    .unlockedBy("has_milk_bucket", has(Items.MILK_BUCKET))
+                    .save(output, "cheese");
             // 艾滋
             this.shapeless(RecipeCategory.FOOD, ModItems.GREEN_RICE_BALLS)
                     .requires(ModItems.STICKY_RICE_CAKE)
@@ -1063,7 +1126,7 @@ public class ModRecipeGeneration extends FabricRecipeProvider {
             // 春卷
             this.shapeless(RecipeCategory.FOOD, ModItems.SPRING_ROLLS)
                     .requires(ModItems.TOFU_STRIP)
-                    .requires(ModItems.WHITE_RADDISH_STRIP)
+                    .requires(ModItems.WHITE_RADISH_STRIP)
                     .requires(ItemTags.MEAT)
                     .requires(ModItems.VEGETABLE)
                     .unlockedBy("has_tofu_strip", has(ModItems.TOFU_STRIP))
@@ -1122,6 +1185,15 @@ public class ModRecipeGeneration extends FabricRecipeProvider {
                     .define('B', ModItems.MILLED_RICE)
                     .unlockedBy("has_milled_rice", has(ModItems.MILLED_RICE))
                     .save(output, "crossing_bridge_noodles");
+            // 面条汤
+            this.shaped(RecipeCategory.FOOD, ModItems.NOODLES)
+                    .pattern("ABA")
+                    .pattern("ABA")
+                    .pattern("ABA")
+                    .define('A', Items.WATER_BUCKET)
+                    .define('B', ModItems.FLOUR)
+                    .unlockedBy("has_flour", has(ModItems.FLOUR))
+                    .save(output, "noodles");
             // 红枣树苗
             this.shaped(RecipeCategory.MISC, ModBlocks.CHINESE_DATE_SAPLING)
                     .pattern(" A ")
@@ -1146,7 +1218,7 @@ public class ModRecipeGeneration extends FabricRecipeProvider {
                     .unlockedBy("logs", has(ItemTags.LOGS))
                     .save(output, "diamond_kitchen_knife");
             // 面团，饺子皮
-            this.shaped(RecipeCategory.FOOD, ModItems.DUMPLING_WRAPPERS, 2)
+            this.shaped(RecipeCategory.FOOD, ModItems.FLOUR_DOUGH, 2)
                     .pattern("ABA")
                     .pattern("ABA")
                     .pattern("ABA")
@@ -1157,8 +1229,8 @@ public class ModRecipeGeneration extends FabricRecipeProvider {
             // 饺子
             this.shapeless(RecipeCategory.FOOD, ModItems.DUMPLING)
                     .requires(ModItems.DUMPLING_MEAT)
-                    .requires(ModItems.DUMPLING_WRAPPERS)
-                    .unlockedBy("has_dumping_wrappers", has(ModItems.DUMPLING_WRAPPERS))
+                    .requires(ModItems.FLOUR_DOUGH)
+                    .unlockedBy("has_dumping_wrappers", has(ModItems.FLOUR_DOUGH))
                     .unlockedBy("has_dumping_meat", has(ModItems.DUMPLING_MEAT));
             // 绿宝石菜刀
             this.shaped(RecipeCategory.TOOLS, ModItems.EMERALD_KITCHEN_KNIFE)
@@ -1402,9 +1474,9 @@ public class ModRecipeGeneration extends FabricRecipeProvider {
                     .pattern("AAA")
                     .pattern("ABA")
                     .pattern("AAA")
-                    .define('A', ModItems.DUMPLING_WRAPPERS)
+                    .define('A', ModItems.FLOUR_DOUGH)
                     .define('B', ModItems.MILLED_RICE)
-                    .unlockedBy("has_dumpling_wrappers", has(ModItems.DUMPLING_WRAPPERS))
+                    .unlockedBy("has_dumpling_wrappers", has(ModItems.FLOUR_DOUGH))
                     .save(output, "new_year_cake");
             // 过桥米线
             // 橘子汁冰淇淋
@@ -1505,7 +1577,7 @@ public class ModRecipeGeneration extends FabricRecipeProvider {
                     .save(output, "persimmon_sapling");
             // 披萨
             this.shapeless(RecipeCategory.FOOD, ModItems.PIZZA)
-                    .requires(ModItems.DUMPLING_WRAPPERS)
+                    .requires(ModItems.FLOUR_DOUGH)
                     .requires(Items.CARROT)
                     .requires(ModItems.CHEESE)
                     .requires(CommonItemTags.MUSHROOM)
@@ -1917,7 +1989,303 @@ public class ModRecipeGeneration extends FabricRecipeProvider {
                     .define('E', ModItems.DARK_GREEN_STONE)
                     .unlockedBy("has_dark_green_stone", has(ModItems.DARK_GREEN_STONE))
                     .unlockedBy("has_dark_blue_stone", has(ModItems.DARK_BLUE_STONE))
-                    .save(output, "has_ulimate_eternal_stone");
+                    .save(output, "has_ultimate_eternal_stone");
+            // 葡萄蛋糕
+            this.shapeless(RecipeCategory.FOOD, ModBlocks.GRAPES_CAKE)
+                    .requires(ModItems.GRAPES_JAM)
+                    .requires(Items.CAKE)
+                    .unlockedBy("has_cake", has(Items.CAKE))
+                    .save(output, "grapes_cake");
+            // 金葡萄蛋糕
+            this.shapeless(RecipeCategory.FOOD, ModBlocks.GOLDEN_GRAPES_CAKE)
+                    .requires(ModItems.GOLDEN_GRAPES_JAM)
+                    .requires(Items.CAKE)
+                    .unlockedBy("has_cake", has(Items.CAKE))
+                    .save(output, "golden_grapes_cake");
+            // 梨子蛋糕
+            this.shapeless(RecipeCategory.FOOD, ModBlocks.PEAR_CAKE)
+                    .requires(ModItems.PEAR_JAM)
+                    .requires(Items.CAKE)
+                    .unlockedBy("has_cake", has(Items.CAKE))
+                    .save(output, "pear_cake");
+            // 桃子蛋糕
+            this.shapeless(RecipeCategory.FOOD, ModBlocks.PEACH_CAKE)
+                    .requires(ModItems.PEACH_JAM)
+                    .requires(Items.CAKE)
+                    .unlockedBy("has_cake", has(Items.CAKE))
+                    .save(output, "peach_cake");
+            // 橘子蛋糕
+            this.shapeless(RecipeCategory.FOOD, ModBlocks.ORANGE_CAKE)
+                    .requires(ModItems.ORANGE_JAM)
+                    .requires(Items.CAKE)
+                    .unlockedBy("has_cake", has(Items.CAKE))
+                    .save(output, "orange_cake");
+            // 柠檬蛋糕
+            this.shapeless(RecipeCategory.FOOD, ModBlocks.LEMON_CAKE)
+                    .requires(ModItems.LEMON_JAM)
+                    .requires(Items.CAKE)
+                    .unlockedBy("has_cake", has(Items.CAKE))
+                    .save(output, "lemon_cake");
+            // 草莓蛋糕
+            this.shapeless(RecipeCategory.FOOD, ModBlocks.STRAWBERRY_CAKE)
+                    .requires(ModItems.STRAWBERRY_JAM)
+                    .requires(Items.CAKE)
+                    .unlockedBy("has_cake", has(Items.CAKE))
+                    .save(output, "strawberry_cake");
+            // 椰子蛋糕
+            this.shapeless(RecipeCategory.FOOD, ModBlocks.COCONUT_CAKE)
+                    .requires(ModItems.COCONUT_JAM)
+                    .requires(Items.CAKE)
+                    .unlockedBy("has_cake", has(Items.CAKE))
+                    .save(output, "coconut_cake");
+            // 葡萄果酱
+            this.shapeless(RecipeCategory.FOOD, ModItems.GRAPES_JAM)
+                    .requires(Items.WATER_BUCKET)
+                    .requires(ModItems.GRAPES)
+                    .requires(Items.SUGAR)
+                    .unlockedBy("has_grape", has(ModItems.GRAPES))
+                    .unlockedBy("has_sugar", has(Items.SUGAR))
+                    .save(output, "grape_jam");
+            // 金葡萄果酱
+            this.shapeless(RecipeCategory.FOOD, ModItems.GOLDEN_GRAPES_JAM)
+                    .requires(Items.WATER_BUCKET)
+                    .requires(ModItems.GOLDEN_GRAPES)
+                    .requires(Items.SUGAR)
+                    .unlockedBy("has_golden_grape", has(ModItems.GOLDEN_GRAPES))
+                    .unlockedBy("has_sugar", has(Items.SUGAR))
+                    .save(output, "golden_grape_jam");
+            // 梨子果酱
+            this.shapeless(RecipeCategory.FOOD, ModItems.PEAR_JAM)
+                    .requires(Items.WATER_BUCKET)
+                    .requires(ModItems.PEAR)
+                    .requires(Items.SUGAR)
+                    .unlockedBy("has_pear", has(ModItems.PEAR))
+                    .unlockedBy("has_sugar", has(Items.SUGAR))
+                    .save(output, "pear_jam");
+            // 桃子果酱
+            this.shapeless(RecipeCategory.FOOD, ModItems.PEACH_JAM)
+                    .requires(Items.WATER_BUCKET)
+                    .requires(ModItems.PEACH)
+                    .requires(Items.SUGAR)
+                    .unlockedBy("has_peach", has(ModItems.PEACH))
+                    .unlockedBy("has_sugar", has(Items.SUGAR))
+                    .save(output, "peach_jam");
+            // 橘子果酱
+            this.shapeless(RecipeCategory.FOOD, ModItems.ORANGE_JAM)
+                    .requires(Items.WATER_BUCKET)
+                    .requires(ModItems.ORANGE)
+                    .requires(Items.SUGAR)
+                    .unlockedBy("has_orange", has(ModItems.ORANGE))
+                    .unlockedBy("has_sugar", has(Items.SUGAR))
+                    .save(output, "orange_jam");
+            // 柠檬果酱
+            this.shapeless(RecipeCategory.FOOD, ModItems.LEMON_JAM)
+                    .requires(Items.WATER_BUCKET)
+                    .requires(ModItems.LEMON)
+                    .requires(Items.SUGAR)
+                    .unlockedBy("has_lemon", has(ModItems.LEMON))
+                    .unlockedBy("has_sugar", has(Items.SUGAR))
+                    .save(output, "lemon_jam");
+            // 草莓果酱
+            this.shapeless(RecipeCategory.FOOD, ModItems.STRAWBERRY_JAM)
+                    .requires(Items.WATER_BUCKET)
+                    .requires(ModItems.STRAWBERRY)
+                    .requires(Items.SUGAR)
+                    .unlockedBy("has_strawberry", has(ModItems.STRAWBERRY))
+                    .unlockedBy("has_sugar", has(Items.SUGAR))
+                    .save(output, "strawberry_jam");
+            // 椰子果酱
+            this.shapeless(RecipeCategory.FOOD, ModItems.COCONUT_JAM)
+                    .requires(Items.WATER_BUCKET)
+                    .requires(ModItems.COCONUT)
+                    .requires(Items.SUGAR)
+                    .unlockedBy("has_coconut", has(ModItems.COCONUT))
+                    .unlockedBy("has_sugar", has(Items.SUGAR))
+                    .save(output, "coconut_jam");
+            // 葡萄饼干
+            this.shapeless(RecipeCategory.FOOD, ModItems.GRAPES_BISCUIT)
+                    .requires(ModItems.BISCUIT)
+                    .requires(ModItems.BISCUIT)
+                    .requires(ModItems.GRAPES_JAM)
+                    .unlockedBy("has_biscuit", has(ModItems.BISCUIT))
+                    .unlockedBy("has_grapes_jam", has(ModItems.GRAPES_JAM))
+                    .save(output, "grapes_biscuit");
+            // 金葡萄饼干
+            this.shapeless(RecipeCategory.FOOD, ModItems.GOLDEN_GRAPES_BISCUIT)
+                    .requires(ModItems.BISCUIT)
+                    .requires(ModItems.BISCUIT)
+                    .requires(ModItems.GOLDEN_GRAPES_JAM)
+                    .unlockedBy("has_biscuit", has(ModItems.BISCUIT))
+                    .unlockedBy("has_golden_grapes_jam", has(ModItems.GOLDEN_GRAPES_JAM))
+                    .save(output, "golden_grapes_biscuit");
+            // 梨子饼干
+            this.shapeless(RecipeCategory.FOOD, ModItems.PEAR_BISCUIT)
+                    .requires(ModItems.BISCUIT)
+                    .requires(ModItems.BISCUIT)
+                    .requires(ModItems.PEAR_JAM)
+                    .unlockedBy("has_biscuit", has(ModItems.BISCUIT))
+                    .unlockedBy("has_pear_jam", has(ModItems.PEAR_JAM))
+                    .save(output, "pear_biscuit");
+            // 桃子饼干
+            this.shapeless(RecipeCategory.FOOD, ModItems.PEACH_BISCUIT)
+                    .requires(ModItems.BISCUIT)
+                    .requires(ModItems.BISCUIT)
+                    .requires(ModItems.PEACH_JAM)
+                    .unlockedBy("has_biscuit", has(ModItems.BISCUIT))
+                    .unlockedBy("has_pear_jam", has(ModItems.PEACH_JAM))
+                    .save(output, "peach_biscuit");
+            // 橘子饼干
+            this.shapeless(RecipeCategory.FOOD, ModItems.ORANGE_BISCUIT)
+                    .requires(ModItems.BISCUIT)
+                    .requires(ModItems.BISCUIT)
+                    .requires(ModItems.ORANGE_JAM)
+                    .unlockedBy("has_biscuit", has(ModItems.BISCUIT))
+                    .unlockedBy("has_orange_jam", has(ModItems.ORANGE_JAM))
+                    .save(output, "orange_biscuit");
+            // 柠檬饼干
+            this.shapeless(RecipeCategory.FOOD, ModItems.LEMON_BISCUIT)
+                    .requires(ModItems.BISCUIT)
+                    .requires(ModItems.BISCUIT)
+                    .requires(ModItems.LEMON_JAM)
+                    .unlockedBy("has_biscuit", has(ModItems.BISCUIT))
+                    .unlockedBy("has_lemon_jam", has(ModItems.LEMON_JAM))
+                    .save(output, "lemon_biscuit");
+            // 草莓饼干
+            this.shapeless(RecipeCategory.FOOD, ModItems.STRAWBERRY_BISCUIT)
+                    .requires(ModItems.BISCUIT)
+                    .requires(ModItems.BISCUIT)
+                    .requires(ModItems.STRAWBERRY_JAM)
+                    .unlockedBy("has_biscuit", has(ModItems.BISCUIT))
+                    .unlockedBy("has_strawberry_jam", has(ModItems.STRAWBERRY_JAM))
+                    .save(output, "strawberry_biscuit");
+            // 椰子饼干
+            this.shapeless(RecipeCategory.FOOD, ModItems.COCONUT_BISCUIT)
+                    .requires(ModItems.BISCUIT)
+                    .requires(ModItems.BISCUIT)
+                    .requires(ModItems.COCONUT_JAM)
+                    .unlockedBy("has_biscuit", has(ModItems.BISCUIT))
+                    .unlockedBy("has_coconut_jam", has(ModItems.COCONUT_JAM))
+                    .save(output, "coconut_biscuit");
+            // 糖方块
+            this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SUGAR)
+                    .pattern("AAA")
+                    .pattern("AAA")
+                    .pattern("AAA")
+                    .define('A', Items.SUGAR)
+                    .unlockedBy("has_sugar", has(Items.SUGAR))
+                    .save(output, "sugar_block");
+            // 大米方块
+            this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MILLED_RICE)
+                    .pattern("AAA")
+                    .pattern("AAA")
+                    .pattern("AAA")
+                    .define('A', ModItems.RICE)
+                    .unlockedBy("has_rice", has(ModItems.RICE))
+                    .save(output, "rice_block");
+            // 花生方块
+            this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PEANUT_BLOCK)
+                    .pattern("AAA")
+                    .pattern("AAA")
+                    .pattern("AAA")
+                    .define('A', ModItems.PEANUT)
+                    .unlockedBy("has_peanut", has(ModItems.PEANUT))
+                    .save(output, "peanut_block");
+            // 胡萝卜方块
+            this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CARROT_BLOCK)
+                    .pattern("AAA")
+                    .pattern("AAA")
+                    .pattern("AAA")
+                    .define('A', Items.CARROT)
+                    .unlockedBy("has_carrot", has(Items.CARROT))
+                    .save(output, "carrot_block");
+            // 土豆方块
+            this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POTATO_BLOCK)
+                    .pattern("AAA")
+                    .pattern("AAA")
+                    .pattern("AAA")
+                    .define('A', Items.POTATO)
+                    .unlockedBy("has_potato", has(Items.POTATO))
+                    .save(output, "potato_block");
+            // 盐方块
+            this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SALT)
+                    .pattern("AAA")
+                    .pattern("AAA")
+                    .pattern("AAA")
+                    .define('A', ModItems.SALT)
+                    .unlockedBy("has_salt", has(ModItems.SALT))
+                    .save(output, "salt_block");
+            // 豆子方块
+            this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BEANS)
+                    .pattern("AAA")
+                    .pattern("AAA")
+                    .pattern("AAA")
+                    .define('A', ModItems.BEANS)
+                    .unlockedBy("has_beans", has(ModItems.BEANS))
+                    .save(output, "beans_block");
+            // 糯米方块
+            this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STICKY_RICE_BLOCK)
+                    .pattern("AAA")
+                    .pattern("AAA")
+                    .pattern("AAA")
+                    .define('A', ModItems.STICKY_RICE)
+                    .unlockedBy("has_sticky_rice", has(ModItems.STICKY_RICE))
+                    .save(output, "sticky_rice_block");
+            // 豆瓣方块
+            this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WATERCRESS_BLOCK)
+                    .pattern("AAA")
+                    .pattern("AAA")
+                    .pattern("AAA")
+                    .define('A', ModItems.WATERCRESS)
+                    .unlockedBy("has_watercress", has(ModItems.WATERCRESS))
+                    .save(output, "watercress_block");
+            // 巧克力方块
+            this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHOCOLATE)
+                    .pattern("AAA")
+                    .pattern("AAA")
+                    .pattern("AAA")
+                    .define('A', ModItems.CHOCOLATE)
+                    .unlockedBy("has_chocolate", has(ModItems.CHOCOLATE))
+                    .save(output, "chocolate_block");
+            // 椰子方块
+            this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COCONUT)
+                    .pattern("AAA")
+                    .pattern("AAA")
+                    .pattern("AAA")
+                    .define('A', ModItems.COCONUT)
+                    .unlockedBy("has_coconut", has(ModItems.COCONUT))
+                    .save(output, "coconut_block");
+            // 香蕉方块
+            this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BANANA)
+                    .pattern("AAA")
+                    .pattern("AAA")
+                    .pattern("AAA")
+                    .define('A', ModItems.BANANA)
+                    .unlockedBy("has_banana", has(ModItems.BANANA))
+                    .save(output, "banana_block");
+            // 净化水桶
+            this.shapeless(RecipeCategory.TOOLS, ModItems.CLEANING_BUCKET)
+                    .requires(Items.BUCKET)
+                    .requires(Items.WHITE_WOOL)
+                    .unlockedBy("has_white_wool", has(Items.WHITE_WOOL))
+                    .save(output, "cleaning_bucket");
+            // 扳手
+            this.shaped(RecipeCategory.TOOLS, ModItems.WRENCH)
+                    .pattern("A A")
+                    .pattern(" A ")
+                    .pattern(" A ")
+                    .define('A', Items.IRON_INGOT)
+                    .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
+                    .save(output, "wrench");
+            // 香蕉
+            this.shapeless(RecipeCategory.FOOD, ModItems.BANANA, 9)
+                    .requires(ModBlocks.BANANA)
+                    .unlockedBy("has_banana_block", has(ModBlocks.BANANA))
+                    .save(output, "banana");
+            // 椰子
+            this.shapeless(RecipeCategory.FOOD, ModItems.COCONUT, 9)
+                    .requires(ModBlocks.COCONUT)
+                    .unlockedBy("has_coconut_block", has(ModBlocks.COCONUT))
+                    .save(output, "coconut");
         }
 
         public void smelting() {

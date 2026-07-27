@@ -1,6 +1,7 @@
 package com.crystal.foodcraft;
 
 import com.crystal.foodcraft.block.ModBlocks;
+import com.crystal.foodcraft.item.ModItems;
 import com.crystal.foodcraft.register.ModFluids;
 import com.crystal.foodcraft.item.juice.JuiceColor;
 import com.crystal.foodcraft.rendering.api.ChunkSectionLayerMap;
@@ -86,5 +87,8 @@ public class FoodCraftClient implements ClientModInitializer {
 		// 桶与液体绑定
 		FluidStorage.combinedItemApiProvider(Items.MILK_BUCKET).register(context ->
 				new FullItemFluidStorage(context, Items.BUCKET, FluidVariant.of(ModFluids.MILK_STILL), FluidConstants.BUCKET));
+		// 瓶子与液体绑定
+		FluidStorage.combinedItemApiProvider(ModItems.PEANUT_OIL).register(context ->
+				new FullItemFluidStorage(context, Items.GLASS_BOTTLE, FluidVariant.of(ModFluids.COOKING_OIL_STILL), FluidConstants.BOTTLE));
 	}
 }

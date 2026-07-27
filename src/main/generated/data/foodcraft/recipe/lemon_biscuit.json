@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "foodcraft:biscuit",
+    "foodcraft:biscuit",
+    "foodcraft:lemon_jam"
+  ],
+  "result": {
+    "id": "foodcraft:lemon_biscuit"
+  }
+}

@@ -74,7 +74,7 @@ public class ModBlockLootDataGeneration extends FabricBlockLootSubProvider {
                 LootItem.lootTableItem(ModItems.TOMATO_SEEDS)
                         .when(LootItemRandomChanceCondition.randomChance(0.33F)),
                 // 白萝卜
-                LootItem.lootTableItem(ModItems.WHITE_RADDISH)
+                LootItem.lootTableItem(ModItems.WHITE_RADISH)
                         .when(LootItemRandomChanceCondition.randomChance(0.33F)),
                 // 白菜
                 LootItem.lootTableItem(ModItems.VEGETABLE)
@@ -107,7 +107,7 @@ public class ModBlockLootDataGeneration extends FabricBlockLootSubProvider {
                 LootItem.lootTableItem(ModItems.SWEET_POTATO).when(LootItemRandomChanceCondition.randomChance(0.23f)),
                 LootItem.lootTableItem(ModItems.TOMATO).when(LootItemRandomChanceCondition.randomChance(0.23f)),
                 LootItem.lootTableItem(ModItems.GRAPES).when(LootItemRandomChanceCondition.randomChance(0.23f)),
-                LootItem.lootTableItem(ModItems.WHITE_RADDISH).when(LootItemRandomChanceCondition.randomChance(0.23f)),
+                LootItem.lootTableItem(ModItems.WHITE_RADISH).when(LootItemRandomChanceCondition.randomChance(0.23f)),
                 LootItem.lootTableItem(ModItems.VEGETABLE).when(LootItemRandomChanceCondition.randomChance(0.23f)),
                 LootItem.lootTableItem(ModItems.STRAWBERRY).when(LootItemRandomChanceCondition.randomChance(0.23f)),
                 LootItem.lootTableItem(ModItems.BEANS).when(LootItemRandomChanceCondition.randomChance(0.23f)),

@@ -20,6 +20,7 @@ public class FoodCraftDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModBlockTagsProvider::new);
 		pack.addProvider(ModRecipeGeneration::new);
 		pack.addProvider(ModBlockLootDataGeneration::new);
+		pack.addProvider(ModEntityLootGeneration::new);
 
 		pack.addProvider(JuiceTagsProvider::new);
 	}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:water_bucket",
+    "foodcraft:orange",
+    "minecraft:sugar"
+  ],
+  "result": {
+    "id": "foodcraft:orange_jam"
+  }
+}

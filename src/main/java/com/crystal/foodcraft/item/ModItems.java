@@ -28,7 +28,7 @@ import java.util.function.Function;
 public class ModItems {
     /**------------------------------ Machines and Tools  ------------------------------*/
     public static final Item IRON_SHEET = register("iron_sheet");
-    public static final Item ITEM_BUCKET = register("item_bucket");
+    public static final Item CLEANING_BUCKET = register("cleaning_bucket");
     public static final Item MACHINE_CORE = register("machine_core");
     public static final Item KITCHEN_KNIFE = register("kitchen_knife", properties -> new KitchenKnifeItem(properties, ToolMaterial.IRON, 3.0F, -2.4F), new Item.Properties().stacksTo(1));
     public static final Item GOLDEN_KITCHEN_KNIFE = register("golden_kitchen_knife", properties -> new KitchenKnifeItem(properties, ToolMaterial.GOLD, 3.0F, -2.4F), new Item.Properties().stacksTo(1));
@@ -44,7 +44,7 @@ public class ModItems {
     public static final Item STICKY_RICE = register("sticky_rice", cropBlock(ModBlocks.STICKY_RICE), new Item.Properties());
     public static final Item RED_BEAN = register("red_bean", cropBlock(ModBlocks.RED_BEAN), new Item.Properties());
     public static final Item GREEN_BEAN = register("green_bean", cropBlock(ModBlocks.GREEN_BEANS), new Item.Properties());
-    public static final Item WHITE_RADDISH = register("white_raddish", cropBlock(ModBlocks.WHITE_RADDISH), new Item.Properties());
+    public static final Item WHITE_RADISH = register("white_radish", cropBlock(ModBlocks.WHITE_RADISH), new Item.Properties());
     public static final Item VEGETABLE = food("vegetable", ModFoods.VEGETABLE);
     public static final Item CHILI = register("chili");
     public static final Item GREEN_PEPPER = food("green_pepper", ModFoods.GREEN_PEPPER);
@@ -160,7 +160,7 @@ public class ModItems {
     public static final Item MILLED_RICE = register("milled_rice");
     public static final Item FLOUR = register("flour");
     public static final Item SALT = register("salt");
-    public static final Item DUMPLING_WRAPPERS = register("dumpling_wrappers");
+    public static final Item FLOUR_DOUGH = register("flour_dough");
     public static final Item WATERCRESS = register("watercress");
     public static final Item CHOCOLATE_DUST = register("chocolate_dust");
     public static final Item DUMPLING_MEAT = register("dumpling_meat");
@@ -182,8 +182,8 @@ public class ModItems {
     public static final Item PEANUT_FILLING = register("peanut_filling");
     public static final Item TOFU_STRIP = register("tofu_strip");
     public static final Item CARROT_STRIP = register("carrot_strip");
-    public static final Item WHITE_RADDISH_STRIP = register("white_raddish_strip");
-    public static final Item NOODLE = register("noodle");
+    public static final Item WHITE_RADISH_STRIP = register("white_radish_strip");
+    public static final Item NOODLE_STRING = register("noodle_string");
     public static final Item BLOCK_CURRY = food("block_curry", ModFoods.BLOCK_CURRY);
     public static final Item SMOKED_MATERIAL = register("smoothed_material");
     public static final Item CHARRED_FOOD = register("charred_food");

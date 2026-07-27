@@ -1,0 +1,9 @@
+{
+  "type": "foodcraft:panning",
+  "input": "foodcraft:noodle_string",
+  "maxTime": 350,
+  "minTime": 250,
+  "output": {
+    "id": "foodcraft:dough_twist"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "foodcraft:beverage_making",
+  "fluidInput": {
+    "Name": "foodcraft:milk",
+    "Properties": {
+      "falling": "true"
+    }
+  },
+  "ingredient": "foodcraft:soy_bean_milk",
+  "mode": "cool",
+  "result": {
+    "components": {
+      "foodcraft:juice": {
+        "juice": "foodcraft:soy_milk"
+      }
+    },
+    "id": "foodcraft:juice"
+  }
+}

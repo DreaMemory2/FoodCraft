@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    "foodcraft:dumpling_wrappers",
+    "foodcraft:flour_dough",
     "minecraft:carrot",
     "foodcraft:cheese",
     "#c:mushroom"

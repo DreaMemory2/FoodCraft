@@ -114,7 +114,7 @@ public class ModModelDataGeneration extends FabricModelProvider {
         createSapling(model, ModBlocks.BANANA_SAPLING, BlockModelGenerators.PlantType.NOT_TINTED);
         createSapling(model, ModBlocks.COCONUT_SAPLING, BlockModelGenerators.PlantType.NOT_TINTED);
         // 作物
-        createCropBlock(model, ModBlocks.WHITE_RADDISH);
+        createCropBlock(model, ModBlocks.WHITE_RADISH);
         createCropBlock(model, ModBlocks.STRAWBERRY);
         createCropBlock(model, ModBlocks.BEANS);
         createCropBlock(model, ModBlocks.TOMATO);
@@ -140,7 +140,7 @@ public class ModModelDataGeneration extends FabricModelProvider {
     public void generateItemModels(@NotNull ItemModelGenerators model) {
         // Machines and Tools
         createFlatItemModel(model, ModItems.IRON_SHEET);
-        createFlatItemModel(model, ModItems.ITEM_BUCKET);
+        createFlatItemModel(model, ModItems.CLEANING_BUCKET);
         createFlatItemModel(model, ModItems.MACHINE_CORE);
         createFlatItemModel(model, ModItems.KITCHEN_KNIFE);
         createFlatItemModel(model, ModItems.GOLDEN_KITCHEN_KNIFE);
@@ -249,7 +249,7 @@ public class ModModelDataGeneration extends FabricModelProvider {
         createFlatItemModel(model, ModItems.MILLED_RICE);
         createFlatItemModel(model, ModItems.FLOUR);
         createFlatItemModel(model, ModItems.SALT);
-        createFlatItemModel(model, ModItems.DUMPLING_WRAPPERS);
+        createFlatItemModel(model, ModItems.FLOUR_DOUGH);
         createFlatItemModel(model, ModItems.WATERCRESS);
         createFlatItemModel(model, ModItems.CHOCOLATE_DUST);
         createFlatItemModel(model, ModItems.DUMPLING_MEAT);
@@ -270,8 +270,8 @@ public class ModModelDataGeneration extends FabricModelProvider {
         createFlatItemModel(model, ModItems.PEANUT_FILLING);
         createFlatItemModel(model, ModItems.TOFU_STRIP);
         createFlatItemModel(model, ModItems.CARROT_STRIP);
-        createFlatItemModel(model, ModItems.WHITE_RADDISH_STRIP);
-        createFlatItemModel(model, ModItems.NOODLE);
+        createFlatItemModel(model, ModItems.WHITE_RADISH_STRIP);
+        createFlatItemModel(model, ModItems.NOODLE_STRING);
         createFlatItemModel(model, ModItems.BLOCK_CURRY);
         createFlatItemModel(model, ModItems.SMOKED_MATERIAL);
         createFlatItemModel(model, ModItems.CHARRED_FOOD);
@@ -373,8 +373,10 @@ public class ModModelDataGeneration extends FabricModelProvider {
         model.generateFlatItem(ModItems.SALIVATING_STAPLE_FOOD_II, Items.KNOWLEDGE_BOOK, ModelTemplates.FLAT_ITEM);
         model.generateFlatItem(ModItems.SALIVATING_STAPLE_FOOD_III, Items.KNOWLEDGE_BOOK, ModelTemplates.FLAT_ITEM);
         model.generateFlatItem(ModItems.SYMBOL_RICH, Items.KNOWLEDGE_BOOK, ModelTemplates.FLAT_ITEM);
-
+        // 花生油桶
         createFlatItemModel(model, ModItems.PEANUT_OIL_BUCKET);
+        // 糯米粉
+        createFlatItemModel(model, ModItems.STICKY_RICE_FLOUR);
     }
 
     /**

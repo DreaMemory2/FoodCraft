@@ -1,0 +1,20 @@
+{
+  "type": "foodcraft:brewing",
+  "fluidInput": {
+    "Name": "minecraft:water",
+    "Properties": {
+      "falling": "true"
+    }
+  },
+  "ingredients": [
+    "foodcraft:grape_wine",
+    "foodcraft:grape_wine",
+    "foodcraft:grape_wine"
+  ],
+  "results": [
+    {
+      "count": 9,
+      "id": "foodcraft:red_wine"
+    }
+  ]
+}

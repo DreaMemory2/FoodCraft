@@ -65,7 +65,7 @@ public class ChineseDataGeneration extends FabricLanguageProvider {
         builder.add("item.foodcraft.juice.chocolate_milk", "巧克力牛奶");
         builder.add("item.foodcraft.juice.chocolate_water", "巧克力水");
         builder.add("item.foodcraft.juice.soy_milk", "豆浆");
-        builder.add("item.foodcraft.juice.white_raddish", "白萝卜汁");
+        builder.add("item.foodcraft.juice.white_radish", "白萝卜汁");
         builder.add("item.foodcraft.juice.tomato", "番茄汁");
         builder.add("item.foodcraft.juice.corn", "玉米汁");
         builder.add("item.foodcraft.juice.cucumber", "黄瓜汁");
@@ -101,7 +101,7 @@ public class ChineseDataGeneration extends FabricLanguageProvider {
         builder.add(ModItemTags.KNIVES, "菜刀");
         // Machines and Tools
         builder.add(ModItems.IRON_SHEET, "铁片");
-        builder.add(ModItems.ITEM_BUCKET, "桶");
+        builder.add(ModItems.CLEANING_BUCKET, "净化水空桶");
         builder.add(ModItems.MACHINE_CORE, "机器核心");
         builder.add(ModItems.KITCHEN_KNIFE, "菜刀");
         builder.add(ModItems.GOLDEN_KITCHEN_KNIFE, "金制菜刀");
@@ -114,10 +114,10 @@ public class ChineseDataGeneration extends FabricLanguageProvider {
         builder.add(ModItems.RICE, "大米");
         builder.add(ModItems.PEANUT, "花生");
         builder.add(ModItems.BEANS, "豆子");
-        builder.add(ModItems.STICKY_RICE, "檽米");
+        builder.add(ModItems.STICKY_RICE, "糯米");
         builder.add(ModItems.RED_BEAN, "红豆");
         builder.add(ModItems.GREEN_BEAN, "绿豆");
-        builder.add(ModItems.WHITE_RADDISH, "白萝卜");
+        builder.add(ModItems.WHITE_RADISH, "白萝卜");
         builder.add(ModItems.VEGETABLE, "蔬菜");
         builder.add(ModItems.CHILI, "辣椒");
         builder.add(ModItems.GREEN_PEPPER, "青椒");
@@ -226,7 +226,7 @@ public class ChineseDataGeneration extends FabricLanguageProvider {
         builder.add(ModItems.MILLED_RICE, "大米");
         builder.add(ModItems.FLOUR, "面粉");
         builder.add(ModItems.SALT, "盐");
-        builder.add(ModItems.DUMPLING_WRAPPERS, "饺子皮");
+        builder.add(ModItems.FLOUR_DOUGH, "面皮");
         builder.add(ModItems.WATERCRESS, "纯净水");
         builder.add(ModItems.CHOCOLATE_DUST, "巧克力粉");
         builder.add(ModItems.DUMPLING_MEAT, "饺子馅料");
@@ -243,13 +243,13 @@ public class ChineseDataGeneration extends FabricLanguageProvider {
         builder.add(ModItems.VINEGAR, "陈醋");
         builder.add(ModItems.RED_BEAN_PASTE, "豆瓣酱");
         builder.add(ModItems.STARCHES, "淀粉");
-        builder.add(ModItems.STICKY_RICE_FLOUR, "檽米粉");
-        builder.add(ModItems.STICKY_RICE_DOUGH, "檽米团");
+        builder.add(ModItems.STICKY_RICE_FLOUR, "糯米粉");
+        builder.add(ModItems.STICKY_RICE_DOUGH, "糯米团");
         builder.add(ModItems.PEANUT_FILLING, "花生汤圆馅");
         builder.add(ModItems.TOFU_STRIP, "豆腐丝");
         builder.add(ModItems.CARROT_STRIP, "胡萝卜丝");
-        builder.add(ModItems.WHITE_RADDISH_STRIP, "白萝卜丝");
-        builder.add(ModItems.NOODLE, "面条");
+        builder.add(ModItems.WHITE_RADISH_STRIP, "白萝卜丝");
+        builder.add(ModItems.NOODLE_STRING, "面条丝");
         builder.add(ModItems.BLOCK_CURRY, "咖喱块");
         builder.add(ModItems.SMOKED_MATERIAL, "腊味熏料");
         builder.add(ModItems.CHARRED_FOOD, "烧焦的食物");

@@ -140,7 +140,7 @@
                       "condition": "minecraft:random_chance"
                     }
                   ],
-                  "name": "foodcraft:white_raddish"
+                  "name": "foodcraft:white_radish"
                 },
                 {
                   "type": "minecraft:item",
@@ -320,7 +320,7 @@
                       "condition": "minecraft:random_chance"
                     }
                   ],
-                  "name": "foodcraft:white_raddish"
+                  "name": "foodcraft:white_radish"
                 },
                 {
                   "type": "minecraft:item",

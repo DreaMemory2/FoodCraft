@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "minecraft:bucket",
+    "minecraft:white_wool"
+  ],
+  "result": {
+    "id": "foodcraft:cleaning_bucket"
+  }
+}

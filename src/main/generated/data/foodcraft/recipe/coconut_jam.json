@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:water_bucket",
+    "foodcraft:coconut",
+    "minecraft:sugar"
+  ],
+  "result": {
+    "id": "foodcraft:coconut_jam"
+  }
+}

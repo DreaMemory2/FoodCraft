@@ -89,7 +89,7 @@ public class ModBlocks {
     public static final Block BANANA_SAPLING = sapling("banana_sapling", properties -> new SaplingBlock(ModTreeGrower.BANANA, properties));
     public static final Block COCONUT_SAPLING = sapling("coconut_sapling", properties -> new SaplingBlock(ModTreeGrower.COCONUT, properties));
     // 作物
-    public static final Block WHITE_RADDISH = crop("white_raddish", WhiteRaddishCrop::new);
+    public static final Block WHITE_RADISH = crop("white_radish", WhiteRadishCrop::new);
     public static final Block STRAWBERRY = crop("strawberry", StrawBerryCrop::new);
     public static final Block BEANS = crop("beans", BeanCrop::new);
     public static final Block TOMATO = crop("tomato", TomatoCrop::new);

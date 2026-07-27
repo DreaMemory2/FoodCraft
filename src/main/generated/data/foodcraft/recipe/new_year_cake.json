@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "A": "foodcraft:dumpling_wrappers",
+    "A": "foodcraft:flour_dough",
     "B": "foodcraft:milled_rice"
   },
   "pattern": [

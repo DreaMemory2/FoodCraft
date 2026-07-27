@@ -1,0 +1,14 @@
+{
+  "type": "foodcraft:beverage_making",
+  "fluidInput": {
+    "Name": "foodcraft:milk",
+    "Properties": {
+      "falling": "true"
+    }
+  },
+  "ingredient": "minecraft:snowball",
+  "mode": "cool",
+  "result": {
+    "id": "foodcraft:vanilla_ice_cream"
+  }
+}
